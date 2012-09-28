@@ -57,9 +57,17 @@ We use the practices that work for us, namely:
 
 While it's fine that different developers gravitate towards different things, no developer should be the only person that knows how to do any particular thing.
 
-If we notice that the same person always does the same task because no one else knows how to, we forbid them from doing it the next time.
+If we notice that the same person always does the same task because no one else knows how to, we "forbid" them from doing it the next time.
 
 #### Continuous deployment.
+
+#### Leaving some slack.
+
+We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
+
+We try to spend at least an hour or two every morning fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring etc.
+
+And when we do planned tasks, we try to have enough slack to do them well the first time.
 
 #### Some code review.
 
