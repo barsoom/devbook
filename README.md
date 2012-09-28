@@ -53,6 +53,10 @@ We use the practices that work for us, namely:
 
 #### Test-driven development.
 
+We try to work test-first.
+
+We aim for 100% code coverage. Not because that guarantees a perfect test suite, but because the coverage reports help us find dead code and other things we miss.
+
 #### Collective code ownership.
 
 While it's fine that different developers gravitate towards different things, no developer should be the only person that knows how to do any particular thing.
