@@ -83,6 +83,6 @@ All commits are shown and linked in our chatroom, so there is also some spontane
 
 We pair program to spread knowledge or for problems that don't easily fit inside one head.
 
-But we don't always pair program, as the flow and speed of the single developer is hard to beat.
+But we don't always pair program, as the flow and speed of the lone developer is hard to beat.
 
 Sometimes we use "distributed pair programming" where two or more developers work on different parts of the same task, so they can sometimes consult each other without any major context switching.
