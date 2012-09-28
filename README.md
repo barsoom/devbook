@@ -8,6 +8,16 @@
 
 We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
 
+
+### General
+
+#### Avoid trailing whitespace.
+
+It's good practice as a developer to show invisible characters, since they can be significant. But when you do, trailing whitespace left by others can be annoying.
+
+So show it, and strip it.
+
+
 ### HTML
 
 #### Prefer `-` to `_` in CSS classes, ids, data attributes.
