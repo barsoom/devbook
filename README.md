@@ -16,3 +16,5 @@ We aim towards a consistent style so we don't waste time repeatedly arguing over
 ```
 
 Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with both.
+
+Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
