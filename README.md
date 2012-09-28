@@ -3,6 +3,9 @@
 # Barsoom developer's handbook
 
 * [Styleguide](#styleguide)
+  * [General](#general)
+  * [HTML](#html)
+  * [Ruby](#ruby)
 
 ## Styleguide
 
