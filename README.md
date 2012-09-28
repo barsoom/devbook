@@ -12,6 +12,7 @@
 We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
 
 
+---
 ### General
 
 #### Avoid trailing whitespace.
@@ -21,8 +22,6 @@ It's good practice as a developer to show invisible characters, since they can b
 So show it, and strip it.
 
 ---
-
-
 ### HTML
 
 #### Prefer `-` to `_` in CSS classes, ids, data attributes.
@@ -36,8 +35,6 @@ Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with
 Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
 
 ---
-
-
 ### Ruby
 
 #### Prefer 1.9-style hashes.
