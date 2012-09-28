@@ -67,6 +67,10 @@ We also try to automate or at least document common tasks to help spread the kno
 
 #### Continuous deployment.
 
+We deploy several times a day.
+
+Any difference between development and production is a liability. Small and frequent changes means smaller failures when they happen.
+
 #### Leaving some slack.
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
