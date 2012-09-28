@@ -1,13 +1,13 @@
-# Developer's handbook
-
 ![Barsoom](http://barsoom.se/barsoom.png)
+
+# Barsoom developer's handbook
 
 
 ## Styleguide
 
 We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
 
-#### HTML
+### HTML
 
 #### Prefer `-` to `_` in CSS classes, ids, data attributes.
 
