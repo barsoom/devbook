@@ -59,6 +59,8 @@ While it's fine that different developers gravitate towards different things, no
 
 If we notice that the same person always does the same task because no one else knows how to, we "forbid" them from doing it the next time.
 
+We also try to automate or at least document common tasks to help spread the knowledge.
+
 #### Continuous deployment.
 
 #### Leaving some slack.
