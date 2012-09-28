@@ -47,7 +47,7 @@ Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
 
 ## How we work
 
-We are little-a agile. That means we are continually looking for ways to improve how we work but don't subscribe to any particular methodology (Scrum, XP, …).
+We are little-a agile. That means we are always looking for ways to improve how we work, but don't subscribe to any particular methodology (Scrum, XP, …).
 
 We use the practices that work for us, namely:
 
