@@ -6,6 +6,7 @@
   * [General](#general)
   * [HTML](#html)
   * [Ruby](#ruby)
+* [How we work](#how-we-work)
 
 ## Styleguide
 
@@ -42,3 +43,36 @@ Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_na
 #### Prefer 1.9-style hashes.
 
 Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
+
+
+## How we work
+
+We are little-a agile. That means we are continually looking for ways to improve how we work but don't subscribe to any particular methodology (Scrum, XP, …).
+
+We use the practices that work for us, namely:
+
+#### Test-driven development.
+
+#### Collective code ownership.
+
+While it's fine that different developers gravitate towards different things, no developer should be the only person that knows how to do any particular thing.
+
+If we notice that the same person always does the same task because no one else knows how to, we forbid them from doing it the next time.
+
+#### Continuous deployment.
+
+#### Some code review.
+
+We don't review all code all the time; we prefer to "move fast and break things".
+
+We do review some changes, when breaking things would be unacceptable. At those times, we use GitHub pull requests.
+
+All commits are shown and linked in our chatroom, so there is also some spontaneous post-merge review from that.
+
+#### Some pair programming.
+
+We pair program to spread knowledge or for problems that don't easily fit inside one head.
+
+But we don't always pair program, as the flow and speed of the single developer is hard to beat.
+
+Sometimes we use "distributed pair programming" where two or more developers work on different parts of the same task, so they can sometimes consult each other without any major context switching.
