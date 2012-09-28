@@ -2,48 +2,11 @@
 
 # Barsoom developer's handbook
 
+* [How we work](#how-we-work)
 * [Styleguide](#styleguide)
   * [General](#general)
   * [HTML](#html)
   * [Ruby](#ruby)
-* [How we work](#how-we-work)
-
-## Styleguide
-
-We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
-
-
----
-### General
-
-#### Avoid trailing whitespace.
-
-It's good practice as a developer to show invisible characters, since they can be significant. But when you do, trailing whitespace left by others can be annoying.
-
-So show it, and strip it.
-
-Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
-
----
-### HTML
-
-#### Prefer `-` to `_` in CSS classes, ids, data attributes.
-
-``` css
-<div class="foo-bar" id="baz-boink" data-foo-bar="wat">
-```
-
-Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with both.
-
-Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
-
----
-### Ruby
-
-#### Prefer 1.9-style hashes.
-
-Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
-
 
 ## How we work
 
@@ -94,3 +57,39 @@ We pair program to spread knowledge or for problems that don't easily fit inside
 But we don't always pair program, as the flow and speed of the lone developer is hard to beat.
 
 Sometimes we do "distributed pair programming" where two or more developers work on different parts of the same task, so they can consult each other without any major context switching.
+
+## Styleguide
+
+We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
+
+
+---
+### General
+
+#### Avoid trailing whitespace.
+
+It's good practice as a developer to show invisible characters, since they can be significant. But when you do, trailing whitespace left by others can be annoying.
+
+So show it, and strip it.
+
+Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
+
+---
+### HTML
+
+#### Prefer `-` to `_` in CSS classes, ids, data attributes.
+
+``` css
+<div class="foo-bar" id="baz-boink" data-foo-bar="wat">
+```
+
+Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with both.
+
+Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
+
+---
+### Ruby
+
+#### Prefer 1.9-style hashes.
+
+Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
