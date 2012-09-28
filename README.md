@@ -21,6 +21,8 @@ It's good practice as a developer to show invisible characters, since they can b
 
 So show it, and strip it.
 
+Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
+
 ---
 ### HTML
 
