@@ -8,6 +8,7 @@
   * [HTML](#html)
   * [Ruby](#ruby)
 
+
 ## How we work
 
 We are little-a agile. That means we are always looking for ways to improve how we work, but don't subscribe to any particular methodology (Scrum, XP, …).
@@ -58,12 +59,12 @@ But we don't always pair program, as the flow and speed of the lone developer is
 
 Sometimes we do "distributed pair programming" where two or more developers work on different parts of the same task, so they can consult each other without any major context switching.
 
+
 ## Styleguide
 
 We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
 
 
----
 ### General
 
 #### Avoid trailing whitespace.
@@ -75,6 +76,7 @@ So show it, and strip it.
 Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
 
 ---
+
 ### HTML
 
 #### Prefer `-` to `_` in CSS classes, ids, data attributes.
@@ -88,6 +90,7 @@ Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with
 Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
 
 ---
+
 ### Ruby
 
 #### Prefer 1.9-style hashes.
