@@ -2,6 +2,7 @@
 
 # Barsoom developer's handbook
 
+* [Styleguide](#styleguide)
 
 ## Styleguide
 
