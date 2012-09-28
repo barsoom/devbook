@@ -39,7 +39,7 @@ Any difference between development and production is a liability. Small and freq
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
 
-We try to spend at least an hour or two every morning fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring etc.
+We try to spend at least an hour or two every morning fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring, documents like this one etc.
 
 And when we do planned tasks, we try to have enough slack to do them well the first time.
 
