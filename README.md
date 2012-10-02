@@ -97,6 +97,7 @@ Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_na
 
 Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
 
+
 #### No empty lines when indentation level changes.
 
 But always put empty lines around multiline blocks when the indent level doesn't change.
@@ -128,3 +129,9 @@ class Foo
 
 end
 ```
+
+### Ruby on Rails
+
+#### Avoid `default_scope`.
+
+It tends to cause confusing behavior.
