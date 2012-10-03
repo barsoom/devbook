@@ -35,6 +35,12 @@ We deploy several times a day.
 
 Any difference between development and production is a liability. Small and frequent changes means smaller failures when they happen.
 
+#### Open source.
+
+We use a lot of open source, contribute patches and release [libs of our own](http://github.com/barsoom).
+
+If a problem is not too particular to the app we're working on, and does not represent an important competitive advantage for that business, we encourage extracting and sharing it.
+
 #### Leaving some slack.
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
@@ -62,7 +68,7 @@ Sometimes we do "distributed pair programming" where two or more developers work
 
 ## Styleguide
 
-We aim towards a consistent style so we don't waste time repeatedly arguing over unimportant things.
+We aim towards a consistent and document style so we don't waste time arguing over unimportant things with one another, or with ourselves.
 
 
 ### General
