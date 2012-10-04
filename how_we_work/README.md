@@ -32,6 +32,10 @@ We use a lot of open source, contribute patches and release [libs of our own](ht
 
 If a problem is not too particular to the app we're working on, and does not represent an important competitive advantage for that business, we encourage extracting and sharing it.
 
+#### Post mortems in a blame-free environment.
+
+The important thing when something goes wrong is to figure out why it happened and how to all learn from that, not to assign blame.
+
 #### Leaving some slack.
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
