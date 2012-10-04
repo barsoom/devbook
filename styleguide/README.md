@@ -74,8 +74,17 @@ class Foo
 end
 ```
 
-### Ruby on Rails
+### Active Record
 
 #### Avoid `default_scope`.
 
 It tends to cause confusing behavior.
+
+#### Avoid SQL outside models.
+
+Ideally, each model encapsulates its underlying table. Changes to the table shouldn't need to break the model's API. Specifically:
+
+* Prefer scopes or custom methods to calling Active Record methods like `where` from outside the model.
+* Use `[merge](http://apidock.com/rails/ActiveRecord/SpawnMethods/merge)` to avoid using raw SQL from another model's scopes.
+
+There's a trade-off between keeping the model API small and keeping its internals encapsulated. In some cases, as with statistics, it may make more sense overall to use SQL methods from outside the class.
