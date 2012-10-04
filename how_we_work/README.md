@@ -1,6 +1,6 @@
 ![Barsoom](http://barsoom.se/barsoom.png)
 
-# Barsoom developer's handbook: How we work
+# How we work
 
 We are little-a agile. That means we are always trying to improve how we work, but we don't subscribe to any particular methodology (Scrum, XP, …).
 
