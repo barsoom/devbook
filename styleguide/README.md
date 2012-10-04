@@ -1,7 +1,6 @@
 ![Barsoom](http://barsoom.se/barsoom.png)
 
-# Barsoom developer's handbook
-## Styleguide
+# Barsoom developer's handbook: Styleguide
 
 We aim towards a consistent and document style so we don't waste time arguing over unimportant things with one another, or with ourselves.
 
