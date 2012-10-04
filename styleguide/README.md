@@ -88,3 +88,9 @@ Ideally, each model encapsulates its underlying table. Changes to the table shou
 * Use [`merge`](http://apidock.com/rails/ActiveRecord/SpawnMethods/merge) to avoid using raw SQL from another model's scopes.
 
 There's a trade-off between keeping the model API small and keeping its internals encapsulated. In some cases, as with statistics, it may make more sense overall to use SQL methods from outside the class.
+
+### Ruby on Rails
+
+#### Don't use `delegate` with `prefix: true`.
+
+If you do `delegate :bar, to: :foo, prefix: true`, it defines a `foo_bar` method that is hard to search for. Define it explicitly instead.
