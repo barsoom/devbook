@@ -30,6 +30,15 @@ Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with
 
 Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
 
+
+---
+### CSS
+
+#### Use `0` without a unit for zero values.
+
+Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
+
+
 ---
 ### Ruby
 
