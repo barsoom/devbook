@@ -18,7 +18,6 @@ So show it, and strip it.
 Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
 
 ---
-
 ### HTML
 
 #### Prefer `-` to `_` in CSS classes, ids, data attributes.
@@ -32,7 +31,6 @@ Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with
 Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
 
 ---
-
 ### Ruby
 
 #### Prefer 1.9-style hashes.
@@ -72,6 +70,7 @@ class Foo
 end
 ```
 
+---
 ### Active Record
 
 #### Avoid `default_scope`.
@@ -87,6 +86,7 @@ Ideally, each model encapsulates its underlying table. Changes to the table shou
 
 There's a trade-off between keeping the model API small and keeping its internals encapsulated. In some cases, as with statistics, it may make more sense overall to use SQL methods from outside the class.
 
+---
 ### Ruby on Rails
 
 #### Don't use `delegate` with `prefix: true`.
