@@ -94,3 +94,7 @@ There's a trade-off between keeping the model API small and keeping its internal
 #### Don't use `delegate` with `prefix: true`.
 
 If you do `delegate :bar, to: :foo, prefix: true`, it defines a `foo_bar` method that is hard to search for. Define it explicitly instead.
+
+#### Don't use instance variables in partials.
+
+Pass in locals from the view instead of using instance variables directly. This makes dependencies more obvious and makes renaming instance variables more predictable.
