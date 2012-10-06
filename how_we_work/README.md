@@ -26,7 +26,7 @@ We deploy several times a day.
 
 Any difference between development and production is a liability. Small and frequent changes means smaller failures when they happen.
 
-#### Open source.
+#### Open source everything.
 
 We use a lot of open source, contribute patches and release [libs of our own](http://github.com/barsoom).
 
