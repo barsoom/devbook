@@ -7,6 +7,7 @@ We aim toward a consistent and document style so we don't waste time arguing ove
 We may have old code that conflicts with these rules, but we try to follow them for new code, and to update old code as we encounter it.
 
 
+---
 ### General
 
 #### Avoid trailing whitespace.
