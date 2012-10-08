@@ -4,3 +4,4 @@
 
 * [How we work](/barsoom/devbook/blob/master/how_we_work)
 * [Styleguide](/barsoom/devbook/blob/master/styleguide)
+* [Deploy without downtime](/barsoom/devbook/blob/master/deploy_without_downtime)
