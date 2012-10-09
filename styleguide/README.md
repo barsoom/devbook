@@ -106,3 +106,7 @@ If you do `delegate :bar, to: :foo, prefix: true`, it defines a `foo_bar` method
 #### Don't use instance variables in partials.
 
 Pass in locals from the view instead of using instance variables directly. This makes dependencies more obvious and makes renaming instance variables more predictable.
+
+#### Use the short style for partials when possible.
+
+Prefer `render "foo", bar: "baz"` to `render partial: "foo", locals: { bar: "baz" }`.
