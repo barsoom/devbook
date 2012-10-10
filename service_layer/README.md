@@ -17,7 +17,7 @@ Basically, we want to separate domain logic from the Rails controller, and treat
 
 Example:
 
-```
+``` ruby
 module CancelOrder
   def self.run(order, client)
     order.cancel!
