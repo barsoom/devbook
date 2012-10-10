@@ -60,3 +60,10 @@ The conventional method is `run` because it's short. We could use `call` for lam
 The callback convention is `noun_was_verbed` as above. Makes it more obvious that it's a callback.
 
 This example use case is pretty short. We'd very likely want to extract a use case for anything longer; at this length or shorter, it may be overkill. We're still finding that limit.
+
+## Under discussion
+
+Some points that are particularly not-settled:
+
+* `call` instead of `run`? Seems to be the Ruby convention for "just run this thing" except when you need to prevent use of lambdas.
+* `CancelOrder.run` isn't very domainy. But `Order.cancel` easily collides with models.
