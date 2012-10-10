@@ -31,9 +31,9 @@ The application before a deploy is the "old app". The application after a deploy
 * **Removing columns** is never safe.
   The old app will attempt to use the cached column name and will break things.
 
-  Deploy removals in two steps:
+  Deploy removals in two steps.
 
-  * Make the app ignore the column.
+  * 1. Deploy an app that ignores the column.
 
     ``` ruby
     class Item < ActiveRecord::base
@@ -42,6 +42,6 @@ The application before a deploy is the "old app". The application after a deploy
       end
     end
     ```
-  * Now deploy the migration, as the old app will not have the column name cache.
+  * 2. Deploy the migration, as the old app will not have the column name cached.
 
 * TODO
