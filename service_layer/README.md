@@ -77,3 +77,17 @@ Some points that are particularly not-settled:
 
 * `call` instead of `run`? Seems to be the Ruby convention for "just run this thing" except when you need to prevent use of lambdas.
 * `CancelOrder.run` isn't very domainy. But `Order.cancel` easily collides with models.
+
+## Rejected ideas and why
+
+``` ruby
+result = CancelOrder.run(some_order, self)
+
+if result  # or maybe: if result.cancelled?
+  redirect_to some_path, notice: "Awyeah!"
+else
+  redirect_to some_path, alert: "No!"
+end
+```
+
+Returning and acting on a bool is less self-documenting and ties you to two outcomes only. Switching on the result value violates tell-don't-ask (TODO: Why in particular is that problematic?).
