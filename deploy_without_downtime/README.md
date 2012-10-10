@@ -33,7 +33,8 @@ The application before a deploy is the "old app". The application after a deploy
 
   Deploy removals in two steps:
 
-  1. Make the app ignore the column.
+  * Make the app ignore the column.
+
     ``` ruby
     class Item < ActiveRecord::base
       def self.columns
@@ -41,6 +42,6 @@ The application before a deploy is the "old app". The application after a deploy
       end
     end
     ```
-  2. Now deploy the migration, as the old app will not have the column name cache.
+  * Now deploy the migration, as the old app will not have the column name cache.
 
 * TODO
