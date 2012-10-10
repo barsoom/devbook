@@ -20,6 +20,8 @@ The application before a deploy is the "old app". The application after a deploy
 
 * A migration is only safe if the old app works with the new state of the DB.
 
+  This is because deploys will have a period where the migrations have run (in part or in whole) while the old app is still in play.
+
 * A migration is not safe if it locks the DB for long.
 
 Specifically:
