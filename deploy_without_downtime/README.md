@@ -37,7 +37,7 @@ Specifically:
 
   Deploy removals in two steps.
 
-  * 1. Deploy an app that ignores the column.
+  * Deploy an app that ignores the column.
 
     ``` ruby
     class Item < ActiveRecord::base
@@ -46,6 +46,6 @@ Specifically:
       end
     end
     ```
-  * 2. Deploy the migration, as the old app will not have the column name cached.
+  * Deploy the migration, as the old app will not have the column name cached.
 
 * TODO
