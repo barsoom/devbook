@@ -12,6 +12,11 @@ Matt Wynne sells it in his [Hexagonal Rails talk](http://www.youtube.com/watch?v
 
 Basically, we want to separate domain logic from the Rails controller, and treat the controller only as a web interface. Its responsibilities are taking input from parameters, cookies etc and sending output in the form of views, redirects, cookies etc, but *not* to make domain decisions.
 
+## Additional inspiration
+
+Jason Roelofs has a good series of articles on [rails app architecture](http://jasonroelofs.com/2012/05/29/designing-a-rails-app-part-1/).
+
+And we've been greatly inspired by Robert Martin, both from his keynote, [Architecture the Lost Years](http://www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years), and from the article on [The Clean Architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 
 ## Our conventions
 
