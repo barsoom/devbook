@@ -81,7 +81,7 @@ Some points that are particularly not-settled:
 ## Rejected ideas and why
 
 ``` ruby
-result = CancelOrder.run(some_order, self)
+result = CancelOrder.run(some_order)
 
 if result  # or maybe: if result.cancelled?
   redirect_to some_path, notice: "Awyeah!"
