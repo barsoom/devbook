@@ -29,7 +29,7 @@ Specifically:
 * **Removing columns** is never safe.
   The old app will attempt to use the cached column name and will break things.
 
-  Deploy removals in two steps.
+  Deploy removals in two steps:
 
   * Deploy an app that ignores the column.
 
