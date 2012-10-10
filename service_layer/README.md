@@ -65,6 +65,8 @@ TransferMoney.run(from: a, to: b, amount: 1000)
 GivePuppy.to_child(child)
 ```
 
+We call the controller `client` since it doesn't *have* to be a controller. Pass it as the last argument, or as the named argument `client:`.
+
 The callback convention is `noun_was_verbed` as above. Makes it more obvious that it's a callback.
 
 This example use case is pretty short. We'd very likely want to extract a use case for anything longer; at this length or shorter, it may be overkill. We're still finding that limit.
