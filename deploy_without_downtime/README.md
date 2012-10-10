@@ -46,6 +46,6 @@ Specifically:
       end
     end
     ```
-  * Deploy the migration, as the old app will not have the column name cached.
+  * Deploy the migration, as the old app will no longer have the column name cached.
 
 * TODO
