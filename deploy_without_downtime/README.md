@@ -26,4 +26,21 @@ The application before a deploy is the "old app". The application after a deploy
 
 * A migration is only safe if the old app works with the new state of the DB.
 
+* **Adding columns** is always safe.
+
+* **Removing columns** is never safe.
+  The old app will attempt to use the cached column name and will break things.
+
+  Deploy removals in two steps:
+
+  1. Make the app ignore the column.
+    ``` ruby
+    class Item < ActiveRecord::base
+      def self.columns
+        super.reject { |c| c.name == "description" }
+      end
+    end
+    ```
+  2. Now deploy the migration, as the old app will not have the column name cache.
+
 * TODO
