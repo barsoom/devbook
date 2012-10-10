@@ -53,9 +53,17 @@ class OrdersController < ActionController::Base
 end
 ```
 
-Typically one file per use case.
+One file per use case.
 
-The conventional method is `run` because it's short. We could use `call` for lambda compatibility, but we can't see when that would be meaningful.
+The class is `VerbNoun` as above.
+
+The conventional method is `run` because it's short and we think we prefer it to `call`. We don't see that we'd ever use lambdas.
+
+When it reads better or makes things clearer, use another method name or pass named arguments:
+``` ruby
+TransferMoney.run(from: a, to: b, amount: 1000)
+GivePuppy.to_child(child)
+```
 
 The callback convention is `noun_was_verbed` as above. Makes it more obvious that it's a callback.
 
