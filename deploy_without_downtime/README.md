@@ -12,15 +12,9 @@ We call a revision/migration "safe" if it can be deployed without downtime.
 
 The application before a deploy is the "old app". The application after a deploy is the "new app".
 
+
 ## Considerations
 
-### Requests
-
-* TODO
-
-### Assets
-
-* TODO
 
 ### Database
 
@@ -49,3 +43,21 @@ Specifically:
   * Deploy the migration, as the old app will no longer have the column name cached.
 
 * TODO
+
+
+### Assets
+
+* TODO
+
+
+### Requests
+
+Someone may post a form, follow a link etc from the old app where the resulting request is handled by the new app.
+
+If the old and new apps don't expect the exact same parameters and paths, the user may see an exception or a 404.
+
+We generally don't attempt to handle this as problems are rare at our scale.
+
+If you do need to handle them, you can do so by making the new app handle old-style input for a while, using aliases, no-ops and similar.
+
+If it's very common and important in a particular instance, perhaps the forms and controllers can be explicitly versioned like an API. We've never had to do this.
