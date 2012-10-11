@@ -90,4 +90,50 @@ else
 end
 ```
 
-Returning and acting on a bool is less self-documenting and ties you to two outcomes only. Switching on the result value violates tell-don't-ask (TODO: Why in particular is that problematic?).
+Returning and acting on a bool is less self-documenting and ties you to two outcomes only.
+
+Another benefit of using callbacks is that you can return different data for different outcomes, like this:
+
+``` ruby
+def create
+  PlaceOrder.run(params[:order], self)
+end
+
+def order_was_placed(order)
+  redirect_to order_path(order), notice: "Awyeah!"
+end
+
+def order_was_not_placed(error_message)
+  redirect_to some_path, alert: error_message
+end
+```
+
+And you can chain on other objects like this:
+
+``` ruby
+# PlaceOrder.run(params[:order], OrderResultLogger.new(self))
+
+class PlaceOrder
+  def self.run(attributes, client)
+    ...
+    # first goes to the logger which forwards it to the controller after logging
+    client.order_was_placed(order)
+  end
+end
+
+class OrderResultLogger
+  def initialize(client)
+    @client = client
+  end
+
+  def order_was_placed(order)
+    # log
+    @client.order_was_placed(order)
+  end
+
+  def order_was_not_placed(error_message)
+    # log
+    @client.order_was_not_placed(order)
+  end
+end
+```
