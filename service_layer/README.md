@@ -63,12 +63,18 @@ One file per use case.
 
 The class is `VerbNoun` as above.
 
-The conventional method is `run` because it's short and we think we prefer it to `call`. We don't see that we'd ever use lambdas.
-
-When it reads better or makes things clearer, use another method name or pass named arguments:
+Prefer a descriptive name for the method. Fall back to `run` if you can't think of anything else. Prefer `run` to repeating the class name in the method name:
 ``` ruby
-TransferMoney.run(from: a, to: b, amount: 1000)
 GivePuppy.to_child(child)
+CancelOrder.run(order)
+CancelOrder.with_id(order_id)
+```
+
+Decide between ordered arguments and named arguments as you would in any code.
+
+``` ruby
+GivePuppy.to_child(child)
+TransferMoney.run(from: a, to: b, amount: 1000)
 ```
 
 We call the controller `client` since it doesn't *have* to be a controller. Pass it as the last argument, or as the named argument `client:`.
