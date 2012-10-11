@@ -24,6 +24,8 @@ The application before a deploy is the "old app". The application after a deploy
 
 * A migration is not safe if it locks the DB for long.
 
+* The below is for PostgreSQL, which we use. Much of it is true of any DB engine, but locking in particular will vary between engines.
+
 Specifically:
 
 * **Adding columns** is always safe.
@@ -44,7 +46,23 @@ Specifically:
     ```
   * Deploy the migration, as the old app will no longer have the column name cached.
 
-* TODO
+* **Renaming columns** is never safe.
+
+  TODO
+
+* **Adding tables** is always safe.
+
+* **Removing tables** is never safe.
+
+  Just like with removing columns, deploy them in two steps:
+
+  * Deploy an app that doesn't use those tables at all.
+
+  * Deploy the migration that removes those tables.
+
+* **Creating indexes** is TODO.
+
+* **Removing indexes** is always safe.
 
 
 ### Assets
