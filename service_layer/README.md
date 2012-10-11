@@ -90,9 +90,11 @@ else
 end
 ```
 
-Returning and acting on a bool is less self-documenting and ties you to two outcomes only.
+Returning and acting on a bool is less self-documenting and ties you to two outcomes only. Also, when using callbacks you can return different data for different outcomes.
 
-Another benefit of using callbacks is that you can return different data for different outcomes, like this:
+## Examples of using callbacks
+
+Return different data for different outcomes:
 
 ``` ruby
 def create
@@ -108,7 +110,7 @@ def order_was_not_placed(error_message)
 end
 ```
 
-And you can chain on other objects like this:
+Chaining on other objects:
 
 ``` ruby
 # PlaceOrder.run(params[:order], OrderResultLogger.new(self))
