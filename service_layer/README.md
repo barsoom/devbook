@@ -14,9 +14,15 @@ Basically, we want to separate domain logic from the Rails controller, and treat
 
 ## Additional inspiration
 
-Jason Roelofs has a good series of articles called [Designing a Rails App](http://jasonroelofs.com/2012/05/29/designing-a-rails-app-part-1/).
+Jason Roelofs:
+* [Designing a Rails App](http://jasonroelofs.com/2012/05/29/designing-a-rails-app-part-1/) (find the whole series of posts)
+* [Where's Your Business Logic?](http://collectiveidea.com/blog/archives/2012/06/28/wheres-your-business-logic/)
 
-We've also been greatly inspired by Robert Martin, both from his keynote, [Architecture the Lost Years](http://www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years), and from the article on [The Clean Architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html).
+Robert "Uncle Bob" Martin:
+
+* [Architecture: The Lost Years](http://www.confreaks.com/videos/759-rubymidwest2011-keynote-architecture-the-lost-years)
+* [The Clean Architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
 
 ## Our conventions
 
