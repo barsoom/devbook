@@ -92,7 +92,7 @@ end
 
 Returning and acting on a bool is less self-documenting and ties you to two outcomes only. Also, when using callbacks you can return different data for different outcomes.
 
-## Examples of using callbacks
+### Examples of using callbacks
 
 Return different data for different outcomes:
 
