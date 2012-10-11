@@ -92,8 +92,7 @@ end
 
 Returning and acting on a bool is less self-documenting and ties you to two outcomes only.
 
-Return different data for different outcomes:
-=======
+## Return different data for different outcomes
 
 Another benefit of using callbacks is that you can return different data for different outcomes, like this:
 
