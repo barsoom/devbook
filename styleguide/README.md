@@ -110,3 +110,21 @@ Pass in locals from the view instead of using instance variables directly. This 
 #### Use the short style for partials when possible.
 
 Prefer `render "foo", bar: "baz"` to `render partial: "foo", locals: { bar: "baz" }`.
+
+---
+### RSpec/testing
+
+#### Balance "should not" tests with a DRY opposite.
+
+A test like `foo.should_not include("bar")` can become irrelevant, but keep passing, when someone changes copy.
+
+Only have tests like that if you also have a test stating the opposite, and with both sharing a constant or variable:
+
+``` ruby
+describe "something" do
+  let(:failed_message) { "it failed" }
+
+  specify { bar.should include(failed_message) }
+  specify { foo.should_not include(failed_message) }
+end
+```
