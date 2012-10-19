@@ -111,6 +111,14 @@ Pass in locals from the view instead of using instance variables directly. This 
 
 Prefer `render "foo", bar: "baz"` to `render partial: "foo", locals: { bar: "baz" }`.
 
+#### Avoid using instance variables beyond a controller + views.
+
+Instance variables are (probably) fine to share data between a controller and its views. But avoid them to communicate between two helpers, controller and layout and so on.
+
+Instead, define setters/getters/boolean methods for that communication: one helper sets with `foo!` and another checks with `foo?`
+
+This way, renaming the instance variable or reimplementing that logic is less work and less risk.
+
 ---
 ### RSpec/testing
 
