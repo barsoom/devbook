@@ -83,14 +83,23 @@ The callback convention is `noun_was_verbed` as above. Makes it more obvious tha
 
 This example use case is pretty short. We'd very likely want to extract a use case for anything longer; at this length or shorter, it may be overkill. We're still finding that limit.
 
-## Under discussion
-
-Some points that are particularly not-settled:
+## Discussion
 
 * `call` instead of `run`? Seems to be the Ruby convention for "just run this thing" except when you need to prevent use of lambdas.
 * `CancelOrder.run` isn't very domainy. But `Order.cancel` easily collides with models.
 
-## Rejected ideas and why
+### Full-on service layer or just service objects?
+
+You can go all the way and use services in every single controller, even a simple CRUD: `ListItems`, `UpdateItem` and so on.
+
+Or you can just use them occasionally, to contain complex actions that coordinate multiple classes or would be a too-complex method within a class.
+
+Pragmatically, it makes sense to go with the latter for now.
+
+
+### Callbacks or return value/querying?
+
+We're going with callbacks for now, rather than something like:
 
 ``` ruby
 result = CancelOrder.run(some_order)
@@ -103,8 +112,6 @@ end
 ```
 
 Returning and acting on a bool is less self-documenting and ties you to two outcomes only.
-
-## Return different data for different outcomes
 
 Another benefit of using callbacks is that you can return different data for different outcomes, like this:
 
