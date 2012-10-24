@@ -80,6 +80,52 @@ class Foo
 end
 ```
 
+### Don't skip indent levels for alignment.
+
+Do any of these:
+
+    ```ruby
+    foo(bar, one: 1, two: 2)
+
+    foo(
+      bar,
+      one: 1,
+      two: 2
+    )
+
+    foo(
+      bar,
+      {
+        one: 1,
+        two: 2
+      }
+    )
+    ```
+
+    But don't do this:
+
+    ```ruby
+    foo(bar, one: 1,
+             two: 2)
+    ```
+
+### Don't assign in a method argument.
+
+Don't do:
+
+```ruby
+Foo.should_receive(:bar).with(:baz).and_return(waz = mock)
+```
+
+Prefer:
+
+```ruby
+waz = mock
+Foo.should_receive(:bar).with(:baz).and_return(waz)
+```
+
+Otherwise it's hard to see where the variable is defined.
+
 ---
 ### Active Record
 
