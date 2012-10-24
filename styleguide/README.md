@@ -84,30 +84,30 @@ end
 
 Do any of these:
 
-    ```ruby
-    foo(bar, one: 1, two: 2)
+```ruby
+foo(bar, one: 1, two: 2)
 
-    foo(
-      bar,
-      one: 1,
-      two: 2
-    )
+foo(
+  bar,
+  one: 1,
+  two: 2
+)
 
-    foo(
-      bar,
-      {
-        one: 1,
-        two: 2
-      }
-    )
-    ```
+foo(
+  bar,
+  {
+    one: 1,
+    two: 2
+  }
+)
+```
 
-    But don't do this:
+But don't do this:
 
-    ```ruby
-    foo(bar, one: 1,
-             two: 2)
-    ```
+```ruby
+foo(bar, one: 1,
+         two: 2)
+```
 
 ### Don't assign in a method argument.
 
