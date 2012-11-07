@@ -133,6 +133,12 @@ Otherwise it's hard to see where the variable is defined.
 
 It tends to cause confusing behavior.
 
+#### Always use lambdas with `scope`.
+
+Do `scope :cool, -> { where(cool: true) }` and not `scope :cool, where(cool: true)`.
+
+The old style will be deprecated in Rails 4. The new style helps avoid issues where you need a lambda but forget.
+
 #### Avoid SQL outside models.
 
 Ideally, each model encapsulates its underlying table. Changes to the table shouldn't need to break the model's API. Specifically:
