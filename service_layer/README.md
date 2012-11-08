@@ -33,6 +33,70 @@ Robert "Uncle Bob" Martin:
 Example:
 
 ``` ruby
+module RegisterPayment
+  def self.with_attributes(attributes)
+    record = Payment.create!(attributes)
+    PaymentMailer.deliver_registered(record)
+    record
+  end
+end
+```
+
+Put it in `app/use_cases/register_payment.rb`. Our app is configured to look there.
+
+In the controller:
+
+``` ruby
+def create
+  @payment = RegisterPayment.with_attributes(amount: 1234)
+  redirect_to :wherever
+end
+```
+
+One file per use case.
+
+The class is `VerbNoun` as above.
+
+Prefer a descriptive name for the method. Fall back to `run` if you can't think of anything better. Prefer `run` to repeating the class name in the method name:
+``` ruby
+GivePuppy.to_child(child)
+CancelOrder.run(order)
+CancelOrder.with_id(order_id)
+```
+
+Decide between ordered arguments and named arguments as you would in any other code.
+
+``` ruby
+GivePuppy.to_child(child)
+TransferMoney.run(from: a, to: b, amount: 1000)
+```
+
+## Full-on service layer or just service objects?
+
+You can go all the way and use services in every single controller, even a simple CRUD: `ListItems`, `UpdateItem` and so on.
+
+Or you can just use them occasionally, to contain complex actions that coordinate multiple classes or would be a too-complex method within a class.
+
+Pragmatically, it makes sense to go with the latter for now.
+
+## When to use it?
+
+When your Active Record model would otherwise send mail in callbacks.
+
+When your controller would otherwise have application logic in it. Extract that to a use case and it's easier to test and to reuse.
+
+It's probably not worth it to extract to a use case for simple things like a standard CRUD, where the use case would only delegate to Active Record. Nor for things that are all DB, where it would again just delegate.
+
+
+## Callbacks or return value/querying?
+
+Just use the return value, like we did above, when it's the simplest thing that works. For more complicated flows, concider callbacks.
+
+This is a simple example, possibly too simple to bother with callbacks, but in the interest of keeping the examples short:
+
+The use case:
+
+``` ruby
 module CancelOrder
   def self.run(order, client)
     order.cancel!
@@ -43,9 +107,7 @@ module CancelOrder
 end
 ```
 
-Put it in `app/use_cases/cancel_order.rb`. Our app is configured to look there.
-
-In the controller:
+The controller:
 
 ``` ruby
 class OrdersController < ActionController::Base
@@ -63,57 +125,11 @@ class OrdersController < ActionController::Base
 end
 ```
 
-One file per use case.
-
-The class is `VerbNoun` as above.
-
-Prefer a descriptive name for the method. Fall back to `run` if you can't think of anything else. Prefer `run` to repeating the class name in the method name:
-``` ruby
-GivePuppy.to_child(child)
-CancelOrder.run(order)
-CancelOrder.with_id(order_id)
-```
-
-Decide between ordered arguments and named arguments as you would in any other code.
-
-``` ruby
-GivePuppy.to_child(child)
-TransferMoney.run(from: a, to: b, amount: 1000)
-```
-
 We call the controller `client` since it doesn't *have* to be a controller. Pass it as the last argument, or as the named argument `client:`.
 
 The callback convention is `noun_was_verbed` as above. Makes it more obvious that it's a callback.
 
-This example use case is pretty short. We'd very likely want to extract a use case for anything longer; at this length or shorter, it may be overkill. We're still finding that limit.
-
-## Discussion
-
-* `call` instead of `run`? Seems to be the Ruby convention for "just run this thing" except when you need to prevent use of lambdas.
-* `CancelOrder.run` isn't very domainy. But `Order.cancel` easily collides with models.
-
-### Full-on service layer or just service objects?
-
-You can go all the way and use services in every single controller, even a simple CRUD: `ListItems`, `UpdateItem` and so on.
-
-Or you can just use them occasionally, to contain complex actions that coordinate multiple classes or would be a too-complex method within a class.
-
-Pragmatically, it makes sense to go with the latter for now.
-
-
-### Callbacks or return value/querying?
-
-We're going with callbacks for now, rather than something like:
-
-``` ruby
-result = CancelOrder.run(some_order)
-
-if result  # or maybe: if result.cancelled?
-  redirect_to some_path, notice: "Awyeah!"
-else
-  redirect_to some_path, alert: "No!"
-end
-```
+### Why callbacks instead of just a return value, or querying a use case instance?
 
 Returning and acting on a bool is less self-documenting and ties you to two outcomes only.
 
