@@ -6,11 +6,15 @@
 
 We're experimenting with a service layer in Rails. It hasn't settled, but we're maintaining this document to try to formalize it a bit.
 
+
 ## Rationale
 
 Matt Wynne sells it in his [Hexagonal Rails talk](http://www.youtube.com/watch?v=CGN4RFkhH2M).
 
 Basically, we want to separate domain logic from the Rails controller, and treat the controller only as a web interface. Its responsibilities are taking input from parameters, cookies etc and sending output in the form of views, redirects, cookies etc, but *not* to make domain decisions.
+
+Also, we want to separate non-persistence concerns from ActiveRecord (or any other persistence adapter). The "sign up customer" use case can create a customer in DB and send a welcome mail, but ActiveRecord should not.
+
 
 ## Additional inspiration
 
@@ -70,7 +74,7 @@ CancelOrder.run(order)
 CancelOrder.with_id(order_id)
 ```
 
-Decide between ordered arguments and named arguments as you would in any code.
+Decide between ordered arguments and named arguments as you would in any other code.
 
 ``` ruby
 GivePuppy.to_child(child)
