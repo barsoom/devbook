@@ -13,7 +13,7 @@ Matt Wynne sells it in his [Hexagonal Rails talk](http://www.youtube.com/watch?v
 
 Basically, we want to separate domain logic from the Rails controller, and treat the controller only as a web interface. Its responsibilities are taking input from parameters, cookies etc and sending output in the form of views, redirects, cookies etc, but *not* to make domain decisions.
 
-Also, we want to separate non-persistence concerns from ActiveRecord (or any other persistence adapter). The "sign up customer" use case can create a customer in DB and send a welcome mail, but ActiveRecord should not.
+Also, we want to separate non-persistence concerns from Active Record (or any other persistence adapter). The "sign up customer" use case can create a customer in DB and send a welcome mail, but Active Record should not.
 
 
 ## Additional inspiration
