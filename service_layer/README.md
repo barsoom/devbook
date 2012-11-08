@@ -55,7 +55,7 @@ end
 
 One file per use case.
 
-The class is `VerbNoun` as above.
+The class is `VerbNoun` as above. The terms should be of the domain, not of the technology. So `RegisterPayment`, not `CreatePayment`.
 
 Prefer a descriptive name for the method. Fall back to `run` if you can't think of anything better. Prefer `run` to repeating the class name in the method name:
 ``` ruby
