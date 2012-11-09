@@ -148,6 +148,11 @@ Ideally, each model encapsulates its underlying table. Changes to the table shou
 
 There's a trade-off between keeping the model API small and keeping its internals encapsulated. In some cases, as with statistics, it may make more sense overall to use SQL methods from outside the class.
 
+#### Remember to make DB columns "NOT NULL".
+
+If the column shouldn't be empty, make it "NOT NULL" in the DB in the interests of data integrity.
+
+
 ---
 ### Ruby on Rails
 
@@ -170,6 +175,7 @@ Instance variables are (probably) fine to share data between a controller and it
 Instead, define setters/getters/boolean methods for that communication: one helper sets with `foo!` and another checks with `foo?`
 
 This way, renaming the instance variable or reimplementing that logic is less work and less risk.
+
 
 ---
 ### RSpec/testing
