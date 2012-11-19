@@ -6,6 +6,8 @@ We aim toward a consistent and document style so we don't waste time arguing ove
 
 We may have old code that conflicts with these rules, but we try to follow them for new code, and to update old code as we encounter it.
 
+We try not to waste space in this guide repeating widely accepted idioms (e.g. 2 space indent in Ruby), but only things we've had trouble with or been undecided on.
+
 
 ---
 ### General
