@@ -139,6 +139,14 @@ Do `scope :cool, -> { where(cool: true) }` and not `scope :cool, where(cool: tru
 
 The old style will be deprecated in Rails 4. The new style helps avoid issues where you need a lambda but forget.
 
+There are some tricky bugs waiting to happen if you don't use lambdas everywhere, like:
+
+``` ruby
+scope :later, -> { where("happens_at > ?", Time.now) }  # now = runtime
+scope :later_alligator, -> { later.alligator }          # now = runtime
+scope :later_alligator, later.alligator                 # now = server launch time
+```
+
 #### Avoid SQL outside models.
 
 Ideally, each model encapsulates its underlying table. Changes to the table shouldn't need to break the model's API. Specifically:
