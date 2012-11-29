@@ -43,6 +43,14 @@ Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, an
 
 
 ---
+### SASS
+
+#### Use hyphen when dealing with multiple-word variable names.
+
+Example: `$foo-bar`
+
+
+---
 ### Ruby
 
 #### Prefer 1.9-style hashes.
