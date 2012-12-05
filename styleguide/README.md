@@ -136,6 +136,16 @@ Foo.should_receive(:bar).with(:baz).and_return(waz)
 
 Otherwise it's hard to see where the variable is defined.
 
+### Don't define bang methods without good reason.
+
+When in doubt between `#foo` and `#foo!`, go with `#foo`.
+
+Acceptable reasons for going with a bang:
+
+* The method modifies the object in-place and this is unexpected. E.g. `String#gsub!`.
+
+* There is a pair of methods, with and without bang, where the only difference is that one is more destructive (e.g. raises). E.g. `ActiveRecord::Base#save/#save!`.
+
 ---
 ### Active Record
 
