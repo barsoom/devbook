@@ -140,11 +140,9 @@ Otherwise it's hard to see where the variable is defined.
 
 When in doubt between `#foo` and `#foo!`, go with `#foo`.
 
-Acceptable reasons for going with a bang:
+Only use the bang when there is a pair of methods, with and without bang, where one is more destructive (e.g. raises, modifies in place). Cf. `String#gsub!`, `ActiveRecord::Base#save!`.
 
-* The method modifies the object in-place and this is unexpected. E.g. `String#gsub!`.
-
-* There is a pair of methods, with and without bang, where the only difference is that one is more destructive (e.g. raises). E.g. `ActiveRecord::Base#save/#save!`.
+Further reading: ["Bang methods; or, Danger, Will Rubyist!" by David Black](http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist)
 
 ---
 ### Active Record
