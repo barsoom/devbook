@@ -45,9 +45,11 @@ Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, an
 ---
 ### SASS
 
-#### Use hyphen when dealing with multiple-word variable names.
+#### Use hyphens in multiple-word variable names.
 
-Example: `$foo-bar`
+So `$foo-bar: 123px;`
+
+This is the style used in the Sass documentation.
 
 
 ---
