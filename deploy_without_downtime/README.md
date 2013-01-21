@@ -35,7 +35,7 @@ Specifically:
 
   Deploy removals in two steps:
 
-  * Deploy an app that ignores the column.
+  * Deploy 1: Make the app ignore the column:
 
     ``` ruby
     class Item < ActiveRecord::base
@@ -44,11 +44,25 @@ Specifically:
       end
     end
     ```
-  * Deploy the migration, as the old app will no longer have the column name cached.
+  * Deploy 2: A migration to remove the column. The old app will no longer have the column name cached.
 
 * **Renaming columns** is never safe.
 
-  TODO
+  You can think of it as adding a duplicate column, then removing the old one.
+
+  Deploy it in three steps:
+
+  * Deploy 1:
+    * Make the app write to both the old and the new column. Now all new records will have a value in the new column.
+
+  * Deploy 2:
+    * Migrate old records to copy the old column to the new column. Now both old and new records will have a value in the new column.
+    * The app should ignore the old column (see above). Reference only the new column in code; not the old one.
+
+  * Deploy 3:
+    * Remove the old column from the DB.
+
+  Note that if you migrate old records in the same deploy as you start writing to the new column, any records updated between the migration completing and the app server restarting will not be correct.
 
 * **Adding tables** is always safe.
 
