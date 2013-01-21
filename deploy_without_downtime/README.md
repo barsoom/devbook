@@ -94,10 +94,7 @@ Specifically:
 
   ``` ruby
   first_new_id = NewRecord.minimum(:id) || 999_999_999
-  insert_sql("
-    INSERT INTO new_records
-     (SELECT * FROM old_records WHERE id < #{first_new_id})
-  ")
+  insert_sql("INSERT INTO new_records (SELECT * FROM old_records WHERE id < #{first_new_id})")
   ```
 
 * **Creating indexes** is TODO.
