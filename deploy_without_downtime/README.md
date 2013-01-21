@@ -74,6 +74,32 @@ Specifically:
 
   * Deploy the migration that removes those tables.
 
+* **Renaming tables** is never safe.
+
+  You can do it much like renaming columns. Write to both tables, then migrate old records, then remove the old table.
+
+  This may be tricky if the table is edited from a lot of places through a big API (i.e. if your model does not encapsulate Active Record).
+
+  You may write to both tables something like:
+
+  ``` ruby
+  x = OldRecord.create(params)
+  # NOTE: id is a protected attribute.
+  NewRecord.create(params.merge(id: x.id), without_protection: true)
+  # NOTE: Postgres doesn't change the id autoincrement automatically.
+  NewRecord.connection.select_value("SELECT setval('new_records_id_seq', (SELECT MAX(id) FROM new_records));")
+  ```
+
+  And you may migrate old values something like:
+
+  ``` ruby
+  first_new_id = NewRecord.minimum(:id) || 999_999_999
+  insert_sql("
+    INSERT INTO new_records
+     (SELECT * FROM old_records WHERE id < #{first_new_id})
+  ")
+  ```
+
 * **Creating indexes** is TODO.
 
 * **Removing indexes** is always safe.
