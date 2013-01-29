@@ -44,6 +44,16 @@ We try to spend at least an hour or two every morning fixing things we want to f
 
 And when we do planned tasks, we try to have enough slack to do them well the first time.
 
+#### Zero tolerance for bugs and exceptions.
+
+We want to be notified about every exception, but ideally only once or twice; then they should be fixed. If you glance at an exception and discard it because it's a known issue, you're doing it wrong.
+
+If it's known, make your app handle or swallow it. Exceptions should be exceptional. Whatever you're doing in your head to handle or ignore that exception, put it in code.
+
+Bugs should be fixed when they crop up, before starting work on new features. The only way to win against entropy is to fix the broken stuff before adding new <strike>broken stuff</strike> features.
+
+We're not perfect, so we're always a little short of this goal, but not very.
+
 #### Some code review.
 
 We don't review all code all the time; we prefer to "move fast and break things".
