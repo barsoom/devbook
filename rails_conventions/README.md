@@ -31,7 +31,7 @@ Have their own views in `app/views/documents`, e.g. `contract_document.`.
 
 Preferred library: our own unreleased abstraction on top of [Prawn](http://prawn.majesticseacreature.com/).
 
-### `app/forms`
+### `app/forms/`
 
 Rails-compatible form objects not backed by a DB, when we need them.
 
@@ -39,11 +39,11 @@ Currently using [`Minimapper::Entity`](https://github.com/joakimk/minimapper).
 
 Looking into: maybe `ActiveModel::Model` in Rails 4?
 
-### `app/helpers`
+### `app/helpers/`
 
 As in omakase Rails, but we prefer presenters (see below) if they're model-centric or complex enough that we want something more OO.
 
-### `app/jobs`
+### `app/jobs/`
 
 Preferred library: Resque. Looking into: Sidekiq.
 
@@ -53,7 +53,7 @@ Their responsibility is to configure themselves for retry handling, queues and s
 
 The actual task to perform belongs in a model or use case.
 
-### `app/mailers`
+### `app/mailers/`
 
 We like to use one mailer per action to facilitate refactoring. Action name: `build`.
 
@@ -65,13 +65,13 @@ Models never send mail (or similar) in callbacks. See use cases for that.
 
 Looking into: separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper).
 
-### `app/observers`
+### `app/observers/`
 
 Avoid them. They're implicit model callbacks.
 
 If possible, create a *use case* instead.
 
-### `app/presenters`
+### `app/presenters/`
 
 For object-oriented helpers.
 
