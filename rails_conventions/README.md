@@ -35,9 +35,9 @@ Preferred library: our own unreleased abstraction on top of [Prawn](http://prawn
 
 Rails-compatible form objects not backed by a DB, when we need them.
 
-Currently using [`Minimapper::Entity`](https://github.com/joakimk/minimapper).
+Preferred library: [`Minimapper::Entity`](https://github.com/joakimk/minimapper).
 
-Looking into: maybe `ActiveModel::Model` in Rails 4?
+Looking into: Maybe `ActiveModel::Model` in Rails 4?
 
 ### `app/helpers/`
 
@@ -51,19 +51,19 @@ Job classes should be minimal, much like controllers.
 
 Their responsibility is to configure themselves for retry handling, queues and such; and to parse and pass on parameters; but not much else.
 
-The actual task to perform belongs in a model or use case.
+The actual task to perform belongs in a *model* or *use case*.
 
 ### `app/mailers/`
 
-We like to use one mailer per action to facilitate refactoring. Action name: `build`.
+We like to use one mailer per action to facilitate refactoring. Action name: `build`. E.g. `Buyer::WonItemMailer.build(item.id)` (ids for [resque\_mailer](https://github.com/barsoom/resque_mailer_with_retries)), wrapped in `Buyer::WonItemMailer.deliver(item)`.
 
 ### `app/models/`
 
 Models don't have to inherit from `ActiveRecord::Base`. In fact, it's nice if they don't as they'll be easier to test.
 
-Models never send mail (or similar) in callbacks. See use cases for that.
+Models never send mail (or similar) in callbacks. See *use cases* for that.
 
-Looking into: separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper).
+Looking into: Separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper).
 
 ### `app/observers/`
 
@@ -75,7 +75,7 @@ If possible, create a *use case* instead.
 
 For object-oriented helpers.
 
-Uses:
+Use for:
 
 1. Things that involve both models and helpers (e.g. a due date wrapped in a CSS class).
 2. Localized strings based on non-localized state (e.g. turning "sold" state into "Sold item").
@@ -99,12 +99,12 @@ For [CarrierWave](https://github.com/jnicklas/carrierwave).
 
 Also known as services. E.g. `SignUpUser.from_params(params)`.
 
-Uses:
+Use for:
 
-1. To wrap persistence (via a model) *and* sending mail.
-2. More generally, to perform an action that doesn't go in the *controller*, because it's domain logic, not HTTP; nor in a *model*, because it is more of an interaction than an action on one model.
+1. Representing interactions that involve persistence (via a model) *and* sending mail, like a user signup.
+2. More generally, to perform an action that doesn't go in the *controller*, because it's domain logic and not HTTP; nor in a *model*, because it is more of an interaction than an action on one model.
 
-(FIXME: Henrik thinks the model/use case boundary is too undefined.)
+(FIXME: Henrik thinks the model/use case boundary is too vaguely defined.)
 
 [Read more.](/service_layer)
 
