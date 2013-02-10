@@ -36,6 +36,8 @@ If a problem is not too particular to the app we're working on, and does not rep
 
 The important thing when something goes wrong is to figure out why it happened and how to all learn from that, not to assign blame.
 
+Looking into the error *will* certainly involve `git blame`, and possibly some mild teasing, but making mistakes is considered part of the process.
+
 #### Leaving some slack.
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
