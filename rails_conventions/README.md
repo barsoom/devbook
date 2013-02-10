@@ -106,7 +106,7 @@ Uses:
 
 (FIXME: Henrik thinks the model/use case boundary is too undefined.)
 
-[Read more.](/blob/master/service_layer)
+[Read more.](/service_layer)
 
 ### `app/views/`
 

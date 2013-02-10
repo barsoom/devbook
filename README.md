@@ -4,7 +4,7 @@
 
 Our conventions and ideals made explicit for reference and discussion.
 
-* [How we work](/blob/master/how_we_work)
-* [Styleguide](/blob/master/styleguide)
-* [Rails conventions](/blob/master/rails_conventions)
-* [Deploy without downtime](/blob/master/deploy_without_downtime)
+* [How we work](/how_we_work)
+* [Styleguide](/styleguide)
+* [Rails conventions](/rails_conventions)
+* [Deploy without downtime](/deploy_without_downtime)
