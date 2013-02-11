@@ -106,9 +106,9 @@ Use for:
 
 E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be a use case like `PlaceMaxBid#place` and not a model method like `MaxBid#place`. Because it doesn't just involve that model and doesn't just deal with its concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
 
-In theory, controllers should always talk to use cases, never to models directly, but in the cases where the use case would just delegate to the model, such as with standard CRUD, we don't bother.
+Use cases are the outer boundary of the domain, the entry point for controllers.
 
-(FIXME: Henrik thinks the model/use case boundary is too vaguely defined.)
+In theory, controllers should always talk to use cases, never to models directly, but in the cases where the use case would just delegate to the model, such as with standard CRUD, we don't bother.
 
 [Read more.](/service_layer)
 
