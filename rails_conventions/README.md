@@ -15,7 +15,7 @@ Preferred libraries: SCSS (Sass) and CoffeeScript.
 Take HTTP input (params, cookies etc) and pass data to views. Not much else.
 
 Very simple CRUD can be inline as in omakase Rails.
-Complexity should probably be moved into a model or use case.
+Complexity should probably be moved into a model or interactor.
 
 Shouldn't know SQL or much of the Active Record API; models should encapsulate that.
 
@@ -51,7 +51,7 @@ Job classes should be minimal, much like controllers.
 
 Their responsibility is to configure themselves for retry handling, queues and such; and to parse and pass on parameters; but not much else.
 
-The actual task to perform belongs in a *model* or *use case*.
+The actual task to perform belongs in a *model* or *interactor*.
 
 ### `app/mailers/`
 
@@ -61,7 +61,7 @@ We like to use one mailer per action to facilitate refactoring. Action name: `bu
 
 Models don't have to inherit from `ActiveRecord::Base`. In fact, it's nice if they don't as they'll be easier to test.
 
-Models never send mail (or similar) in callbacks. See *use cases* for that.
+Models never send mail (or similar) in callbacks. See *interactors* for that.
 
 Looking into: Separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper).
 
@@ -69,7 +69,7 @@ Looking into: Separating persistence from domain logic with [Minimapper](https:/
 
 Avoid them. They're implicit model callbacks.
 
-If possible, create a *use case* instead.
+If possible, create an *interactor* instead.
 
 ### `app/presenters/`
 
@@ -95,20 +95,20 @@ We like the view context to be passed in explicitly and for presenters to be cle
 
 For [CarrierWave](https://github.com/jnicklas/carrierwave).
 
-### `app/use_cases/`
+### `app/interactors/`
 
-Also known as services. E.g. `SignUpUser.from_params(params)`.
+Also known as services or use cases. E.g. `SignUpUser.from_params(params)`.
 
 Use for:
 
 1. Representing interactions that involve persistence (via a model) *and* sending mail, like a user signup.
 2. More generally, to perform an action that doesn't go in the *controller*, because it's domain logic and not HTTP; nor in a *model*, because it is more of an interaction than an action on one model.
 
-E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be a use case like `PlaceMaxBid#place` and not a model method like `MaxBid#place`. Because it doesn't just involve that model and doesn't just deal with its concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
+E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be an interactor like `PlaceMaxBid#place` and not a model method like `MaxBid#place`. Because it doesn't just involve that model and doesn't just deal with its concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
 
-Use cases are the outer boundary of the domain, the entry point for controllers.
+Interactors are the outer boundary of the domain, the entry point for controllers.
 
-In theory, controllers should always talk to use cases, never to models directly, but in the cases where the use case would just delegate to the model, such as with standard CRUD, we don't bother.
+In theory, controllers should always talk to interactors, never to models directly, but in the cases where the interactor would just delegate to the model, such as with standard CRUD, we don't bother.
 
 [Read more.](/service_layer)
 
