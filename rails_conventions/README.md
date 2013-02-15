@@ -41,7 +41,7 @@ Looking into: Maybe `ActiveModel::Model` in Rails 4?
 
 ### `app/helpers/`
 
-As in omakase Rails, but we prefer presenters (see below) if they're model-centric or complex enough that we want something more OO.
+As in omakase Rails, but we prefer *presenters* and *view helpers* (see below) if they're model-centric or complex enough that we want something more OO.
 
 ### `app/jobs/`
 
