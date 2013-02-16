@@ -104,7 +104,7 @@ Use for:
 1. Representing interactions that involve persistence (via a model) *and* sending mail, like a user signup.
 2. More generally, to perform an action that doesn't go in the *controller*, because it's domain logic and not HTTP; nor in a *model*, because it is more of an interaction than an action on one model.
 
-E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be an interactor like `PlaceMaxBid#place` and not a model method like `MaxBid#place`. Because it doesn't just involve that model and doesn't just deal with its concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
+E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be an interactor like `PlaceMaxBid#place` and not a model method like `MaxBid#place`. Because it doesn't just involve that model and doesn't just deal with its internal concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
 
 Interactors are the outer boundary of the domain, the entry point for controllers.
 
