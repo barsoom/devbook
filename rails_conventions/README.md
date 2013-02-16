@@ -27,7 +27,7 @@ PDF document generators. E.g. `ContractDocument`.
 
 Have their own helpers in `app/documents/helpers`, e.g. `ContractDocumentHelper`.
 
-Have their own views in `app/views/documents`, e.g. `contract_document.`.
+Have their own templates in `app/views/documents`, e.g. `contract_document`.
 
 Preferred library: our own unreleased abstraction on top of [Prawn](http://prawn.majesticseacreature.com/).
 
