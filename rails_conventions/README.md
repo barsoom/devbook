@@ -19,7 +19,7 @@ Complexity should probably be moved into a model or interactor.
 
 Shouldn't know SQL or much of the Active Record API; models should encapsulate that.
 
-Looking into: Two-step views (view models and templates); passing locals explicitly instead of ivars.
+Looking into: Two-step views (view objects and templates); passing locals explicitly instead of ivars.
 
 ### `app/documents/`
 
