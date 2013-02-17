@@ -25,11 +25,7 @@ Looking into: Two-step views (view objects and templates); passing locals explic
 
 PDF document generators. E.g. `ContractDocument`.
 
-Have their own helpers in `app/documents/helpers`, e.g. `ContractDocumentHelper`.
-
-Have their own templates in `app/views/documents`, e.g. `contract_document`.
-
-Preferred library: our own unreleased abstraction on top of [Prawn](http://prawn.majesticseacreature.com/).
+Preferred library: our own [PrawnCocktail](https://github.com/barsoom/prawn_cocktail) on top of [Prawn](http://prawn.majesticseacreature.com/).
 
 ### `app/forms/`
 
