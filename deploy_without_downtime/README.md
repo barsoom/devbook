@@ -58,6 +58,7 @@ Specifically:
   * Deploy 2:
     * Migrate old records to copy the old column to the new column. Now both old and new records will have a value in the new column.
     * The app should ignore the old column (see above). Reference only the new column in code; not the old one.
+    * NOTE: Rails will let you ignore the old column and still read it with `read_attribute`/`[]` in one and the same commit/deploy.
 
   * Deploy 3:
     * Remove the old column from the DB.
