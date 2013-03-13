@@ -94,32 +94,45 @@ end
 
 ### Don't skip indent levels for alignment.
 
+When a statement is split over several lines, we think it's generally more readable if each new line changes by at most one level of indentation.
+
 Do any of these:
 
 ```ruby
-foo(bar, one: 1, two: 2)
+my_method(foo, one: 1, two: 2)
 
-foo(
-  bar,
+my_method(
+  foo,
   one: 1,
   two: 2
 )
 
-foo(
-  bar,
+my_method(
+  foo,
   {
     one: 1,
     two: 2
   }
 )
+
+my_method(foo,
+  one: 1,
+  two: 2)
 ```
 
-But don't do this:
+But not any of these:
 
 ```ruby
-foo(bar, one: 1,
-         two: 2)
+my_method(foo, one: 1,
+          two: 2)
+
+my_method(foo, one: 1,
+               two: 2)
 ```
+
+If you do skip levels of indentation to align arguments, and you later rename something, the indentation is also liable to become confusing.
+
+It should be noted that Vim's Ruby indentation rules disagree with us here; they do align on arguments.
 
 ### Don't assign in a method argument.
 
