@@ -87,6 +87,14 @@ We like the view context to be passed in explicitly and for presenters to be cle
 
 (FIXME: We're in disagreement about where derived attributes go.)
 
+### `app/tasks/`
+
+For models that are only used from the console for maintenance tasks that don't have a UI yet.
+
+E.g. a `ContractChanger`.
+
+Sort of like one-off scripts that are run often, but not often enough that we've made a proper UI.
+
 ### `app/uploaders/`
 
 For [CarrierWave](https://github.com/jnicklas/carrierwave).
