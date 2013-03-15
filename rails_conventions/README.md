@@ -53,13 +53,17 @@ The actual task to perform belongs in a *model* or *interactor*.
 
 We like to use one mailer per action to facilitate refactoring. Action name: `build`. E.g. `Buyer::WonItemMailer.build(item.id)` (ids for [resque\_mailer](https://github.com/barsoom/resque_mailer_with_retries)), wrapped in `Buyer::WonItemMailer.deliver(item)`.
 
+### `app/mappers/`
+
+[Minimapper](https://github.com/joakimk/minimapper) mappers and records.
+
 ### `app/models/`
 
 Models don't have to inherit from `ActiveRecord::Base`. In fact, it's nice if they don't as they'll be easier to test.
 
 Models never send mail (or similar) in callbacks. See *interactors* for that.
 
-Looking into: Separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper).
+Looking into: Separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper). With Minimapper, this is where the entity models go.
 
 ### `app/observers/`
 
