@@ -118,8 +118,6 @@ Interactors are the outer boundary of the domain, the entry point for controller
 
 In theory, controllers should always talk to interactors, never to models directly, but in the cases where the interactor would just delegate to the model, such as with standard CRUD, we don't bother.
 
-[Read more.](/service_layer)
-
 ### `app/view_helpers/`
 
 For object-oriented helpers.
