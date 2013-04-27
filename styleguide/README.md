@@ -235,3 +235,5 @@ describe "something" do
   specify { foo.should_not include(failed_message) }
 end
 ```
+
+Further reading: ["How to make negative assertions in tests"](http://thepugautomatic.com/2013/04/negative-assertions/)
