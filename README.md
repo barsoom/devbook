@@ -8,3 +8,4 @@ Our conventions and ideals made explicit for reference and discussion.
 * [Styleguide](/styleguide)
 * [Rails conventions](/rails_conventions)
 * [Deploy without downtime](/deploy_without_downtime)
+* [Authentication](/authentication)
