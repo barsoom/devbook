@@ -19,3 +19,7 @@ This is what we have so far:
 We currently use [breadcrumbs_on_rails](https://github.com/weppos/breadcrumbs_on_rails), mostly because it's good enough and we're used to it.
 
 More importantly, we keep breadcrumb building outside the controller with [something like this](https://gist.github.com/henrik/5637729).
+
+## Misc
+
+* [attr_extras](https://github.com/barsoom/attr_extras) to reduce boilerplate.
