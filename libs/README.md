@@ -20,6 +20,12 @@ We currently use [breadcrumbs_on_rails](https://github.com/weppos/breadcrumbs_on
 
 More importantly, we keep breadcrumb building outside the controller with [something like this](https://gist.github.com/henrik/5637729).
 
+## PDF generation
+
+In new projects, we use [our own abstraction](https://gist.github.com/henrik/5523767) on top of [pdfkit](https://github.com/pdfkit/pdfkit).
+
+We have a custom tool (not yet public) to visually preview them in a browser during development.
+
 ## Misc
 
 * [attr_extras](https://github.com/barsoom/attr_extras) to reduce boilerplate.
