@@ -132,9 +132,7 @@ Can be things like a `SearchTitle` or `ItemBreadcrumbBuilder`.
 
 ### `app/views/`
 
-Preferred library: [Haml](http://haml.info/). Looking into: [Slim](http://slim-lang.com/).
-
-Looking into: Two-step views (view objects and templates); passing locals explicitly instead of ivars.
+Preferred library: [Slim](http://slim-lang.com/).
 
 ## `lib/`
 
