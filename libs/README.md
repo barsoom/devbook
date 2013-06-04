@@ -22,7 +22,9 @@ More importantly, we keep breadcrumb building outside the controller with [somet
 
 ## PDF generation
 
-In new projects, we use [our own abstraction](https://gist.github.com/henrik/5523767) on top of [pdfkit](https://github.com/pdfkit/pdfkit).
+When we value speed of development over point-perfect control, we use [our own abstraction](https://gist.github.com/henrik/5523767) on top of [pdfkit](https://github.com/pdfkit/pdfkit).
+
+When we value precise control, our [PrawnCocktail](https://github.com/barsoom/prawn_cocktail) on top of [Prawn](http://prawn.majesticseacreature.com/).
 
 We have a custom tool (not yet public) to visually preview them in a browser during development.
 

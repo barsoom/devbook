@@ -29,7 +29,7 @@ Looking into: Two-step views (view objects and templates); passing locals explic
 
 PDF document generators. E.g. `ContractDocument`.
 
-Preferred library: our own [PrawnCocktail](https://github.com/barsoom/prawn_cocktail) on top of [Prawn](http://prawn.majesticseacreature.com/).
+Preferred library: [ours on top of pdfkit or Prawn](https://github.com/barsoom/devbook/tree/master/libs#pdf-generation).
 
 ### `app/forms/`
 
