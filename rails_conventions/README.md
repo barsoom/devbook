@@ -43,6 +43,8 @@ Looking into: Maybe `ActiveModel::Model` in Rails 4?
 
 As in omakase Rails, but we prefer *presenters* and *view helpers* (see below) if they're model-centric or complex enough that we want something more OO.
 
+When convenient, a helper can delegate to a more OO implementation elsewhere.
+
 ### `app/jobs/`
 
 Preferred library: Resque. Looking into: Sidekiq.
