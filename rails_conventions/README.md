@@ -87,7 +87,7 @@ For object-oriented helpers that wrap a single model.
 
 *Maybe* use for localized strings based on non-localized state (e.g. turning "sold" state into "Sold item"). But putting that in the model may also be fine.
 
-*Do not use* for domain concepts that don't involve HTML/CSS, localization or some other front-end details. Like calculating age from a birthdate column. Put that in models or a general purpose library.
+*Do not use* for domain concepts unless they involve HTML/CSS, localization or other front-end details. Calculating age from a birthdate column probably doesn't belong in a presenter. Put that in models or a general purpose library.
 
 Preferred library: none, just POROs.
 
