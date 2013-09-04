@@ -118,11 +118,13 @@ Use for:
 1. Representing interactions that involve persistence (via a model) *and* sending mail, like a user signup.
 2. More generally, to perform an action that doesn't go in the *controller*, because it's domain logic and not HTTP; nor in a *model*, because it is more of an interaction flow than just one action involving one or two models.
 
-E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be an interactor like `PlaceMaxBid#place` and not a model method like `MaxBid#place`. Because it doesn't just involve that model and doesn't just deal with its internal concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
+E.g. placing a bid in an eBay-like auction system, with max bids (that you place) and bids (that the system places on your behalf). It should be an interactor like `PlaceMaxBid.place` and not a model method like `MaxBid.place`. Because it doesn't just involve that model and doesn't just deal with its internal concerns. It may create a record via that model, but may also create more than one `Bid` record and trigger mail notifications.
 
 Interactors are high-level coordinators called by controllers, background jobs, scripts or other models.
 
 They may communicate back to their caller by return value or callbacks on a passed-in object.
+
+We name them `VerbifyNoun` and use `.run` for a method name if we can't come up with anything better.
 
 ### `app/view_helpers/`
 
