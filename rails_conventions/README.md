@@ -23,7 +23,9 @@ Complexity should probably be moved into a model or interactor.
 
 Shouldn't know SQL or much of the Active Record API; models should encapsulate that.
 
-Looking into: Two-step views (view objects and templates); passing locals explicitly instead of ivars.
+We like to pass locals explicitly to the view rather than using ivars.
+
+Looking into: Two-step views (view objects and templates).
 
 ### `app/documents/`
 
@@ -81,21 +83,15 @@ If possible, create an *interactor* instead.
 
 For object-oriented helpers that wrap a single model.
 
-Use for:
+*Definitely* use for things that involve both models and helpers (e.g. a due date wrapped in a CSS class).
 
-1. Things that involve both models and helpers (e.g. a due date wrapped in a CSS class).
-2. Localized strings based on non-localized state (e.g. turning "sold" state into "Sold item").
+*Maybe* use for localized strings based on non-localized state (e.g. turning "sold" state into "Sold item"). But putting that in the model may also be fine.
 
-Do not use for:
-
-1. Derived attributes that are a domain concept, e.g. age derived from a birthdate column.
-   Add to an existing model or introduce a new one. General-purpose calculations like age should probably be delegated from the model to a gem or to code in `lib`.
+*Do not use* for domain concepts that don't involve HTML/CSS, localization or some other front-end details. Like calculating age from a birthdate column. Put that in models or a general purpose library.
 
 Preferred library: none, just POROs.
 
-We like the view context to be passed in explicitly and for presenters to be clearly named as such in view variables.
-
-(FIXME: We're in disagreement about where derived attributes go.)
+We like the view context to be passed in explicitly when needed, and for presenters to be clearly named as such in view variables instead of being seen as secret decorators. `item_presenter`, not `item`.
 
 ### `app/tasks/`
 

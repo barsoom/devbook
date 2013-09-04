@@ -20,6 +20,10 @@ We currently use [breadcrumbs_on_rails](https://github.com/weppos/breadcrumbs_on
 
 More importantly, we keep breadcrumb building outside the controller with [something like this](https://gist.github.com/henrik/5637729).
 
+## Form generation
+
+[simple_form](https://github.com/plataformatec/simple_form) is decent.
+
 ## PDF generation
 
 When we value speed of development over point-perfect control, we use [our own abstraction](https://gist.github.com/henrik/5523767) on top of [pdfkit](https://github.com/pdfkit/pdfkit).
