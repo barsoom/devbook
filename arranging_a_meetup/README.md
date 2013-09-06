@@ -25,6 +25,9 @@ Things to think about.
 * Chill drinks
 * Set out bowls for snacks
 * Set out table for food
+* Napkins
+* Glasses/mugs (if necessary)
+* Bottle opener (and somewhere to throw caps)
 * Make sure we have wifi; post details
 
 ### Just before
@@ -45,6 +48,7 @@ Things to think about.
 ## Buy
 
 * Buy disposable plates
+* Buy disposable mugs (if necessary)
 * Buy alcoholic beverages (~3 per head)
 * Buy non-alcoholic beverages
 
