@@ -33,6 +33,7 @@ Things to think about.
 * Arrange chairs
 * Set out snacks
 * Hide secrets (maps, whiteboards…)
+* Make sure the dashboards are pretty ;)
 
 
 ### For an Open Space
