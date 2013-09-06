@@ -14,6 +14,7 @@ Things to think about.
 
 ### Ahead of time
 
+* Buy drinks the day before so they are nice and chilly in time
 * Set out garbage bins/trash bags
 * Empty garbage bins
 * Tidy up
