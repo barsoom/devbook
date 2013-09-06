@@ -15,6 +15,7 @@ Things to think about.
 ### Ahead of time
 
 * Buy drinks the day before so they are nice and chilly in time
+* Chill drinks
 * Set out garbage bins/trash bags
 * Empty garbage bins
 * Tidy up
@@ -22,7 +23,6 @@ Things to think about.
 * Some place to put jackets and bags
 * Prepare a board for job postings
 * Put up our job postings
-* Chill drinks
 * Set out bowls for snacks
 * Set out table for food
 * Napkins
@@ -73,12 +73,12 @@ Things to think about.
 
     16:00: Doors open
     16:00–16:30: Drink, snack, mingle
-    16:30–16:45: Welcome, intro
-    16:45–17:00: Suggest topics, mingle
-    17:00–17:30: Session 1
-    17:30–18:00: Pizza arrives! Modify topics, mingle
-    18:00–18:30: Session 2
-    18:30–18:45: Modify topics, mingle
-    18:45–19:15: Session 3
-    19:15–21:00: Mingle
+    16:30–16:35: Welcome, intro
+    16:35–16:45: Suggest topics, mingle
+    16:45–17:15: Session 1
+    17:15–17:45: Pizza arrives! Eat, modify topics, mingle
+    17:45–18:15: Session 2
+    18:15–19:25: Modify topics, mingle
+    19:25–20:00: Session 3
+    20:00–21:00: Mingle
     21:00: Leave! ;)
