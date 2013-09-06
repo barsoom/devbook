@@ -58,3 +58,20 @@ Things to think about.
 * Food
 * Venue (chairs, cleaning etc)
 * Master of Ceremonies
+
+
+## Schedule
+
+### Open space example schedule
+
+    16:00: Doors open
+    16:00–16:30: Drink, snack, mingle
+    16:30–16:45: Welcome, intro
+    16:45–17:00: Suggest topics, mingle
+    17:00–17:30: Session 1
+    17:30–18:00: Pizza arrives! Modify topics, mingle
+    18:00–18:30: Session 2
+    18:30–18:45: Modify topics, mingle
+    18:45–19:15: Session 3
+    19:15–21:00: Mingle
+    21:00: Leave! ;)
