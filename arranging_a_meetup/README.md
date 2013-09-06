@@ -36,6 +36,7 @@ Things to think about.
 
 ### For an Open Space
 * Prepare a board for topics, sheets and pens
+* Prepare a map
 
 
 ## Buy
