@@ -29,6 +29,7 @@ Things to think about.
 * Glasses/mugs (if necessary)
 * Bottle opener (and somewhere to throw caps)
 * Make sure we have wifi; post details
+* Blankets if we're going to be outdoors when it's chilly
 
 ### Just before
 
