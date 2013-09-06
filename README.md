@@ -4,8 +4,13 @@
 
 Our conventions and ideals made explicit for reference and discussion.
 
-* [How we work](/how_we_work)
+## Reference
+
 * [Styleguide](/styleguide)
-* [Rails conventions](/rails_conventions)
 * [Deploy without downtime](/deploy_without_downtime)
+
+## Conventions
+
+* [How we work](/how_we_work)
+* [Rails conventions](/rails_conventions)
 * [Libraries](/libs)
