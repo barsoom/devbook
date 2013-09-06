@@ -25,6 +25,7 @@ Things to think about.
 * Chill drinks
 * Set out bowls for snacks
 * Set out table for food
+* Make sure we have wifi; post details
 
 ### Just before
 
