@@ -15,11 +15,10 @@ Things to think about.
 ### Ahead of time
 
 * Buy drinks the day before so they are nice and chilly in time
-* Chill drinks
+* Clear fridge, chill drinks
 * Set out garbage bins/trash bags
 * Empty garbage bins
 * Tidy up
-* Clear the fridge
 * Some place to put jackets and bags
 * Prepare a board for job postings
 * Put up our job postings
