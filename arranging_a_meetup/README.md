@@ -25,9 +25,10 @@ Things to think about.
 * Set out bowls for snacks
 * Set out table for food
 * Napkins
-* Glasses/mugs (if necessary)
+* Glasses/mugs
 * Bottle opener (and somewhere to throw caps)
 * Make sure we have wifi; post details
+* Helpful notes: drink fridge, bathroom, food and snacks (vegetarian, allergies)
 * Blankets if we're going to be outdoors when it's chilly
 
 ### Just before
@@ -41,14 +42,14 @@ Things to think about.
 
 
 ### For an Open Space
-* Prepare a board for topics, sheets and pens
-* Prepare a map
+* Prepare sheets, pens and a board for topics
+* Prepare a room map
 
 
 ## Buy
 
 * Buy disposable plates
-* Buy disposable mugs (if necessary)
+* Buy disposable mugs
 * Buy alcoholic beverages (~3 per head)
   Heavy! 25 people = 60 beers + some non-alcoholic = 4 people to carry.
 * Buy non-alcoholic beverages
@@ -63,6 +64,7 @@ Things to think about.
 ## Responsibilities during the meetup
 
 * Overall planner
+* Alarm
 * Watch the door
 * Food
 * Venue (chairs, cleaning etc)
