@@ -51,13 +51,15 @@ Things to think about.
 * Buy disposable plates
 * Buy disposable mugs (if necessary)
 * Buy alcoholic beverages (~3 per head)
+  Heavy! 25 people = 60 beers + some non-alcoholic = 4 people to carry.
 * Buy non-alcoholic beverages
 
 
 ## Order
 
-* Food (pizza, wraps) – 1/3+ vegetarian
-
+* Food (pizza, wraps)
+  At least 1/3 vegetarian.
+  From somewhere close or the delivery time can be unreliable.
 
 ## Responsibilities during the meetup
 
