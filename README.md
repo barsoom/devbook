@@ -2,7 +2,7 @@
 
 # Barsoom developer's handbook
 
-Our conventions and ideals made explicit for reference and discussion.
+For reference and discussion.
 
 ## Reference
 
