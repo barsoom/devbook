@@ -2,15 +2,16 @@
 
 # Arranging a meetup
 
-## Do
+## Checklist
+
+### Do
 
 * Call the security company about the alarm
 * Prepare an introduction
 
+### Around the HQ
 
-## Around the HQ
-
-### Ahead of time
+#### Ahead of time
 
 * Buy drinks the day before so they are nice and chilly in time
 * Clear fridge, chill drinks
@@ -29,7 +30,7 @@
 * Helpful notes: drink fridge, bathroom, food and snacks (vegetarian, allergies)
 * Blankets if we're going to be outdoors when it's chilly
 
-### Just before
+#### Just before
 
 * Lock unused offices
 * Move desks
@@ -38,13 +39,11 @@
 * Hide secrets (maps, whiteboards…)
 * Make sure the dashboards are pretty ;)
 
-
-### For an Open Space
+#### For an Open Space
 * Prepare sheets, pens and a board for topics
 * Prepare a room map
 
-
-## Buy
+### Buy
 
 * Buy disposable plates
 * Buy disposable mugs
@@ -52,14 +51,13 @@
   Heavy! 25 people = 60 beers + some non-alcoholic = 4 people to carry.
 * Buy non-alcoholic beverages
 
-
-## Order
+### Order
 
 * Food (pizza, wraps).
   At least 1/3 vegetarian.
   From somewhere close or the delivery time can be unreliable.
 
-## Responsibilities during the meetup
+### Responsibilities during the meetup
 
 * Overall planner
 * Alarm
@@ -69,9 +67,11 @@
 * Master of Ceremonies (introduction, timekeeping)
 
 
-## Schedule
+## Templates
 
-### Open space example schedule
+### Open space
+
+#### Example schedule
 
     16:00: Doors open
     16:00–16:30: Drink, snack, mingle
@@ -84,3 +84,19 @@
     18:25–19:00: Session 3
     19:00–21:00: Mingle
     21:00: Leave! ;)
+
+#### Example introduction
+
+Welcome. Barsoom is a Rails development shop, …. We're hiring.
+
+Practical: bathroom is there, pizza arrives at X.
+
+Open space: topics on a board with M rooms and N time slots.
+
+Point out rooms.
+
+Feel free to move topics around, to repeat them, to remove your own or add new ones if you have an interesting discussion in the breaks.
+
+One important law, the Law of Two Feet:
+
+"If at any time during our time together you find yourself in any situation where you are neither learning nor contributing, use your two feet, go someplace else." You have the right and the responsibility to maximize your own learning and contribution. Don't waste time. Don't be offended if this happens.
