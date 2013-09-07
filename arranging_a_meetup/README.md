@@ -2,8 +2,6 @@
 
 # Arranging a meetup
 
-Things to think about.
-
 ## Do
 
 * Call the security company about the alarm
