@@ -82,7 +82,7 @@ Things to think about.
     16:45–17:15: Session 1
     17:15–17:45: Pizza arrives! Eat, modify topics, mingle
     17:45–18:15: Session 2
-    18:15–19:25: Modify topics, mingle
-    19:25–20:00: Session 3
-    20:00–21:00: Mingle
+    18:15–18:25: Modify topics, mingle
+    18:25–19:00: Session 3
+    19:00–21:00: Mingle
     21:00: Leave! ;)
