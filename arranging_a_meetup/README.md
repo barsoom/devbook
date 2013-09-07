@@ -50,14 +50,14 @@ Things to think about.
 
 * Buy disposable plates
 * Buy disposable mugs
-* Buy alcoholic beverages (~3 per head)
+* Buy alcoholic beverages (~3 per head).
   Heavy! 25 people = 60 beers + some non-alcoholic = 4 people to carry.
 * Buy non-alcoholic beverages
 
 
 ## Order
 
-* Food (pizza, wraps)
+* Food (pizza, wraps).
   At least 1/3 vegetarian.
   From somewhere close or the delivery time can be unreliable.
 
@@ -67,8 +67,8 @@ Things to think about.
 * Alarm
 * Watch the door
 * Food
-* Venue (chairs, cleaning etc)
-* Master of Ceremonies
+* Venue (setting out chairs, cleaning etc)
+* Master of Ceremonies (introduction, timekeeping)
 
 
 ## Schedule
