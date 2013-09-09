@@ -54,6 +54,7 @@
 ### Order
 
 * Food (pizza, wraps).
+  16 pizzas for ~24 people seemed like just enough.
   At least 1/3 vegetarian.
   From somewhere close or the delivery time can be unreliable.
 
