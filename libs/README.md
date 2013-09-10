@@ -35,3 +35,4 @@ We have a custom tool (not yet public) to visually preview them in a browser dur
 ## Misc
 
 * [attr_extras](https://github.com/barsoom/attr_extras) to reduce boilerplate.
+* [PaperTrail](https://github.com/airblade/paper_trail) for data versioning.
