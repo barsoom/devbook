@@ -11,8 +11,7 @@ We want to move in the direction of many small, focused libraries that do things
 This is what we have so far:
 
 * [ActiveModel::SecurePassword](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html) for encrypting passwords, validating confirmation etc.
-* [Authentication](https://gist.github.com/henrik/6510138) for the authentication.
-* [UserSession](https://gist.github.com/henrik/5261139) for the session management.
+* [Autho](http://github.com/henrik/autho) for auth and session management.
 * [go_to_param](https://github.com/henrik/go_to_param/) to redirect where you wanted to go after logging in.
 
 ## Breadcrumbs
@@ -37,3 +36,4 @@ We have a custom tool (not yet public) to visually preview them in a browser dur
 
 * [attr_extras](https://github.com/barsoom/attr_extras) to reduce boilerplate.
 * [PaperTrail](https://github.com/airblade/paper_trail) for data versioning.
+* [will_paginate](https://github.com/mislav/will_paginate) for pagination.
