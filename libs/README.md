@@ -39,3 +39,4 @@ We have a custom tool (not yet public) to visually preview them in a browser dur
 * [will_paginate](https://github.com/mislav/will_paginate) for pagination.
 * [Traco](https://github.com/barsoom/traco) for translatable columns.
 * [I18nUtils](https://github.com/henrik/i18n_utils) for some i18n additions.
+* [validates_email_format_of](https://github.com/barsoom/validates_email_format_of) for validation of email.
