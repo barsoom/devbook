@@ -2,6 +2,8 @@
 
 # Libraries
 
+Checklist/reference when setting up new projects.
+
 ## Authentication
 
 We're wary of full-stack libraries as we value higher flexibility above getting a generic flow running quickly.
@@ -40,3 +42,4 @@ We have a custom tool (not yet public) to visually preview them in a browser dur
 * [Traco](https://github.com/barsoom/traco) for translatable columns.
 * [I18nUtils](https://github.com/henrik/i18n_utils) for some i18n additions.
 * [validates_email_format_of](https://github.com/barsoom/validates_email_format_of) for validation of email.
+* [pry-rails](https://github.com/rweng/pry-rails) console.
