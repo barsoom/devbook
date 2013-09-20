@@ -67,6 +67,11 @@
 * Venue (setting out chairs, cleaning etc)
 * Master of Ceremonies (introduction, timekeeping)
 
+### After
+
+* Give receipts to bookkeeping
+* Print a list of attendees for bookkeeping
+
 
 ## Templates
 
