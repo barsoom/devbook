@@ -146,6 +146,10 @@ Tests.
 
 Preferred libraries: RSpec, Capybara.
 
+## `script/db`
+
+Import scripts and such that are not suitable as regular migrations, because we run them repeatedly or not as part of a deploy.
+
 ## `unit/`
 
 Rails-free tests.
