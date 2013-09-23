@@ -8,6 +8,7 @@
 
 * Call the security company about the alarm
 * Prepare an introduction
+* Promote the meetup on Twitter
 
 ### Around the HQ
 
