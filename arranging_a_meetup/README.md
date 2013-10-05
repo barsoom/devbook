@@ -2,7 +2,14 @@
 
 # Arranging a meetup
 
-## Checklist
+## Hike
+
+* Blister bandages
+* First aid kit (you never know)
+* Toilet paper (you never know)
+* Tell participants to [bring stuff](http://www.meetup.com/sthlmrb/events/143175002/)
+
+## Traditional meetup
 
 ### Do
 
