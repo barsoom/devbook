@@ -159,6 +159,31 @@ Only use the bang when there is a pair of methods, with and without bang, where 
 
 Further reading: ["Bang methods; or, Danger, Will Rubyist!" by David Black](http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist)
 
+### Strings
+We prefer double quoutes before single quotes where it is possible.
+
+Like this `"correctly quoted string"` and not like this `'erroneously quoted string'`.
+
+### Translation keys
+Use a string and not a symbol
+
+Do `t.("correct_way")` and not `t.(:"dont_do_this")`
+
+### Nested classes
+We prefer
+
+`class X::Y`
+
+over the
+``` ruby
+class X
+  class Y
+  end
+end
+```
+
+But bevare of the constant lookup issues.
+
 ---
 ### Active Record
 
