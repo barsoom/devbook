@@ -159,22 +159,24 @@ Only use the bang when there is a pair of methods, with and without bang, where 
 
 Further reading: ["Bang methods; or, Danger, Will Rubyist!" by David Black](http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist)
 
-### Strings
-We prefer double quoutes before single quotes where it is possible.
+### Double-quote strings unless the string contains double quotes.
 
-Like this `"correctly quoted string"` and not like this `'erroneously quoted string'`.
+Single-quoted strings [aren't faster](http://stackoverflow.com/questions/1836467/is-there-a-performance-gain-in-using-single-quotes-vs-double-quotes-in-ruby). Double quotes means you don't need to change them if you add interpolation.
 
-### Translation keys
-Use a string and not a symbol
+But don't escape quotes inside a string if you don't need to. Change the quote style instead: `'like "this"'` or `%{'like' "this"}`.
 
-Do `t.("correct_way")` and not `t.(:"dont_do_this")`
+### Use strings with i18n.
 
-### Nested classes
+Do `t("this.here")` and not `t(:"this.here")`.
+
+### Use the short `class X::Y` form for nested classes/modules.
+
 We prefer
 
 `class X::Y`
 
-over the
+to
+
 ``` ruby
 class X
   class Y
@@ -182,7 +184,9 @@ class X
 end
 ```
 
-But bevare of the constant lookup issues.
+when possible. It's shorter and avoids superclass mismatch issues.
+
+Beware of [constant lookup issues](http://cirw.in/blog/constant-lookup.html), though. Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
 
 ---
 ### Active Record
