@@ -23,7 +23,7 @@ Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, 
 ---
 ### HTML
 
-#### Prefer `-` to `_` in CSS classes, ids, data attributes.
+#### Use hyphens in multiple-word variable names (CSS classes, ids, data attributes).
 
 ``` css
 <div class="foo-bar" id="baz-boink" data-foo-bar="wat">
