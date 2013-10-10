@@ -165,9 +165,11 @@ Single-quoted strings [aren't faster](http://stackoverflow.com/questions/1836467
 
 But don't escape quotes inside a string if you don't need to. Change the quote style instead: `'like "this"'` or `%{'like' "this"}`.
 
-### Use strings with i18n.
+### Use strings with complex i18n keys.
 
 Do `t("this.here")` and not `t(:"this.here")`.
+
+Where a simple unquoted symbol will do, they're fine: `t(:this)`
 
 ### Use the short `class X::Y` form for nested classes/modules.
 
