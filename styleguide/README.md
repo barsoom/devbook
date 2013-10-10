@@ -169,7 +169,7 @@ But don't escape quotes inside a string if you don't need to. Change the quote s
 
 In contexts (e.g. `Gemfile`) where single quotes are conventional, respect that convention.
 
-### Use strings with complex i18n keys.
+### Use strings for complex i18n keys.
 
 Do `t("this.here")` and not `t(:"this.here")`.
 
