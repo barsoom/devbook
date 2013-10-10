@@ -258,7 +258,7 @@ This way, renaming the instance variable or reimplementing that logic is less wo
 ---
 ### RSpec/testing
 
-#### Use the next `expect()` style.
+#### Use the new `expect()` style.
 
 Prefer `expect(foo).to be_bar` to `foo.should be_bar`.
 
