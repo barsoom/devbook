@@ -258,6 +258,10 @@ This way, renaming the instance variable or reimplementing that logic is less wo
 ---
 ### RSpec/testing
 
+#### Use the next `expect()` style.
+
+Prefer `expect(foo).to be_bar` to `foo.should be_bar`.
+
 #### Balance "should not" tests with a DRY opposite.
 
 A test like `foo.should_not include("bar")` can become irrelevant, but keep passing, when someone changes copy.
