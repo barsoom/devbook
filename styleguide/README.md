@@ -224,9 +224,11 @@ Ideally, each model encapsulates its underlying table. Changes to the table shou
 
 There's a trade-off between keeping the model API small and keeping its internals encapsulated. In some cases, as with statistics, it may make more sense overall to use SQL methods from outside the class.
 
-#### Remember to make DB columns "NOT NULL".
+#### Explicitly declare `null:` for every column in migrations.
 
-If the column shouldn't be empty, make it "NOT NULL" in the DB in the interests of data integrity.
+If a column shouldn't be empty, make it "NOT NULL" in the DB in the interests of data integrity.
+
+To make sure we remember, we always declare `null:` for every column, even if it's `null: true`.
 
 
 ---
