@@ -262,6 +262,29 @@ This way, renaming the instance variable or reimplementing that logic is less wo
 
 Prefer `expect(foo).to be_bar` to `foo.should be_bar`.
 
+#### Don't use `be_foo` in the spec for `foo?`
+
+In `describe Item, "#foo?"`, do `expect(item.foo?).to be_true` but not `expect(item).to be_foo`.
+
+In another test that isn't for that method specifically, you are free to use it:
+
+``` ruby
+describe "#fooify" do
+  it "makes the item foo" do
+    item.fooify
+    expect(item).to be_foo
+  end
+end
+```
+
+Rationale:
+
+The method under test should be tested as-is without additional methods inbetween.
+
+The actual output expectaction (`true` or truthy?) will be explicit.
+
+It can be used consistently. `be_foo -> foo?` works, `have_foo -> has_foo` works but e.g. `need_foo -> needs_foo?` does not.
+
 #### Balance "should not" tests with a DRY opposite.
 
 A test like `foo.should_not include("bar")` can become irrelevant, but keep passing, when someone changes copy.
