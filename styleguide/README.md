@@ -9,6 +9,14 @@ We may have old code that conflicts with these rules, but we try to follow them 
 We try not to waste space in this guide repeating widely accepted idioms (e.g. 2 space indent in Ruby), but only things we've had trouble with or been undecided on.
 
 
+## How to change this styleguide
+
+If anyone in the team wants to add, change or remove something, they bring it up on our weekly Friday meeting.
+
+Everyone makes their case if they have one, and we decide by consensus – but typically the minority will fold.
+
+You can demand that someone should follow a rule in this styleguide until it has been changed this way, even if they disagree with it.
+
 ---
 ### General
 
