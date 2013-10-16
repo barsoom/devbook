@@ -293,9 +293,9 @@ The actual output expectaction (`true` or truthy?) will be explicit.
 
 It can be used consistently. `be_foo -> foo?` works, `have_foo -> has_foo` works but e.g. `need_foo -> needs_foo?` does not.
 
-#### Balance "should not" tests with a DRY opposite.
+#### Balance "not" tests with a DRY opposite.
 
-A test like `foo.should_not include("bar")` can become irrelevant, but keep passing, when someone changes copy.
+A test like `expect(foo).not_to include("bar")` can become irrelevant, but keep passing, when someone changes copy.
 
 Only have tests like that if you also have a test stating the opposite, and with both sharing a constant or variable:
 
@@ -303,8 +303,8 @@ Only have tests like that if you also have a test stating the opposite, and with
 describe "something" do
   let(:failed_message) { "it failed" }
 
-  specify { bar.should include(failed_message) }
-  specify { foo.should_not include(failed_message) }
+  specify { expect(bar).to include(failed_message) }
+  specify { expect(foo).not_to include(failed_message) }
 end
 ```
 
