@@ -293,6 +293,22 @@ The actual output expectaction (`true` or truthy?) will be explicit.
 
 It can be used consistently. `be_foo -> foo?` works, `have_foo -> has_foo` works but e.g. `need_foo -> needs_foo?` does not.
 
+#### Avoid `subject`.
+
+It's easier to read `expect(account).to be_valid` than `expect(subject).to be_valid`.
+
+You're free to use `subject(:account) { … }`, but don't refer to it by the name `subject` elsewhere.
+
+We haven't yet regulated using the subject implicitly like `it { should be_valid }`. Use it or not as you please.
+
+#### Avoid `described_class`.
+
+It's easier to read `expect(MyFooThingie.foo).to eq("foo")` than `expect(described_class.foo).to eq("foo")`.
+
+That clarity is worth more than not having to type the name, or not having to search-and-replace if it changes.
+
+If you do need it for technical reasons, perhaps with shared examples, go ahead.
+
 #### Balance "not" tests with a DRY opposite.
 
 A test like `expect(foo).not_to include("bar")` can become irrelevant, but keep passing, when someone changes copy.
