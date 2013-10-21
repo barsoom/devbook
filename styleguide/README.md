@@ -270,6 +270,24 @@ This way, renaming the instance variable or reimplementing that logic is less wo
 
 Prefer `expect(foo).to be_bar` to `foo.should be_bar`.
 
+#### Avoid `subject`.
+
+It's easier to read `expect(account).to be_valid` than `expect(subject).to be_valid`.
+
+You're free to use `subject(:account) { … }`, but don't refer to it by the name `subject` elsewhere.
+
+If you do need it for technical reasons, perhaps with shared examples, go ahead.
+
+We haven't yet regulated using the subject implicitly like `it { should be_valid }`. Use it or not as you please.
+
+#### Avoid `described_class`.
+
+It's easier to read `expect(MyFooThingie.foo).to eq("foo")` than `expect(described_class.foo).to eq("foo")`.
+
+That clarity is worth more than not having to type the name, or not having to search-and-replace if it changes.
+
+If you do need it for technical reasons, perhaps with shared examples, go ahead.
+
 #### Don't use `be_foo` in the spec for `foo?`
 
 In `describe Item, "#foo?"`, do `expect(item.foo?).to be_true` but not `expect(item).to be_foo`.
@@ -292,24 +310,6 @@ The method under test should be tested as-is without additional methods inbetwee
 The actual output expectaction (`true` or truthy?) will be explicit.
 
 It can be used consistently. `be_foo -> foo?` works, `have_foo -> has_foo` works but e.g. `need_foo -> needs_foo?` does not.
-
-#### Avoid `subject`.
-
-It's easier to read `expect(account).to be_valid` than `expect(subject).to be_valid`.
-
-You're free to use `subject(:account) { … }`, but don't refer to it by the name `subject` elsewhere.
-
-If you do need it for technical reasons, perhaps with shared examples, go ahead.
-
-We haven't yet regulated using the subject implicitly like `it { should be_valid }`. Use it or not as you please.
-
-#### Avoid `described_class`.
-
-It's easier to read `expect(MyFooThingie.foo).to eq("foo")` than `expect(described_class.foo).to eq("foo")`.
-
-That clarity is worth more than not having to type the name, or not having to search-and-replace if it changes.
-
-If you do need it for technical reasons, perhaps with shared examples, go ahead.
 
 #### Balance "not" tests with a DRY opposite.
 
