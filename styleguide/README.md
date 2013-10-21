@@ -286,6 +286,8 @@ It's easier to read `expect(MyFooThingie.foo).to eq("foo")` than `expect(describ
 
 That clarity is worth more than not having to type the name, or not having to search-and-replace if it changes.
 
+If the class name is inconveniently long, maybe a `let` works: `let(:my_class) { Foo::Bar::Baz::MyClass }`
+
 If you do need it for technical reasons, perhaps with shared examples, go ahead.
 
 #### Don't use `be_foo` in the spec for `foo?`
