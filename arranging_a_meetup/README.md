@@ -9,6 +9,14 @@
 * Toilet paper (you never know)
 * Tell participants to [bring stuff](http://www.meetup.com/sthlmrb/events/143175002/)
 
+## In-office lunch meetup
+
+* Hand out door code
+* Non-alcoholic drinks in the fridge
+* Order food (mind allergies and preferences like vegetarianism)
+* Post wifi details
+* Make coffee, tea
+
 ## Traditional meetup
 
 ### Do
