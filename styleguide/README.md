@@ -246,9 +246,25 @@ To make sure we remember, we always declare `null:` for every column, even if it
 
 If you do `delegate :bar, to: :foo, prefix: true`, it defines a `foo_bar` method that is hard to search for. Define it explicitly instead.
 
-#### Don't use instance variables in partials.
+#### Don't use instance variables in views (including partials).
 
-Pass in locals from the view instead of using instance variables directly. This makes dependencies more obvious and makes renaming instance variables more predictable.
+Pass in locals instead of using instance variables directly. This makes dependencies more obvious and makes renaming instance variables more predictable.
+
+With a controller/view, this is as simple as:
+
+``` ruby
+def show
+  render locals: { item: Item.find(params[:id]) }
+end
+```
+
+Or, if you define a simple helper:
+
+``` ruby
+def show
+  locals item: Item.find(params[:id])
+end
+```
 
 #### Use the short style for partials when possible.
 
