@@ -19,7 +19,7 @@
 
 ## Teamtalk
 
-* Buy snacks & drinks
+* Buy drinks & snacks
 * Have topics to discuss (involve the other team)
 * Short introduction
 
