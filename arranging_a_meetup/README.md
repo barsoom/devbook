@@ -17,6 +17,12 @@
 * Post wifi details
 * Make coffee, tea
 
+## Teamtalk
+
+* Buy snacks & drinks
+* Have topics to discuss (involve the other team)
+* Short introduction
+
 ## Traditional meetup
 
 ### Do
