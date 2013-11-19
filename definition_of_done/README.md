@@ -8,7 +8,7 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 
 ## Checklist
 
-- [] Working code
+- [ ] Working code
 - [] Automatic tests (tests updated or added, all old tests pass)
 - [] Front-end code has been verified in browsers (for the general public: IE8+, latest Firefox, Chrome, Safari)
 - [] Refactored (readable to others, maintainable)
