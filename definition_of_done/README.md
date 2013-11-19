@@ -12,6 +12,8 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Automatic tests (tests updated or added, all old tests pass)
 * Front-end code has been verified in browsers (IE8+, latest Firefox, Chrome, Safari)
 * Refactored (readable to others)
+  * Spend at least a few minutes, to the best of your ability
+  * When in doubt, consider naming and [Sandi's rules](https://gist.github.com/henrik/4509394)
 * Optimized enough
 * Documented if necessary (others can use it)
 * Stakeholders have approved it
