@@ -8,6 +8,7 @@ For reference and discussion.
 
 * [Styleguide](/styleguide)
 * [Deploy without downtime](/deploy_without_downtime)
+* [Definition of done](/definition_of_done)
 
 ## Conventions
 
