@@ -14,10 +14,10 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Refactored (readable to others, maintainable)
   * Spend at least a few minutes, to the best of your ability
   * When in doubt, consider naming and [Sandi's rules](https://gist.github.com/henrik/4509394)
-* Optimized enough
+* Optimized enough (not slow when run with realistic amounts of data)
 * Localized
 * Documented if necessary (others can use it)
 * Stakeholders have approved it
 * In production (deployed, feature-toggled on, rolled out to everyone)
-* Stakeholders have been informed
+* Stakeholders have been informed that the feature is available
 * Replaced legacy data and code has been removed
