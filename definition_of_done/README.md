@@ -4,15 +4,9 @@
 
 **2013-11-19** Very much a work in progress at the moment.
 
+When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its ticket can be closed?
 
-## Terminology
-
-A feature is ["done done"](http://chrislema.com/what-is-done-done/) when it fulfills the "definition of done".
-
-Since a single "done" is an English word, it's vague and could mean "works but not refactored", "works and tested but not deployed" etc.
-
-
-## Definition of done checklist
+## Checklist
 
 * Working code
 * Automatic tests (tests updated or added, all old tests pass)
