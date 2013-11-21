@@ -9,7 +9,10 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 ## Checklist
 
 * Working code
-* Automatic tests (tests updated or added, all old tests pass)
+* Automatic tests
+  * Tests updated or added
+  * All old tests pass
+  * Have considered if it can be a unit test (and the test pyramid in general)
 * Front-end code has been verified in browsers (for the general public: IE8+, latest Firefox, Chrome, Safari)
 * Refactored (readable to others, maintainable)
   * Spend at least a few minutes, to the best of your ability
