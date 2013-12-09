@@ -1,6 +1,6 @@
 ![Barsoom](http://barsoom.se/barsoom.png)
 
-# How we work
+# How we (want to) work
 
 We are little-a agile. That means we are always trying to improve how we work, but we don't subscribe to any particular methodology (Scrum, XP, …).
 
@@ -19,6 +19,12 @@ While it's fine that different developers gravitate towards different things, no
 If we notice that the same person always does the same task because no one else knows how to, we "forbid" them from doing it the next time.
 
 We also try to automate or at least document common tasks to help spread the knowledge.
+
+#### Own the task.
+
+When you're assigned a task, you should understand its purpose.
+
+If you pair with someone who owns the task, understand its purpose before you start coding.
 
 #### Continuous deployment.
 
@@ -71,3 +77,11 @@ We pair program to spread knowledge or for problems that don't easily fit inside
 But we don't always pair program, as the flow and speed of the lone developer is hard to beat.
 
 Sometimes we do "distributed pair programming" where two or more developers work on different parts of the same task, so they can consult each other without any major context switching.
+
+#### Respectful discussions.
+
+Let others finish.
+
+Be brief.
+
+Be specific.

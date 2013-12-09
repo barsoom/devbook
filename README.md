@@ -12,7 +12,7 @@ For reference and discussion.
 
 ## Conventions
 
-* [How we work](/how_we_work)
+* [How we (want to) work](/how_we_work)
 * [Rails conventions](/rails_conventions)
 * [Libraries](/libs)
 
