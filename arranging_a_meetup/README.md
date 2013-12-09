@@ -17,11 +17,17 @@
 * Post wifi details
 * Make coffee, tea
 
+
 ## Teamtalk
 
 * Buy drinks & snacks
 * Have topics to discuss (involve the other team)
 * Short introduction
+
+### Topic ideas
+
+* Process (standups, retrospectives, estimation, code review)
+* Tools (ticket tracker, chat, deploy, review)
 
 ## Traditional meetup
 
