@@ -26,6 +26,8 @@ When you're assigned a task, you should understand its purpose.
 
 If you pair with someone who owns the task, understand its purpose before you start coding.
 
+If you disagree with the person who assigned you the task, probably one or both of you doesn't understand the purpose. Discuss it until you do. Involving a third party can help.
+
 #### Continuous deployment.
 
 We deploy several times a day.
