@@ -2,6 +2,7 @@
 
 # Arranging a meetup
 
+
 ## Hike
 
 * Blister bandages
@@ -9,16 +10,23 @@
 * Toilet paper (you never know)
 * Tell participants to [bring stuff](http://www.meetup.com/sthlmrb/events/143175002/)
 
+
 ## In-office lunch meetup
 
 * Hand out door code
 * Non-alcoholic drinks in the fridge
-* Order food (mind allergies and preferences like vegetarianism)
+* Order food (mind allergies and preferences like vegetarianism).
+  We've bought wraps from [Miias](http://www.cafemiias.se/). Vegetarian ones done on request. Quicker if you call (073 320 75 56) or mail (info@cafemiias.se) ahead.
 * Post wifi details
-* Make coffee, tea
+* Possibly: Make coffee, tea
+
+### After
+
+* Give receipts to bookkeeping
+* Print a list of attendees for bookkeeping
 
 
-## Teamtalk
+## Team talk
 
 * Buy drinks & snacks
 * Have topics to discuss (involve the other team)
@@ -28,6 +36,7 @@
 
 * Process (standups, retrospectives, estimation, code review)
 * Tools (ticket tracker, chat, deploy, review)
+
 
 ## Traditional meetup
 
