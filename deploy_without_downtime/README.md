@@ -44,18 +44,12 @@ Specifically:
       def self.columns
         super.reject { |c| c.name == "description" }
       end
+
+      # … the rest of the class
     end
     ```
 
-    If you get errors like "undefined method `type' for nil:NilClass", you may (for reasons as yet unknown) also have to do
-
-    ``` ruby
-    class Item < ActiveRecord::base
-      def self.column_names
-        super.reject { |c| c == "description" }
-      end
-    end
-    ```
+    Put that method **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
 
   * Deploy 2: A migration to remove the column. The old app will no longer have the column name cached.
 
