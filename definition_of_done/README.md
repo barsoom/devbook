@@ -21,4 +21,4 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Stakeholders have approved it
 * In production (deployed, feature-toggled on, rolled out to everyone)
 * Stakeholders have been informed that the feature is available
-* Replaced legacy data and code has been removed
+* Old data and old code has been removed (if applicable)
