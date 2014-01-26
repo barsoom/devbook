@@ -2,8 +2,6 @@
 
 # Definition of done
 
-**2013-11-19** Very much a work in progress at the moment.
-
 When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its ticket can be closed?
 
 ## Checklist
