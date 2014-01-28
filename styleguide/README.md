@@ -224,6 +224,10 @@ list = [
 
 Because you can move lines around without accidentally introducing syntax errors.
 
+### Whitespace in arrays and hashes
+
+Do `[ 1, 2, 3 ]` and `{ foo: 1, bar: 2 }` instead of `[1, 2, 3]` and `{foo: 1, bar: 2}` for increased readability.
+
 ---
 ### Active Record
 
