@@ -202,6 +202,28 @@ when possible. It's shorter and avoids superclass mismatch issues.
 
 Beware of [constant lookup issues](http://cirw.in/blog/constant-lookup.html), though. Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
 
+### Add commas to the end of lists
+
+We prefer
+
+```ruby
+list = [
+  :foo,
+  :bar,
+]
+```
+
+to
+
+```ruby
+list = [
+  :foo,
+  :bar
+]
+```
+
+Because you can move lines around without accidentally introducing syntax errors.
+
 ---
 ### Active Record
 
