@@ -204,25 +204,21 @@ Beware of [constant lookup issues](http://cirw.in/blog/constant-lookup.html), th
 
 ### Add commas to the end of lists
 
-We prefer
+Do:
 
 ```ruby
 list = [
   :foo,
   :bar,
 ]
+
+hash = {
+  foo: 1,
+  bar: 2,
+}
 ```
 
-to
-
-```ruby
-list = [
-  :foo,
-  :bar
-]
-```
-
-Because you can move lines around without accidentally introducing syntax errors.
+The trailing commas mean you can move lines around without accidentally introducing syntax errors. It also makes for cleaner diffs.
 
 ### Whitespace in arrays and hashes
 
