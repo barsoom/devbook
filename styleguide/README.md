@@ -218,7 +218,7 @@ hash = {
 }
 ```
 
-The trailing commas mean you can move lines around without accidentally introducing syntax errors. It also makes for cleaner diffs.
+The trailing commas mean you can move lines around without accidentally introducing syntax errors. It also makes for cleaner diffs and won't unnecessarily shift the `git blame` of the previous line.
 
 ### Whitespace in arrays and hashes
 
