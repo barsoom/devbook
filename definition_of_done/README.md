@@ -20,5 +20,6 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Documented if necessary (others can use it)
 * Stakeholders have approved it
 * In production (deployed, feature-toggled on, rolled out to everyone)
+* The support team has been informed about things that may affect them
 * Stakeholders have been informed that the feature is available
 * Old data and old code has been removed (if applicable)
