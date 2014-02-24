@@ -16,6 +16,7 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
   * Spend at least a few minutes, to the best of your ability
   * When in doubt, consider naming and [Sandi's rules](https://gist.github.com/henrik/4509394)
 * Optimized enough (not slow when run with realistic amounts of data)
+* Secure enough (consider the security aspects)
 * Localized
 * Documented if necessary (others can use it)
 * Stakeholders have approved it
