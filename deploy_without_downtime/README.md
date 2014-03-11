@@ -88,7 +88,9 @@ Specifically:
 
   This may be tricky if the table is edited from a lot of places through a big API (i.e. if your model does not encapsulate Active Record).
 
-  You may write to both tables something like:
+  The easiest solution is to first add the new table, then make sure the app doesn't update this table (by disabling features and making it raise on changes in prod), then copy the data once that is in effect, then enable the feature against the new table.
+
+  If you can't disable the feature, another more painful solution is to write to both tables, something like:
 
   ``` ruby
   x = OldRecord.create(params)
