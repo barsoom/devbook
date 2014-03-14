@@ -272,6 +272,19 @@ To make sure we remember, we always declare `null:` for every column, even if it
 
 If you do `delegate :bar, to: :foo, prefix: true`, it defines a `foo_bar` method that is hard to search for. Define it explicitly instead.
 
+#### Put the delegate `to:` on its own line
+
+Do:
+
+```
+delegate :one, :two,
+  to: :numbers
+```
+
+Even if you only delegate a single method.
+
+Rationale: it's easier to spot delegations and determine their targets when you scan the code.
+
 #### Don't use instance variables in views (including partials).
 
 Pass in locals instead of using instance variables directly. This makes dependencies more obvious and makes renaming instance variables more predictable.
