@@ -17,6 +17,7 @@ Everyone makes their case if they have one, and we decide by consensus – but t
 
 You can demand that someone should follow a rule in this styleguide until it has been changed this way, even if they disagree with it.
 
+
 ---
 ### General
 
@@ -27,6 +28,7 @@ It's good practice as a developer to show invisible characters, since they can b
 So show it, and strip it.
 
 Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
+
 
 ---
 ### HTML
@@ -58,6 +60,29 @@ Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, an
 So `$foo-bar: 123px;`
 
 This is the style used in the Sass documentation.
+
+
+---
+### JavaScript
+
+Prefer CoffeeScript.
+
+If you must use JavaScript, some best practices to keep in mind:
+
+* Use `===` and `!==`, don't use `==` and `!=`, unless you have good reason
+
+
+---
+### CoffeeScript
+
+Follow CS/JS conventions when they differ from Ruby conventions, unless you have very good practical reasons.
+
+When in doubt about CS conventions, the style of [their examples](http://coffeescript.org/) is canon.
+
+Some specific examples:
+
+* Use lowerCamelCase for names of variables and functions
+* Prefer `if foo.length` to `if foo.length > 0`
 
 
 ---
