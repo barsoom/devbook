@@ -67,6 +67,12 @@ This is the style used in the Sass documentation.
 
 Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
 
+#### Lambdas should stab their arguments.
+
+Do `->(x) { x * 2 }` and not `-> x { x * 2 }`.
+
+Mostly a stylistic choice. It's consistent with how we define regular methods. Also, stabby lambdas want something to stab!
+
 
 #### No empty lines when indentation level changes.
 
