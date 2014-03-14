@@ -340,14 +340,6 @@ end
 
 Prefer `render "foo", bar: "baz"` to `render partial: "foo", locals: { bar: "baz" }`.
 
-#### Avoid using instance variables beyond a controller + views.
-
-Instance variables are (probably) fine to share data between a controller and its views. But avoid them to communicate between two helpers, controller and layout and so on.
-
-Instead, introduce an abstraction, even if it's a thin one: perhaps the controller sets an ivar with `only_for_super_admins` and the view checks it with `only_for_super_admins?`
-
-This way, renaming the instance variable or reimplementing that logic is less work and less risk.
-
 
 ---
 ### RSpec/testing
