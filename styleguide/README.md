@@ -98,6 +98,9 @@ Do `->(x) { x * 2 }` and not `-> x { x * 2 }`.
 
 Mostly a stylistic choice. It's consistent with how we define regular methods. Also, stabby lambdas want something to stab!
 
+#### Prefer `select` to `find_all`.
+
+A stylistic choice.
 
 #### No empty lines when indentation level changes.
 
