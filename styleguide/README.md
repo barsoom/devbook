@@ -236,7 +236,7 @@ when possible. It's shorter and avoids superclass mismatch issues.
 
 Beware of [constant lookup issues](http://cirw.in/blog/constant-lookup.html), though. Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
 
-### Add commas to the end of lists
+### Add commas to the end of multiline lists and hashes
 
 Do:
 
@@ -253,6 +253,16 @@ hash = {
 ```
 
 The trailing commas mean you can move lines around without accidentally introducing syntax errors. It also makes for cleaner diffs and won't unnecessarily shift the `git blame` of the previous line.
+
+Don't do this within one-liner lists or hashes, though, as it doesn't have any of the above benefits. So, do:
+
+```ruby
+{
+  list: [
+    { one_liner: [ :hash, :and, :array ] },
+  ],
+}
+```
 
 ### Whitespace in arrays and hashes
 
