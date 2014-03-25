@@ -304,9 +304,9 @@ There's a trade-off between keeping the model API small and keeping its internal
 
 #### Explicitly declare `null:` for every column in migrations.
 
-If a column shouldn't be empty, make it "NOT NULL" in the DB in the interests of data integrity.
+If a column shouldn't be empty, make it "NOT NULL" (`null: false` in migrations) in the DB in the interests of data integrity.
 
-To make sure we remember, we always declare `null:` for every column, even if it's `null: true`.
+Even when the column may be empty, explicitly declare `null: true` in migrations to force yourself to make an explicit decision, and to show code reviewers that you did so.
 
 
 ---
