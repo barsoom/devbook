@@ -201,6 +201,33 @@ It *is* acceptable to define *unused* local variables as a refactoring step towa
 method_with_too_many_arguments(name = "Foo", company = "Bar", age = 42, do_the_thing = false)
 ```
 
+### Prefer `unless x` to `if !x` for simple expressions.
+
+Do:
+
+``` ruby
+unless complex?
+  puts "Simple!"
+  # …
+end
+```
+
+Don't do:
+
+``` ruby
+if !complex?
+  puts "Simple!"
+  # …
+end
+```
+
+Rationale: it usually reads better and is idiomatic Ruby.
+
+However, never use `unless` together with an `elsif` or `else`, since that's hard to read.
+
+Avoid using `unless` with complex conditions (e.g. `unless x.blank? || x.old?`), since those are usually hard to understand.
+
+
 ### Don't define bang methods without good reason.
 
 When in doubt between `#foo` and `#foo!`, go with `#foo`.
