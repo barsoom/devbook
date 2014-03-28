@@ -18,7 +18,9 @@ The application before a deploy is the "old app". The application after a deploy
 
 ### Database
 
-**Warning:** Currently, Heroku deploys run migrations at a different time than we discuss below. We should update with more information about that.
+**NOTE:** We assume your deploy process runs and completes its migrations *before* starting the new app. This appears not to be true on Heroku, so make sure to account for that.
+
+TODO: Do more research into what Heroku does exactly.
 
 * A migration is only safe if the old app works with the new state of the DB.
 
