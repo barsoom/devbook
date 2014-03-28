@@ -176,22 +176,30 @@ If you do skip levels of indentation to align arguments, and you later rename so
 
 It should be noted that Vim's Ruby indentation rules disagree with us here; they do align on arguments.
 
-### Don't assign in a method argument.
+### Don't assign in a method argument if you use that variable later.
 
 Don't do:
 
-```ruby
+``` ruby
 Foo.should_receive(:bar).with(:baz).and_return(waz = mock)
+do_something_with(waz)
 ```
 
 Prefer:
 
-```ruby
+``` ruby
 waz = mock
 Foo.should_receive(:bar).with(:baz).and_return(waz)
+do_something_with(waz)
 ```
 
 Otherwise it's hard to see where the variable is defined.
+
+It *is* acceptable to define *unused* local variables as a refactoring step towards replacing positional arguments with keyword arguments:
+
+``` ruby
+method_with_too_many_arguments(name = "Foo", company = "Bar", age = 42, do_the_thing = false)
+```
 
 ### Don't define bang methods without good reason.
 
