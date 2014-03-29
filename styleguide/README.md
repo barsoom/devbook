@@ -212,8 +212,8 @@ method_with_too_many_arguments(name = "Foo", company = "Bar", age = 42, do_the_t
 Do:
 
 ``` ruby
-unless complex?
-  puts "Simple!"
+unless auction.catalog_number?
+  puts "No number!"
   # …
 end
 ```
@@ -221,13 +221,13 @@ end
 Don't do:
 
 ``` ruby
-if !complex?
-  puts "Simple!"
+if !auction.catalog_number?
+  puts "No number!"
   # …
 end
 ```
 
-Rationale: it usually reads better and is idiomatic Ruby.
+Rationale: it's the Ruby idiom.
 
 However, never use `unless` together with an `elsif` or `else`, since that's hard to read.
 
