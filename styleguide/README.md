@@ -187,14 +187,14 @@ It should be noted that Vim's Ruby indentation rules disagree with us here; they
 Don't do:
 
 ``` ruby
-Foo.should_receive(:bar).with(:baz).and_return(waz = mock)
+Foo.should_receive(:bar).with(:baz).and_return(waz = double)
 do_something_with(waz)
 ```
 
 Prefer:
 
 ``` ruby
-waz = mock
+waz = double
 Foo.should_receive(:bar).with(:baz).and_return(waz)
 do_something_with(waz)
 ```
