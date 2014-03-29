@@ -2,7 +2,7 @@
 
 # Styleguide
 
-We aim toward a consistent and document style so we don't waste time arguing over unimportant things with one another, or with ourselves.
+We aim toward a consistent style so we don't waste time arguing over unimportant things with one another, or with ourselves.
 
 We may have old code that conflicts with these rules, but we try to follow them for new code, and to update old code as we encounter it.
 
