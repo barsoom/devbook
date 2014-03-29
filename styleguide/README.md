@@ -23,7 +23,7 @@ You can demand that someone should follow a rule in this styleguide until it has
 
 #### Follow idioms.
 
-As a general rule, we should follow the idioms of a language, even if they're different from another language we've more used to.
+As a general rule, we should follow the idioms of a language, even if they're different from another language we're more used to.
 
 The idioms can often be derived from documentation (e.g. CoffeeScript, Slim) or some dominant library (e.g. jQuery for JS).
 
