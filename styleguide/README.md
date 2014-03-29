@@ -246,11 +246,11 @@ Further reading: ["Bang methods; or, Danger, Will Rubyist!" by David Black](http
 
 Prefer `"this"` to `'this'`.
 
-Single-quoted strings [aren't faster](http://stackoverflow.com/questions/1836467/is-there-a-performance-gain-in-using-single-quotes-vs-double-quotes-in-ruby). Double quotes means you don't need to change them if you add interpolation.
+Single-quoted strings [aren't faster](http://stackoverflow.com/questions/1836467/is-there-a-performance-gain-in-using-single-quotes-vs-double-quotes-in-ruby). Double quotes means you don't need to change them if you add interpolation or escape sequences.
 
 But don't escape quotes inside a string if you don't need to. Change the quote style instead: `'like "this"'` or `%{'like' "this"}`.
 
-In contexts (e.g. `Gemfile`) where single quotes are conventional, respect that convention.
+In contexts (specifically, in `Gemfile`) where single quotes are conventional, respect that convention.
 
 ### Use strings for complex i18n keys.
 
