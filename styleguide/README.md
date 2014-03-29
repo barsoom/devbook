@@ -83,13 +83,11 @@ If you must use JavaScript, some best practices to keep in mind:
 ---
 ### CoffeeScript
 
-Follow CS/JS conventions when they differ from Ruby conventions, unless you have very good practical reasons.
+[Follow idioms](#follow-idioms); the style of [their documentation examples](http://coffeescript.org/) is canon.
 
-When in doubt about CS conventions, the style of [their examples](http://coffeescript.org/) is canon.
+Some idioms:
 
-Some specific examples:
-
-* Use lowerCamelCase for names of variables and functions
+* Use `lowerCamelCase` for names of variables and functions
 * Prefer `if foo.length` to `if foo.length > 0`
 
 
