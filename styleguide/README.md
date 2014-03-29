@@ -320,7 +320,7 @@ It tends to cause confusing behavior.
 
 Do `scope :cool, -> { where(cool: true) }` and not `scope :cool, where(cool: true)`.
 
-The old style will be deprecated in Rails 4. The new style helps avoid issues where you need a lambda but forget.
+The old style is deprecated in Rails 4 and removed in 4.1. The new style helps avoid issues where you need a lambda but forget.
 
 There are some tricky bugs waiting to happen if you don't use lambdas everywhere, like:
 
