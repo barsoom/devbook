@@ -21,6 +21,14 @@ You can demand that someone should follow a rule in this styleguide until it has
 ---
 ### General
 
+#### Follow idioms.
+
+As a general rule, we should follow the idioms of a language, even if they're different from another language we've more used to.
+
+The idioms can often be derived from documentation (e.g. CoffeeScript, Slim) or some dominant library (e.g. jQuery for JS).
+
+If we have good reason to deviate from the idioms, we should [put that down in the styleguide](#how-to-change-this-styleguide).
+
 #### Avoid trailing whitespace.
 
 It's good practice as a developer to show invisible characters, since they can be significant. But when you do, trailing whitespace left by others can be annoying.
