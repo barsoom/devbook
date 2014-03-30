@@ -231,7 +231,7 @@ Rationale: it's the Ruby idiom.
 
 However, never use `unless` together with an `elsif` or `else`, since that's hard to read.
 
-Avoid using `unless` with complex conditions (e.g. `unless x.blank? || x.old?`), since those are usually hard to understand.
+Avoid using `unless` with complex conditions (e.g. `unless x.blank? || x.old?`) or negation (`unless !x.old?`), since those are usually hard to understand.
 
 
 ### Don't define bang methods without good reason.
