@@ -28,3 +28,7 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Front-end code has been verified in browsers (for the general public: IE8+, latest Firefox, Chrome, Safari)
 * The support team has been informed about it and tried using it
 * The FAQ or equivalent has been changed (if applicable)
+
+## What's *not* part of the definition of done?
+
+* Having addressed all code review comments (since we review after the fact and don't want to block on review)
