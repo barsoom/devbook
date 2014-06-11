@@ -122,9 +122,9 @@ They may communicate back to their caller by return value or callbacks on a pass
 
 We name them `VerbifyNoun` and use `.run` for a method name if we can't come up with anything better.
 
-### `app/view_helpers/`
+### `app/view_models/`
 
-For object-oriented helpers.
+For view-layer models.
 
 Unlike presenters, these don't wrap a single model.
 
