@@ -17,7 +17,7 @@ If anyone in the team wants to add, change or remove something, they make a pull
 
 We discuss in the comments and decide by consensus. Feel free to use emoji inspired by [the Crisp consensus model](http://blog.crisp.se/2014/03/27/peterantman/crisp-consensus-model-2-1):
 
-:thumbsup: I support this.
+:thumbsup: Yes please! I support this.
 
 :thumbsdown: No way! I veto this.
 
