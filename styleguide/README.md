@@ -17,13 +17,15 @@ If anyone in the team wants to add, change or remove something, they make a pull
 
 We discuss in the comments and decide by consensus. Feel free to use emoji inspired by [the Crisp consensus model](http://blog.crisp.se/2014/03/27/peterantman/crisp-consensus-model-2-1):
 
-:thumbsup: Yes please! I support this.
+:thumbsup: Yes please! I actively support this.
 
-:thumbsdown: No way! I veto this.
+:thumbsdown: Veto! I feel that I have all the facts needed to say no.
 
-:punch: I forfeit my vote. I neither support nor oppose this change.
+:punch: I stand aside. I neither support nor oppose this.
 
-:point_right: I dunno. Let's discuss further.
+:point_right: Let's discuss further. We don't have all the facts yet.
+
+We may go several rounds. If we get all :thumbsup: or :punch: we have consensus.
 
 
 ---
