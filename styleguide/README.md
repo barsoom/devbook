@@ -93,7 +93,7 @@ It's idiomatic.
 
 It's idiomatic.
 
-#### Use a `_` prefix for "private" methods.
+#### Use non-property functions at end of class for "private methods".
 
 Do
 
@@ -102,17 +102,19 @@ class Greeter
   constructor: (@name) ->
 
   greet: ->
-    "#{@_greeting()}, #{@name}!"
+    "#{greeting()}, #{@name}!"
 
-  _greeting: ->
+  # private
+
+  greeting = ->
     "Hello"
 ```
 
-if the `_greeting` method is not considered public.
+if the `greeting` method is meant to be internal.
 
-This does not prevent access, but it does suggest intent.
+This prevents access from the outside, unlike some other solutions (e.g. a `_greeting` naming convention).
 
-JavaScript has other patterns for truly private functions, but they do not look good in CoffeeScript.
+The `# private` comment makes it more visually clear where the public API ends. And it looks like Ruby!
 
 
 ---
