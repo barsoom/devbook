@@ -83,12 +83,15 @@ If you must use JavaScript, some best practices to keep in mind:
 ---
 ### CoffeeScript
 
-[Follow idioms](#follow-idioms); the style of [their documentation examples](http://coffeescript.org/) is canon.
+Do [follow idioms](#follow-idioms). The style of [their documentation examples](http://coffeescript.org/) is canon.
 
-Some idioms:
+#### Use `lowerCamelCase` for names of variables and functions.
 
-* Use `lowerCamelCase` for names of variables and functions
-* Prefer `if foo.length` to `if foo.length > 0`
+It's idiomatic.
+
+#### Prefer `if foo.length` to `if foo.length > 0` when checking for non-emptiness.
+
+It's idiomatic.
 
 
 ---
