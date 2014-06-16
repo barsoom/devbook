@@ -93,6 +93,27 @@ It's idiomatic.
 
 It's idiomatic.
 
+#### Use a `_` prefix for "private" methods.
+
+Do
+
+``` coffeescript
+class Greeter
+  constructor: (@name) ->
+
+  greet: ->
+    "#{@_greeting()}, #{@name}!"
+
+  _greeting: ->
+    "Hello"
+```
+
+if the `_greeting` method is not considered public.
+
+This does not prevent access, but it does suggest intent.
+
+JavaScript has other patterns for truly private functions, but they do not look good in CoffeeScript.
+
 
 ---
 ### Ruby
