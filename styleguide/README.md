@@ -464,3 +464,23 @@ end
 ```
 
 Further reading: ["How to make negative assertions in tests"](http://thepugautomatic.com/2013/04/negative-assertions/)
+
+#### Use `private` for help methods.
+
+Do:
+
+``` ruby
+describe "#something" do
+  it "works" do
+    expect(my_helper(foo)).to eq 123
+  end
+
+  private
+
+  def my_helper(value)
+    value + 1
+  end
+end
+```
+
+The `private` line creates a visually clear separation.
