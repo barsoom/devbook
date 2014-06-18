@@ -411,6 +411,7 @@ Or if you do `Time.mktime(1999, 12, 31, 12, 0)` that will be noon EST but not no
 We should write "time zone safe" code when we can:
   * use `where("BETWEEN ? AND ?", fooed_at.beginning_of_day, fooed_at.end_of_day)` instead of `DATE(fooed_at)`
   * use `Time.zone.mktime` instead of `Time.mktime`
+  * other similar cases (update this section if you encounter them)
 
 Sometimes it doesn't really matter and isn't worth the effort. In those cases, say so in a comment so others know it's not an oversight:
 
