@@ -397,6 +397,25 @@ end
 
 Prefer `render "foo", bar: "baz"` to `render partial: "foo", locals: { bar: "baz" }`.
 
+#### Either write time zone safe code or document that it's unsafe.
+
+These examples assume that:
+  * the database stores UTC times
+  * the server is in another zone, say EST
+  * Rails is configured to use another zone, say CET
+
+If you e.g. do `DATE(fooed_at)` in your SQL, that will be the date of the UTC timestamp, and not CET.
+
+Or if you do `Time.mktime(1999, 12, 31, 12, 0)` that will be noon EST but not noon CET.
+
+We should write "time zone safe" code when we can:
+  * use `where("BETWEEN ? AND ?", fooed_at.beginning_of_day, fooed_at.end_of_day)` instead of `DATE(fooed_at)`
+  * use `Time.zone.mktime` instead of `Time.mktime`
+
+Sometimes it doesn't really matter and isn't worth the effort. In those cases, say so in a comment so others know it's not an oversight:
+
+`# This code isn't time zone safe. Not important here.`
+
 
 ---
 ### RSpec/testing
