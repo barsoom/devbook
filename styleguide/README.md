@@ -415,7 +415,7 @@ We should write "time zone safe" code when we can:
 
 Sometimes it doesn't really matter and isn't worth the effort. In those cases, say so in a comment so others know it's not an oversight:
 
-`# This code isn't time zone safe. Not important here.`
+`# This code isn't time zone safe, but that doesn't matter.`
 
 
 ---
