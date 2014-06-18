@@ -9,7 +9,7 @@ We try not to waste space in this guide repeating widely accepted idioms (e.g. 2
 
 ## How and when to follow this styleguide
 
-We may have old code that conflicts with these rules, but we try to follow them for new code, and to update old code as we encounter it.
+We may have old code that conflicts with these rules, but we try to follow them for new code, and to update old code as we encounter it (preferably in a separate commit).
 
 If a styleguide violation is pointed out in review, follow it and don't debate it there – make a pull request with your proposed styleguide change.
 
