@@ -95,7 +95,7 @@ It's idiomatic.
 
 #### Use a `_` prefix or non-property functions at end of class for "private methods".
 
-If the `greeting` method below is meant to be internal, either use functions with a `_` prefix:
+If the `greeting` method below is meant to be internal, either use methods with a `_` prefix:
 
 ``` coffeescript
 class Greeter
