@@ -124,9 +124,9 @@ class Greeter
 ```
 
 
-`_` functions suggest private intent but they *can* be called from outside.
+`_` methods functions suggest private intent but they *can* be called from outside, and `@_` looks a bit messy.
 
-Non-property methods look a little cleaner without the `@_` and are "actually" private (cannot be called from outside), but they don't inherit and `this` isn't bound to the instance. The `# private` comment makes it more visually clear where the public API ends.
+Non-property methods look a little cleaner and are "actually" private (cannot be called from outside), but they don't inherit and `this` isn't bound to the instance. The `# private` comment makes it more visually clear where the public API ends.
 
 Use your own judgment to choose between the options.
 
