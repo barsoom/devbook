@@ -93,9 +93,22 @@ It's idiomatic.
 
 It's idiomatic.
 
-#### Use non-property functions at end of class for "private methods".
+#### Use a `_` prefix or non-property functions at end of class for "private methods".
 
-Do
+If the `greeting` method below is meant to be internal, either use functions with a `_` prefix:
+
+``` coffeescript
+class Greeter
+  constructor: (@name) ->
+
+  greet: ->
+    "#{@_greeting()}, #{@name}!"
+
+  _greeting: ->
+    "Hello"
+```
+
+or non-property functions like:
 
 ``` coffeescript
 class Greeter
@@ -110,11 +123,12 @@ class Greeter
     "Hello"
 ```
 
-if the `greeting` method is meant to be internal.
 
-This prevents access from the outside, unlike some other solutions (e.g. a `_greeting` naming convention).
+`_` functions suggest private intent but they *can* be called from outside.
 
-The `# private` comment makes it more visually clear where the public API ends. And it looks like Ruby!
+Non-property methods look a little cleaner without the `@_` and are "actually" private (cannot be called from outside), but they don't inherit and `this` isn't bound to the instance. The `# private` comment makes it more visually clear where the public API ends.
+
+Use your own judgment to choose between the options.
 
 
 ---
