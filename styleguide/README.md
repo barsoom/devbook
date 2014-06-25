@@ -21,7 +21,7 @@ We discuss in the comments and decide by consensus. Feel free to use emoji inspi
 
 :thumbsdown: Veto! I feel that I have all the facts needed to say no.
 
-:punch: I stand aside. I neither support nor oppose this.
+:fist: I stand aside. I neither support nor oppose this.
 
 :point_right: Let's discuss further. We don't have all the facts yet.
 
