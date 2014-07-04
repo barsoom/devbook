@@ -274,7 +274,9 @@ end
 
 to
 
-`class X::Y`
+``` ruby
+class X::Y
+```
 
 but use the latter if you must.
 
