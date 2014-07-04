@@ -261,13 +261,9 @@ Do `t("this.here")` and not `t(:"this.here")`.
 
 Where a simple unquoted symbol will do, they're fine: `t(:this)`
 
-### Use the short `class X::Y` form for nested classes/modules.
+### Prefer `class X; class Y` for nested classes/modules.
 
-We prefer
-
-`class X::Y`
-
-to
+Prefer
 
 ``` ruby
 class X
@@ -276,9 +272,18 @@ class X
 end
 ```
 
-when possible. It's shorter and avoids superclass mismatch issues.
+to
 
-Beware of [constant lookup issues](http://cirw.in/blog/constant-lookup.html), though. Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
+`class X::Y`
+
+but use the latter if you must.
+
+The first version avoids [constant lookup issues](http://cirw.in/blog/constant-lookup.html). Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
+
+Also, it may mean not having to fake out the wrapping module in unit tests.
+
+But the latter version may sometimes be necessary to avoid superclass mismatch issues in some unit tests.
+
 
 ### Add commas to the end of multiline lists and hashes
 
