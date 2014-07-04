@@ -276,6 +276,7 @@ to
 
 ``` ruby
 class X::Y
+end
 ```
 
 but use the latter if you must.
