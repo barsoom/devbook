@@ -39,6 +39,13 @@ Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, 
 
 
 ---
+### Shell scripts
+
+#### Spell out command-line flags
+
+Prefer e.g. `grep --invert-match foo` to `grep -v foo` because it's easier to understand and to look up.
+
+---
 ### HTML
 
 #### Use hyphens in multiple-word variable names (CSS classes, ids, data attributes).
