@@ -6,11 +6,10 @@ We review all code commit-by-commit after the fact using [Remit](https://github.
 
 Committers and reviewers should read these guidelines to do it better.
 
-
-## As a committer
+## As a reviewer
 
 WiP… suggest additions by pull request.
 
-## As a reviewer
+## As a committer
 
 WiP… suggest additions by pull request.
