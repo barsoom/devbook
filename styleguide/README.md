@@ -477,3 +477,25 @@ end
 ```
 
 Further reading: ["How to make negative assertions in tests"](http://thepugautomatic.com/2013/04/negative-assertions/)
+
+### Say why a test is pending.
+
+Don't do:
+
+``` ruby
+it "foos" do
+  pending
+  expect(a).to eq b
+end
+```
+
+Instead do:
+
+``` ruby
+it "foos" do
+  pending "Waiting for the bar to baz"
+  expect(a).to eq b
+end
+```
+
+This communicates *why* it's pending so that others (or a later you) can tell, e.g. if it's abandoned.
