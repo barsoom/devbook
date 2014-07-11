@@ -22,7 +22,7 @@ It takes more time for the committer to open that file and fix the quote style f
 
 Fix it yourself or let it go.
 
-We still have a "right" way of doing things: do complain if someone intentionally changes from the "right" to the "wrong" quote style, and please clean it up if you see it.
+We still have a "right" way of doing things: do complain if someone intentionally changes from the "right" to the "wrong" style, and please clean it up if you see it. It's just not efficient to enforce this in commit-by-commit review.
 
 
 ### Don't mention harmless typos/grammar in internal docs or code comments.
