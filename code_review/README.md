@@ -18,7 +18,7 @@ Committers and reviewers should read these guidelines to do it better.
 
 For small, mostly unimportant stylistic matters like quote style and whitespace, don't point them out unless that person has said they want that feedback.
 
-It takes more time for the committer to open that file and fix the quote style from `'` to `"` than the value of a consistent codebase.
+It takes more time for the committer to open that project, find the file file and fix the quote style from `'` to `"` than it's worth.
 
 Fix it yourself or let it go.
 
@@ -29,7 +29,7 @@ We still have a "right" way of doing things: do complain if someone intentionall
 
 Runnable code and customer-facing copy should not have typos or grammar errors.
 
-But if someone makes a harmless typo or grammar error in internal docs or code comments, it probably takes more time to fix than it's worth.
+But if someone makes a harmless typo or grammar error in internal docs or code comments, it probably takes more time for them to open that project, find the file and fix it than it's worth.
 
 Fix it yourself or let it go.
 
