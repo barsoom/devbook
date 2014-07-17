@@ -311,6 +311,27 @@ Do `t("this.here")` and not `t(:"this.here")`.
 
 Where a simple unquoted symbol will do, they're fine: `t(:this)`
 
+### Put a marker in placeholder translations.
+
+If you must store unfinished translations, add an "[untranslated]" so it's obvious, and easy to search for.
+
+So do:
+
+``` yml
+de:
+  foo: "[untranslated] some English copy for now"
+```
+
+Not:
+
+``` yml
+de:
+  foo: "some English copy for now"
+```
+
+We chose "[untranslated]" because it's easy to search for and shouldn't be super confusing to end users if they see it.
+
+
 ### Use the short `class X::Y` form for nested classes/modules.
 
 We prefer
