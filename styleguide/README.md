@@ -340,6 +340,27 @@ Also, it may mean not having to fake out the wrapping module in unit tests.
 But the latter version may sometimes be necessary to avoid superclass mismatch issues in some unit tests.
 
 
+### Put a marker in placeholder translations.
+
+If you must store unfinished translations, add an "[untranslated]" so it's obvious, and easy to search for.
+
+So do:
+
+``` yml
+de:
+  foo: "[untranslated] some English copy for now"
+```
+
+Not:
+
+``` yml
+de:
+  foo: "some English copy for now"
+```
+
+We chose "[untranslated]" because it's easy to search for and shouldn't be super confusing to end users if they see it.
+
+
 ### Add commas to the end of multiline lists and hashes
 
 Do:
