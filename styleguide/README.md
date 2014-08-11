@@ -45,6 +45,13 @@ Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, 
 
 Prefer e.g. `grep --invert-match foo` to `grep -v foo` because it's easier to understand and to look up.
 
+If a flag is still unclear, consider documenting it:
+
+``` ruby
+# --insecure      Allow connections to SSL sites without certs (H)
+`curl --insecure https://example.com`
+```
+
 ---
 ### HTML
 
