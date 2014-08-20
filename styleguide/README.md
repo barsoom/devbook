@@ -393,6 +393,24 @@ Don't do this within one-liner lists or hashes, though, as it doesn't have any o
 
 Do `[ 1, 2, 3 ]` and `{ foo: 1, bar: 2 }` instead of `[1, 2, 3]` and `{foo: 1, bar: 2}` for increased readability.
 
+### Pass multiple arguments to `system()` when you can.
+
+Prefer
+
+``` ruby
+system("mkdir", "-p", dirname)
+```
+
+to
+
+``` ruby
+system("mkdir -p #{dirname}")
+```
+
+since the first version will escape the value correctly and not allow shell injection, whether malicious or just unintentional.
+
+E.g. if dirname contains a space, the second form will not do the right thing unless you wrap the dirname in quotes.
+
 ---
 ### Active Record
 
