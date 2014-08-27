@@ -54,6 +54,20 @@ Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, 
 
 
 ---
+### Shell scripts
+
+#### Spell out command-line flags
+
+Prefer e.g. `grep --invert-match foo` to `grep -v foo` because it's easier to understand and to look up.
+
+If a flag is still unclear, consider documenting it:
+
+``` ruby
+# --insecure      Allow connections to SSL sites without certs (H)
+`curl --insecure https://example.com`
+```
+
+---
 ### HTML
 
 #### Use hyphens in multiple-word variable names (CSS classes, ids, data attributes).
