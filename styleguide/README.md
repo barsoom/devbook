@@ -604,20 +604,20 @@ The `private` line creates a visually clear separation.
 
 ### Say why a test is pending.
 
+Do:
+
+``` ruby
+it "foos" do
+  pending "Waiting for the bar to baz"
+  expect(a).to eq b
+end
+```
+
 Don't do:
 
 ``` ruby
 it "foos" do
   pending
-  expect(a).to eq b
-end
-```
-
-Instead do:
-
-``` ruby
-it "foos" do
-  pending "Waiting for the bar to baz"
   expect(a).to eq b
 end
 ```
