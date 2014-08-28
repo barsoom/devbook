@@ -407,6 +407,16 @@ Don't do this within one-liner lists or hashes, though, as it doesn't have any o
 
 Do `[ 1, 2, 3 ]` and `{ foo: 1, bar: 2 }` instead of `[1, 2, 3]` and `{foo: 1, bar: 2}` for increased readability.
 
+
+### Explain why you lock down a Gemfile version or fork.
+
+If you lock a gem to a specific version, or specify a non-standard GitHub repository or branch, you should explain why.
+
+This helps the person who wants to upgrade that dependency later. Did the standard version have a regression? Does the fork have some fix we need?
+
+This is not necessary for core dependencies where the reason is obvious, e.g. locking down the Rails version.
+
+
 ---
 ### Active Record
 
