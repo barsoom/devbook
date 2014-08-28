@@ -410,11 +410,18 @@ Do `[ 1, 2, 3 ]` and `{ foo: 1, bar: 2 }` instead of `[1, 2, 3]` and `{foo: 1, b
 
 ### Explain why you lock down a Gemfile version or fork.
 
-If you lock a gem to a specific version, or specify a non-standard GitHub repository or branch, you should explain why.
+If you lock a gem to a specific version, or specify a non-standard GitHub repository or branch, you should explain why in a comment.
 
 This helps the person who wants to upgrade that dependency later. Did the standard version have a regression? Does the fork have some fix we need?
 
 This is not necessary for core dependencies where the reason is obvious, e.g. locking down the Rails version.
+
+Example:
+
+``` ruby
+# 1.2.4 is not compatible with 'apricots'.
+gem 'bananas', '1.2.3'
+```
 
 
 ---
