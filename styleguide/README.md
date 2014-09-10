@@ -251,6 +251,37 @@ If you do skip levels of indentation to align arguments, and you later rename so
 
 It should be noted that Vim's Ruby indentation rules disagree with us here; they do align on arguments.
 
+
+### Use "Weirich style" for blocks.
+
+Use curly braces (`{/}`) when we use the block for its return value (and for one-liners).
+
+Use `do/end` when we use the block for its side effects.
+
+```
+# Used for value.
+names = people.map { |person|
+  person.name
+}.sort
+
+# Used for side effect.
+people.each do |person|
+  puts person.name
+end
+
+# One-liner.
+people.each { |person| puts person.name }
+```
+
+How do you know if we use the block for its return value? If we chain on another method call (`foos.map { … }.sort`) or assign the result (`bars = foos.map { … }`) we use the return value.
+
+Or you could picture adding `nil` as the last line of the block. If that breaks your code, you're relying on the return value.
+
+Rationale: It adds more information than the "always `do/end` for multiple lines" convention. It also looks better with chained calls.
+
+We still use braces for one-liners, because we think `people.each do |person| puts person.name end` looks bad, and you also want to keep one-liners short.
+
+
 ### Don't assign in a method argument if you use that variable later.
 
 Don't do:
