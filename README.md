@@ -19,3 +19,4 @@ For reference and discussion.
 ## Checklists
 
 * [Arranging a meetup](/arranging_a_meetup)
+* [Holding a demo](/holding_a_demo
