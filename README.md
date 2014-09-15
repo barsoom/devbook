@@ -16,6 +16,6 @@ For reference and discussion.
 * [Rails conventions](/rails_conventions)
 * [Libraries](/libs)
 
-## Misc
+## Checklists
 
 * [Arranging a meetup](/arranging_a_meetup)
