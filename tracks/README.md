@@ -26,8 +26,8 @@ We'll deviate from this if we need all hands on deck for some urgent deadline or
 
 We want to have only these two ways of getting the dev team to do something for you:
 
-* If you know it to be big: bring it to the weekly stakeholder planning meeting.
-* Otherwise: report it to the hat (e.g. by our `!hat` chat command, or in person).
+1. If you know it to be big: bring it to the weekly stakeholder planning meeting.
+2. Otherwise: report it to the hat (e.g. by our `!hat` chat command, or in person).
 
 During the weekly stakeholder planning meeting, stakeholders (plus a developer representative) decide on what to prioritize.
 
