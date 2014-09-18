@@ -31,6 +31,11 @@ We want to have only these two ways of getting the dev team to do something for 
 
 During the weekly stakeholder planning meeting, stakeholders (plus a developer representative) decide on what to prioritize.
 
+The developer representative:
+
+* gives a technical perspective (e.g. estimates)
+* brings up any tasks that the hat deferred as "to plan" (see below)
+
 That's followed by a weekly developer planning meeting where the developers discuss technical details and planning.
 
 
