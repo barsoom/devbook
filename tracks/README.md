@@ -15,9 +15,9 @@ We'll deviate from this if we need all hands on deck for some urgent deadline or
 
 ## Definitions
 
-* A "small" task is any task judged by the hat to be faster to just do, than to take the overhead of prioritizing it during planning. (Typically less than half a day of work or so.)
-* A "big" task is any task judged to be worth that overhead. (Typically more than half a day of work or so.)
-* An "urgent" task is any unplanned-for task that must be done quite soon. To e.g. fix an incorrect state, a major broken window or because a customer is waiting for an answer.
+* A **small task** is any task judged by the hat to be faster to just do, than to take the overhead of prioritizing it during planning. (Typically less than half a day of work or so.)
+* A **big task** is any task judged to be worth that overhead. (Typically more than half a day of work or so.)
+* An **urgent task** is any unplanned-for task that must be done quite soon. To e.g. fix an incorrect state, a major broken window or because a customer is waiting for an answer.
 
 
 ## Making requests
