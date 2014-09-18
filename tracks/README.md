@@ -36,6 +36,8 @@ The developer representative:
 * gives a technical perspective (e.g. estimates)
 * brings up any tasks that the hat deferred as "to plan" (see below)
 
+Maintenance tasks (big or small) desired by developers count as any other request and follow the same process.
+
 
 ## The hat
 
