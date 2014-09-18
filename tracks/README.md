@@ -53,8 +53,7 @@ The hat triages requests and routes them where they belong:
 
 * Put in the small tasks wishlist, if it's a non-urgent small task.
 
-* Put in a "to plan" column on the hat Trello board
-  - if the task is big
+* Put in a "to plan" column on the hat Trello board, if the task is big.
 
 The hat lets the requester know where their request ended up.
 
