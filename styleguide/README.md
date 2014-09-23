@@ -514,7 +514,7 @@ Sometimes it doesn't really matter and isn't worth the effort. In those cases, s
 
 ##### Use `require_dependency` to require app code.
 
-If app code needs to require other app code, use `require_dependency "foo"`, not `require "foo"`.
+If app code needs to require other app code (perhaps for Rails-less unit tests), use `require_dependency "foo"`, not `require "foo"`.
 
 `require_dependency` plays nice with Rails development auto-reloading of classes.
 
