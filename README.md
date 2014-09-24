@@ -21,3 +21,4 @@ For reference and discussion.
 
 * [Arranging a meetup](/arranging_a_meetup)
 * [Holding a demo](/holding_a_demo)
+* [Starting a project](/starting_a_project)
