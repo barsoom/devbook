@@ -4,7 +4,7 @@
 
 NOTE: Highly experimental!
 
-In an attempt to spend our time wisely, our team (of 6, at the time of writing) wants to work in tracks:
+In an attempt to spend our time wisely, our team (of six, at the time of writing) wants to work in tracks:
 
 * The **hat track** is typically one person, "the hat".
 * The **small tasks track** is typically one person.
