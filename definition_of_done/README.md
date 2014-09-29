@@ -17,6 +17,7 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Optimized enough (not slow when run with realistic amounts of data)
 * Secure enough (consider the security aspects)
 * Localized
+* Copy has correct spelling, grammar and pluralization
 * Documented if necessary (others can use it)
 * Stakeholders have approved it
 * In production (deployed, feature-toggled on, rolled out to everyone)
