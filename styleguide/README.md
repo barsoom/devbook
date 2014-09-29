@@ -560,6 +560,13 @@ Sometimes it doesn't really matter and isn't worth the effort. In those cases, s
 
 `# It is not important that this is time zone safe.`
 
+##### Use `require_dependency` to require app code.
+
+If non-test code needs to require code that is in Rails' autoload path (e.g. code in `app` or `lib`; perhaps for Rails-less unit tests), use `require_dependency "foo"`, not `require "foo"`.
+
+`require_dependency` plays nice with Rails development auto-reloading of classes.
+
+`require` does not, so if you use it, changes to the required class may not be picked up in dev unless you reload the app server.
 
 ---
 ### RSpec/testing
