@@ -13,9 +13,11 @@ For reference and discussion.
 ## Conventions
 
 * [How we (want to) work](/how_we_work)
+* [Tracks](/tracks)
 * [Rails conventions](/rails_conventions)
 * [Libraries](/libs)
 
-## Misc
+## Checklists
 
 * [Arranging a meetup](/arranging_a_meetup)
+* [Holding a demo](/holding_a_demo)

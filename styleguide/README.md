@@ -10,6 +10,13 @@ We prefer to commit style changes before changes in functionality so that review
 
 We try not to waste space in this guide repeating widely accepted idioms (e.g. 2 space indent in Ruby), but only things we've had trouble with or been undecided on.
 
+
+## How and when to follow this styleguide
+
+We may have old code that conflicts with these rules, but we try to follow them for new code, and to update old code as we encounter it (preferably in a separate commit).
+
+We prefer to commit style changes before changes in functionality so that reviewers only have to comment on things we miss, not things we've fixed in a later commit.
+
 If a styleguide violation is pointed out in review, follow it and don't debate it there – make a pull request with your proposed styleguide change.
 
 
@@ -23,11 +30,11 @@ We discuss in the comments and decide by consensus. Feel free to use emoji inspi
 
 :thumbsdown: Veto! I feel that I have all the facts needed to say no.
 
-:punch: I stand aside. I neither support nor oppose this.
+:fist: I stand aside. I neither support nor oppose this.
 
 :point_right: Let's discuss further. We don't have all the facts yet.
 
-We may go several rounds. If we get all :thumbsup: or :punch: we have consensus.
+We may go several rounds. If we get all :thumbsup: or :fist: we have consensus.
 
 
 ---
@@ -49,6 +56,20 @@ So show it, and strip it.
 
 Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
 
+
+---
+### Shell scripts
+
+#### Spell out command-line flags
+
+Prefer e.g. `grep --invert-match foo` to `grep -v foo` because it's easier to understand and to look up.
+
+If a flag is still unclear, consider documenting it:
+
+``` ruby
+# --insecure      Allow connections to SSL sites without certs (H)
+`curl --insecure https://example.com`
+```
 
 ---
 ### HTML
@@ -104,6 +125,43 @@ It's idiomatic.
 #### Prefer `if foo.length` to `if foo.length > 0` when checking for non-emptiness.
 
 It's idiomatic.
+
+#### Use a `_` prefix or non-property functions at end of class for "private methods".
+
+If the `greeting` method below is meant to be internal, either use methods with a `_` prefix:
+
+``` coffeescript
+class Greeter
+  constructor: (@name) ->
+
+  greet: ->
+    "#{@_greeting()}, #{@name}!"
+
+  _greeting: ->
+    "Hello"
+```
+
+or non-property functions like:
+
+``` coffeescript
+class Greeter
+  constructor: (@name) ->
+
+  greet: ->
+    "#{greeting()}, #{@name}!"
+
+  # private
+
+  greeting = ->
+    "Hello"
+```
+
+
+`_` methods functions suggest private intent but they *can* be called from outside, and `@_` looks a bit messy.
+
+Non-property methods look a little cleaner and are "actually" private (cannot be called from outside), but they don't inherit and `this` isn't bound to the instance. The `# private` comment makes it more visually clear where the public API ends.
+
+Use your own judgment to choose between the options.
 
 
 ---
@@ -197,6 +255,37 @@ If you do skip levels of indentation to align arguments, and you later rename so
 
 It should be noted that Vim's Ruby indentation rules disagree with us here; they do align on arguments.
 
+
+### Use "Weirich style" for blocks.
+
+Use curly braces (`{/}`) when we use the block for its return value (and for one-liners).
+
+Use `do/end` when we use the block for its side effects.
+
+```
+# Used for value.
+names = people.map { |person|
+  person.name
+}.sort
+
+# Used for side effect.
+people.each do |person|
+  puts person.name
+end
+
+# One-liner.
+people.each { |person| puts person.name }
+```
+
+How do you know if we use the block for its return value? If we chain on another method call (`foos.map { … }.sort`) or assign the result (`bars = foos.map { … }`) we use the return value.
+
+Or you could picture adding `nil` as the last line of the block. If that breaks your code, you're relying on the return value.
+
+Rationale: It adds more information than the "always `do/end` for multiple lines" convention. It also looks better with chained calls.
+
+We still use braces for one-liners, because we think `people.each do |person| puts person.name end` looks bad, and you also want to keep one-liners short.
+
+
 ### Don't assign in a method argument if you use that variable later.
 
 Don't do:
@@ -273,13 +362,9 @@ Do `t("this.here")` and not `t(:"this.here")`.
 
 Where a simple unquoted symbol will do, they're fine: `t(:this)`
 
-### Use the short `class X::Y` form for nested classes/modules.
+### Prefer `class X; class Y` for nested classes/modules.
 
-We prefer
-
-`class X::Y`
-
-to
+Prefer
 
 ``` ruby
 class X
@@ -288,9 +373,42 @@ class X
 end
 ```
 
-when possible. It's shorter and avoids superclass mismatch issues.
+to
 
-Beware of [constant lookup issues](http://cirw.in/blog/constant-lookup.html), though. Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
+``` ruby
+class X::Y
+end
+```
+
+but use the latter if you must.
+
+The first version avoids [constant lookup issues](http://cirw.in/blog/constant-lookup.html). Namely: if you type `Z` inside `X::Y`, you may find `X::Y::Z` or `::Z` but not `X::Z`.
+
+Also, it may mean not having to fake out the wrapping module in unit tests.
+
+But the latter version may sometimes be necessary to avoid superclass mismatch issues in some unit tests.
+
+
+### Put a marker in placeholder translations.
+
+If you must store unfinished translations, add an "[untranslated]" so it's obvious, and easy to search for.
+
+So do:
+
+``` yml
+de:
+  foo: "[untranslated] some English copy for now"
+```
+
+Not:
+
+``` yml
+de:
+  foo: "some English copy for now"
+```
+
+We chose "[untranslated]" because it's easy to search for and shouldn't be super confusing to end users if they see it.
+
 
 ### Add commas to the end of multiline lists and hashes
 
@@ -323,6 +441,23 @@ Don't do this within one-liner lists or hashes, though, as it doesn't have any o
 ### Whitespace in arrays and hashes
 
 Do `[ 1, 2, 3 ]` and `{ foo: 1, bar: 2 }` instead of `[1, 2, 3]` and `{foo: 1, bar: 2}` for increased readability.
+
+
+### Explain why you lock down a Gemfile version or fork.
+
+If you lock a gem to a specific version, or specify a non-standard GitHub repository or branch, you should explain why in a comment.
+
+This helps the person who wants to upgrade that dependency later. Did the standard version have a regression? Does the fork have some fix we need?
+
+This is not necessary for core dependencies where the reason is obvious, e.g. locking down the Rails version.
+
+Example:
+
+``` ruby
+# 1.2.4 is not compatible with 'apricots'.
+gem 'bananas', '1.2.3'
+```
+
 
 ---
 ### Active Record
@@ -409,6 +544,33 @@ end
 
 Prefer `render "foo", bar: "baz"` to `render partial: "foo", locals: { bar: "baz" }`.
 
+#### Either write time zone safe code or document that it's unsafe.
+
+These examples assume that:
+  * the database stores UTC times
+  * the server is in another zone, say EST
+  * Rails is configured to use another zone, say CET
+
+If you e.g. do `DATE(fooed_at)` in your SQL, that will be the date of the UTC timestamp, and not CET.
+
+Or if you do `Time.mktime(1999, 12, 31, 12, 0)` that will be noon EST but not noon CET.
+
+We should write "time zone safe" code when we can:
+  * use `where("BETWEEN ? AND ?", fooed_at.beginning_of_day, fooed_at.end_of_day)` instead of `DATE(fooed_at)`
+  * use `Time.zone.mktime` instead of `Time.mktime`
+  * other similar cases (update this section if you encounter them)
+
+Sometimes it doesn't really matter and isn't worth the effort. In those cases, say so in a comment so others know it's not an oversight:
+
+`# It is not important that this is time zone safe.`
+
+##### Use `require_dependency` to require app code.
+
+If non-test code needs to require code that is in Rails' autoload path (e.g. code in `app` or `lib`; perhaps for Rails-less unit tests), use `require_dependency "foo"`, not `require "foo"`.
+
+`require_dependency` plays nice with Rails development auto-reloading of classes.
+
+`require` does not, so if you use it, changes to the required class may not be picked up in dev unless you reload the app server.
 
 ---
 ### RSpec/testing
@@ -476,3 +638,47 @@ end
 ```
 
 Further reading: ["How to make negative assertions in tests"](http://thepugautomatic.com/2013/04/negative-assertions/)
+
+
+#### Use `private` for help methods.
+
+Do:
+
+``` ruby
+describe "#something" do
+  it "works" do
+    expect(my_helper(foo)).to eq 123
+  end
+
+  private
+
+  def my_helper(value)
+    value + 1
+  end
+end
+```
+
+The `private` line creates a visually clear separation.
+
+
+### Say why a test is pending.
+
+Do:
+
+``` ruby
+it "foos" do
+  pending "Waiting for the bar to baz"
+  expect(a).to eq b
+end
+```
+
+Don't do:
+
+``` ruby
+it "foos" do
+  pending
+  expect(a).to eq b
+end
+```
+
+This communicates *why* it's pending so that others (or a later you) can tell, e.g. if it's abandoned.
