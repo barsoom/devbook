@@ -27,6 +27,7 @@ A basic checklist for starting a new project.
 
 * Set up a development environment.
 * Get a walking skeleton going early for shared understanding and get basic technical issues out of the way.
+  - Look at the [libraries](https://github.com/barsoom/devbook/tree/master/libs) list.
 * Set up CI.
 * Set up deploy to staging and production.
 * Set up exception monitoring.
