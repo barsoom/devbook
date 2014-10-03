@@ -41,7 +41,7 @@ Do point out if documentation is hard to understand or misleading, though, wheth
 
 ### If you're asked for clarification, clarify in the *source*.
 
-If a reviewer is uncertain about what a piece of documentation or a snippet of code means, don't just reply in the review tool; try to clarify the documentation or code itself.
+If a reviewer asks what a piece of documentation or a snippet of code means, don't just reply in the review tool; try to clarify the documentation or code itself.
 
 A reply in the review tool is hard to dig up later, if you even know to try.
 
