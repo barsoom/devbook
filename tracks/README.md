@@ -55,7 +55,7 @@ The hat triages requests and routes them where they belong:
 
 * Put in the small tasks wishlist, if it's a non-urgent small task.
 
-* Put in a "to plan" column on the hat Trello board, if the task is big.
+* Put in a "bring to planning" column on the Hat Trello board, if the task is big.
 
 The hat lets the requester know where their request ended up.
 
@@ -67,5 +67,7 @@ If the hat has nothing to do, they temporarily join the small tasks track.
 ## The small tasks team and the small tasks wishlist
 
 The small tasks team works on things in the small tasks wishlist.
+
+If a task turns out not to be small (as defined above), they put it in the "bring to planning" list on the Hat Trello board.
 
 Everyone (including non-devs) helps keep this list in a reasonable order; it will likely grow faster than it shrinks.
