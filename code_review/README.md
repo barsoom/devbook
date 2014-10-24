@@ -39,4 +39,12 @@ Do point out if documentation is hard to understand or misleading, though, wheth
 
 ## As a committer
 
-WiP… suggest additions by pull request.
+### If you're asked for clarification, clarify in the *source*.
+
+If a reviewer asks what a piece of documentation or a snippet of code means, don't just reply in the review tool; try to clarify the documentation or code itself.
+
+A reply in the review tool is hard to dig up later, if you even know to try.
+
+Clarified code, on the other hand, helps everyone who deals with that code in the future.
+
+One of the big wins of code review is to catch hard-to-understand things when *someone* still understands it (having just written it).
