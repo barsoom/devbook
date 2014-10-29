@@ -45,6 +45,19 @@ Do point out if documentation is hard to understand or misleading, though, wheth
 If someone points out a [styleguide](/barsoom/devbook/tree/master/styleguide#how-and-when-to-follow-this-styleguide) violation, fix it. If you want to debate it, take that debate to the styleguide – after fixing it.
 
 
+### Don't obey comments you don't understand or agree with.
+
+Every review comment should be seen as a suggestion. Don't follow them blindly because of things like the reviewer's seniority.
+
+Ask questions (in person, if that helps) until you understand and agree that the change would be an improvement.
+
+If you don't understand their point, don't change it until you do.
+
+If you understand and still disagree, don't change it.
+
+Understanding their point means understanding the *underlying* reasons this would be good or bad ("not DRYing this up could easily lead to bugs here"). An appeal to authority ("DHH says this is the right way") or to rules or smells ("this is not DRY", "this violates SRP") is not enough.
+
+
 ### If you're asked for clarification, clarify in the *source*.
 
 If a reviewer asks what a piece of documentation or a snippet of code means, don't just reply in the review tool; try to clarify the documentation or code itself.
