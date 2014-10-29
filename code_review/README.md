@@ -39,6 +39,12 @@ Do point out if documentation is hard to understand or misleading, though, wheth
 
 ## As a committer
 
+
+### Obey the styleguide.
+
+If someone points out a [styleguide](/barsoom/devbook/tree/master/styleguide#how-and-when-to-follow-this-styleguide) violation, fix it. If you want to debate it, take that debate to the styleguide – after fixing it.
+
+
 ### If you're asked for clarification, clarify in the *source*.
 
 If a reviewer asks what a piece of documentation or a snippet of code means, don't just reply in the review tool; try to clarify the documentation or code itself.
