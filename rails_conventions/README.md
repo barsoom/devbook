@@ -63,7 +63,11 @@ We like to use one mailer per action to facilitate refactoring. Action name: `bu
 
 ### `app/mappers/`
 
-[Minimapper](https://github.com/joakimk/minimapper) mappers and records.
+[Minimapper](https://github.com/joakimk/minimapper) mappers.
+
+### `app/records/`
+
+The active record models when using [Minimapper](https://github.com/joakimk/minimapper).
 
 ### `app/models/`
 
