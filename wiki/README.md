@@ -2,7 +2,7 @@
 
 # Wiki conventions
 
-We use GitHub wikis to document project-specific things as well all company information that can't be public (i.e. in this devbook).
+We use GitHub wikis to document project-specific things as well as all company information that can't be public (i.e. in this devbook).
 
 They easily become a mess, so here are some conventions:
 
