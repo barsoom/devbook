@@ -15,6 +15,7 @@ For reference and discussion.
 * [How we (want to) work](/how_we_work)
 * [Tracks](/tracks)
 * [Rails conventions](/rails_conventions)
+* [Wiki conventions](/wiki)
 * [Libraries](/libs)
 
 ## Checklists
