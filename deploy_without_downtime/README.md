@@ -76,6 +76,8 @@ Specifically:
 
 * **Adding tables** is always safe.
 
+* **Changing column types** is probably not safe. One case is safe though - changing a :string to :text (internally VARCHAR(255) to TEXT). This is because they are essentially compatible, and :text can hold more data than :string. But the other way may truncate data.
+
 * **Removing tables** is never safe.
 
   Just like with removing columns, deploy them in two steps:
