@@ -12,3 +12,4 @@ They easily become a mess, so here are some conventions:
 * New texts should be in US English. Translate any old, Swedish texts when possible.
 * Delete no-longer-relevant pages when you can. Wikis are repos with history, so it's not lost.
 * If a page is outdated but you can't confidently delete it, link to it from one page only, named `Old pages`.
+* Every few months we should have a "cleaning day" where we intentionally clean up wikis and READMEs.
