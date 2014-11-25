@@ -387,6 +387,8 @@ But the latter version may sometimes be necessary to avoid superclass mismatch i
 
 ### Put a marker in placeholder translations.
 
+*The below applies when we manually manage translations. It does not apply when we use a translation tool like [WebTranslateIt](http://webtranslateit.com) that requires us to leave untranslated strings empty in the target language.*
+
 If you must store unfinished translations, add an "[untranslated]" so it's obvious, and easy to search for.
 
 So do:
