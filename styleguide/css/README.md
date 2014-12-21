@@ -56,6 +56,30 @@ They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it
 
 They also discourage modular CSS, as they're only intended to be used once per page.
 
+#### Use hyphens in class names.
+
+So `foo-bar`, not `foo_bar` or `fooBar`.
+
+#### Use BEM-like naming.
+
+Within a component, we prefer BEM-like naming and we avoid nested selectors.
+
+Use `__` for component parts (e.g. `.item-listing__title`).
+
+Use `--` for modifiers (e.g. `.item-listing--inactive`).
+
+E.g.
+
+``` slim
+.item-listing.item-listing--inactive
+  .item-listing__title The title
+  .item-listing__body The body
+```
+
+[Read more about BEM-like naming.](http://cssguidelin.es/#bem-like-naming)
+
+This type of naming is less fragile than nested selectors, more clearly states intent, and makes it easier to override specificity. [Read more about the benefits.](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
+
 #### Use a `test-` prefix for test-only classes.
 
 If a CSS class is only used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
