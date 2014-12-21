@@ -6,10 +6,12 @@ Also see [the general styleguide](/styleguide).
 
 This is an aspirational styleguide. Use this style for new projects and move old projects in this direction.
 
----
-### Organization
+This styleguide intentionally addresses both higher-level structure and lower-level details, based on the current needs of our team.
 
-We use an organization influenced by [SMACSS](https://smacss.com/).
+---
+### File structure
+
+We use a file structure influenced by [SMACSS](https://smacss.com/).
 
 The root stylesheet is named `application.scss` (possibly namespaced, e.g. `admin/application.scss`).
 
