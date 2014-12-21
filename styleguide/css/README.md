@@ -4,8 +4,47 @@
 
 Also see [the general styleguide](/styleguide).
 
+This is an aspirational styleguide. Use this style for new projects and move old projects in this direction.
+
 ---
-### CSS
+### Organization
+
+We use an organization influenced by [SMACSS](https://smacss.com/).
+
+The root stylesheet is named `application.scss` (possibly namespaced, e.g. `admin/application.scss`).
+
+If there's a print stylesheet, it's named `print.scss`.
+
+`application.scss` has no inline CSS, only import statements. We use `@import "foo"` or `@import "dir/*"` in Sass rather than [Sprockets `require` statements](http://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directives) since this works better with Sass variables etc.
+
+For simplicity, the included filenames don't start with an underscore (so `foo.scss`,  not `_foo.scss`). So far we've never compiled Sass in a way that it would matter.
+
+`application.scss` conventionally imports the following things:
+
+``` scss
+// Import general-purpose (typically third-party) libraries first, so we can override them.
+@import "lib/*";  // E.g. normalize.scss, tipsy.scss
+
+// Config files are for $vars only.
+// Smaller projects may have a single config file:
+@import "config";
+// Bigger projects may have separate config files:
+@import "config/*";  // E.g. colors.scss, fonts.scss, misc.scss
+
+// Reusable SASS mixins, placeholder selectors and similar.
+@import "mixins/*";  // E.g. clearfix.scss
+
+// Base elements without classes like <a> and <p>.
+@import "base";
+
+// Anything else, including major layout components.
+@import "components/*";  // E.g. sidebar.scss, cart.scss, cookie_notice.scss
+```
+
+We try to keep our components small (a screenful or less) and reusable (no more specific than necessary).
+
+---
+### Selectors and declarations
 
 #### Don't use ID selectors.
 
