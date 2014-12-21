@@ -62,11 +62,11 @@ So `foo-bar`, not `foo_bar` or `fooBar`.
 
 #### Use BEM-like naming.
 
-Within a component, we prefer BEM-like naming and we avoid nested selectors.
+Within a component, we prefer [BEM-like naming](https://github.com/barsoom/devbook/pull/24) and we avoid nested selectors.
 
-Use `__` for component parts (e.g. `.item-listing__title`).
+Use `__` (two underscores) for component parts (e.g. `.item-listing__title`).
 
-Use `--` for modifiers (e.g. `.item-listing--inactive`).
+Use `--` (two hyphens) for modifiers (e.g. `.item-listing--inactive`).
 
 E.g.
 
@@ -75,8 +75,6 @@ E.g.
   .item-listing__title The title
   .item-listing__body The body
 ```
-
-[Read more about BEM-like naming.](http://cssguidelin.es/#bem-like-naming)
 
 This type of naming is less fragile than nested selectors, more clearly states intent, and makes it easier to override specificity. [Read more about the benefits.](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
