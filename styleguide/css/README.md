@@ -35,6 +35,14 @@ Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, an
 ---
 ### Sass
 
+#### Use `$` variables for colors etc.
+
+Prefer `color: $error-color` or `color: $red` to `color: #f00`.
+
+This helps us keep color schemes small and consistent. It also names the color.
+
+Similarly, variables can help us keep things like margins, padding, line height, font family and font weight consistent.
+
 #### Use hyphens in multiple-word variable names.
 
 So `$foo-bar: 123px;`
