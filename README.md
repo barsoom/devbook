@@ -7,6 +7,7 @@ For reference and discussion.
 ## Reference
 
 * [Styleguide](/styleguide)
+  * [CSS and Sass styleguide](/styleguide/css)
 * [Deploy without downtime](/deploy_without_downtime)
 * [Definition of done](/definition_of_done)
 

@@ -82,21 +82,9 @@ Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_na
 
 
 ---
-### CSS
+### CSS and Sass
 
-#### Use `0` without a unit for zero values.
-
-Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
-
-
----
-### SASS
-
-#### Use hyphens in multiple-word variable names.
-
-So `$foo-bar: 123px;`
-
-This is the style used in the Sass documentation.
+Please see [the CSS and Sass styleguide](/styleguide/css).
 
 
 ---
