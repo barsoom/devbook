@@ -93,7 +93,9 @@ Strive for as low CSS specificity as possible by avoiding nesting selectors (`.f
 
 This makes maintenance easier by avoiding specificity wars and bugs.
 
-[BEM-like naming](#bem-like-naming) helps achieve this. [Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
+[BEM-like naming](#bem-like-naming) helps achieve this.
+
+[Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
 
 #### Use a `test-` prefix for test-only classes.
 
