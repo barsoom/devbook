@@ -558,6 +558,8 @@ If non-test code needs to require code that is in Rails' autoload path (e.g. cod
 
 `require` does not, so if you use it, changes to the required class may not be picked up in dev unless you reload the app server.
 
+[Read more.](http://guides.rubyonrails.org/constant_autoloading_and_reloading.html#autoloading-and-require)
+
 ---
 ### RSpec/testing
 
