@@ -62,7 +62,7 @@ So `foo-bar`, not `foo_bar` or `fooBar`.
 
 #### Use BEM-like naming.
 
-Within a component, we prefer [BEM-like naming](https://github.com/barsoom/devbook/pull/24) and we avoid nested selectors.
+Within a component, we prefer [BEM-like naming](http://cssguidelin.es/#bem-like-naming) and we avoid nested selectors.
 
 Use `__` (two underscores) for component parts (e.g. `.item-listing__title`).
 
