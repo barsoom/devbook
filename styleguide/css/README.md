@@ -83,11 +83,9 @@ This type of naming is less fragile than nested selectors, more clearly states i
 
 Strive for as low CSS specificity as possible by avoiding nesting selectors (`.foo .bar { … }`), chaining selectors (`.foo.bar { … }`) or qualifying classes (`div.foo { … }`).
 
-[BEM-like naming](#bem-like-naming) helps achieve this.
-
 This makes maintenance easier by avoiding specificity wars and bugs.
 
-[Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
+[BEM-like naming](#bem-like-naming) helps achieve this. [Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
 
 #### Use a `test-` prefix for test-only classes.
 
