@@ -21,6 +21,14 @@ If there's a print stylesheet, it's named `print.scss`.
 
 For simplicity, our filenames don't start with an underscore (we use `foo.scss`,  not `_foo.scss`). So far we've never compiled Sass in a way that underscores would make a difference. They do use underscores as word separators: `cookie_notice.scss` defines `.cookie-notice`.
 
+`application.scss` links to this file at the top for reference and mentions any additional project-specific constraints or tools, e.g.:
+
+``` scss
+// Styleguide: https://github.com/barsoom/devbook/tree/master/styleguide/css
+// We support IE8 or better.
+// We use autoprefixer-rails, so there's no need to specify vendor prefixes.
+```
+
 `application.scss` conventionally imports the following things:
 
 ``` scss
@@ -37,7 +45,7 @@ For simplicity, our filenames don't start with an underscore (we use `foo.scss`,
 @import "mixins/*";  // E.g. clearfix.scss
 
 // Base elements without classes like <a> and <p>.
-// Again, you may have a single file or separate files: base/{forms,tables,misc}.scss
+// Again, you may have a single file or separate files: base/{forms,tables,typography,misc}.scss
 @import "base";
 
 // Anything else, including major layout components.
@@ -114,6 +122,8 @@ Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, an
 
 ---
 ### Sass
+
+We use [Sass](http://sass-lang.com/). See [their docs](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
 #### Use hyphens in multiple-word variable names.
 
