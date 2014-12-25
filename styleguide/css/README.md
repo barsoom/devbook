@@ -41,10 +41,12 @@ For simplicity, our filenames don't start with an underscore (we use `foo.scss`,
 // Or separate files:
 @import "config/*";  // E.g. config/{colors,fonts,misc}.scss
 
-// Reusable SASS mixins, placeholder selectors and similar.
+// Globally reusable SASS mixins, placeholder selectors and similar.
+// Mixins etc that are only interesting within a single component should be defined there instead.
 @import "mixins/*";  // E.g. clearfix.scss
 
-// Base elements without classes like <a> and <p>.
+// Base elements without classes: `a`, `a:hover`, `input[type=password]`, `li a`, `p > a`.
+// Descendant/child/attribute selectors are allowed, but keep specificity as low as you can.
 // Again, you may have a single file or separate files: base/{forms,tables,typography,misc}.scss
 @import "base";
 
