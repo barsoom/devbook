@@ -9,6 +9,11 @@ This is an aspirational styleguide. Use this style for new projects and move old
 This styleguide intentionally addresses both higher-level structure and lower-level details, based on the current needs of our team.
 
 ---
+### Frameworks and libraries
+
+Avoid Twitter Bootstrap for non-trivial sites. It is a UI toolkit, not (just) a framework. It can be hard to override sensibly.
+
+---
 ### File structure
 
 The root stylesheet is named `application.scss` (possibly namespaced, e.g. `admin/application.scss`).
