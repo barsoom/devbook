@@ -2,7 +2,7 @@
 
 # CSS and Sass styleguide
 
-Also see [the general styleguide](/styleguide).
+Also see [our top-level styleguide](/styleguide): it explains how and when to follow our styleguides, and how to change them.
 
 This is an aspirational styleguide. Use this style for new projects and move old projects in this direction.
 
