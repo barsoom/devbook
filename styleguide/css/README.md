@@ -109,6 +109,10 @@ If a CSS class is only used to find elements in JavaScript, prefix it. E.g. `js-
 
 This makes its purpose clear to the reader.
 
+#### Avoid undefining styles.
+
+If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
+
 #### Don't use ID selectors.
 
 Feel free to use them for anchor links, but don't style by ID.
