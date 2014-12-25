@@ -11,8 +11,6 @@ This styleguide intentionally addresses both higher-level structure and lower-le
 ---
 ### File structure
 
-We use a file structure influenced by [SMACSS](https://smacss.com/).
-
 The root stylesheet is named `application.scss` (possibly namespaced, e.g. `admin/application.scss`).
 
 If there's a print stylesheet, it's named `print.scss`.
@@ -55,6 +53,11 @@ For simplicity, our filenames don't start with an underscore (we use `foo.scss`,
 ```
 
 We try to keep our components small (a screenful or less) and reusable (no more specific than necessary).
+
+Influences:
+
+* [SMACSS](https://smacss.com/)
+* [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 
 ---
 ### Selectors and declarations
@@ -105,6 +108,22 @@ This makes maintenance easier by avoiding specificity wars and bugs.
 
 [Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
 
+#### Don't use ID selectors.
+
+Feel free to use them for anchor links, but don't style by ID.
+
+They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
+
+They also discourage modular CSS, as they're only intended to be used once per page.
+
+#### Avoid undefining styles.
+
+If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
+
+#### Use `0` without a unit for zero values.
+
+Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
+
 #### Use a `test-` prefix for test-only classes.
 
 If a CSS class is only used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
@@ -116,22 +135,6 @@ This makes its purpose clear to the reader.
 If a CSS class is only used to find elements in JavaScript, prefix it. E.g. `js-destroy-link`.
 
 This makes its purpose clear to the reader.
-
-#### Avoid undefining styles.
-
-If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
-
-#### Don't use ID selectors.
-
-Feel free to use them for anchor links, but don't style by ID.
-
-They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
-
-They also discourage modular CSS, as they're only intended to be used once per page.
-
-#### Use `0` without a unit for zero values.
-
-Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
 
 
 ---
