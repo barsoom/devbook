@@ -87,7 +87,13 @@ Define these classes without nesting to [keep specificity low](#keep-specificity
 .item-listing__title { … }
 ```
 
-This type of naming is less fragile than nested selectors, more clearly states intent, and makes it easier to override specificity. [Read more about the benefits.](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
+This type of naming is less fragile than nested selectors, more clearly states intent, and makes it easier to override specificity.
+
+Further reading:
+
+* [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
+* [Scaling down the BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
+
 
 #### Keep specificity low.
 
