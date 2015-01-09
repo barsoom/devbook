@@ -125,6 +125,14 @@ They also discourage modular CSS, as they're only intended to be used once per p
 
 If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
 
+#### In the markup, put more generic selectors first.
+
+We usually write markup in something like [Slim](http://slim-lang.com/).
+
+Then we prefer `table.table-bordered.items-table` to `table.items-table.table-bordered`.
+
+Since the element name comes first and is the most generic, it reads well to also have generic CSS classes sooner.
+
 #### Use `0` without a unit for zero values.
 
 Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
