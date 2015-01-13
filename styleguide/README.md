@@ -261,9 +261,9 @@ end
 people.each { |person| puts person.name }
 ```
 
-How do you know if we use the block for its return value? If we chain on another method call (`foos.map { … }.sort`) or assign the result (`bars = foos.map { … }`) we use the return value.
+How do you know if we use the block for its return value? Picture adding `nil` as the last line inside the block. If that breaks your code, you're relying on the return value.
 
-Or you could picture adding `nil` as the last line of the block. If that breaks your code, you're relying on the return value.
+If we chain another method call onto the block (`foos.map { … }.sort`) or assign the result (`bars = foos.map { … }`) we most likely use the block's return value.
 
 Rationale: It adds more information than the "always `do/end` for multiple lines" convention. It also looks better with chained calls.
 
