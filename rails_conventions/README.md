@@ -154,9 +154,9 @@ Preferred libraries: RSpec, Capybara.
 
 Import scripts and such that are not suitable as regular migrations, because we run them repeatedly or not as part of a deploy.
 
-## `script/stats`
+## `script/stats_and_data_export`
 
-Statistics generation scripts (that are run on a command line). Easier to find if separate from `scripts/db`.
+Statistics generation scripts and data export scripts (that are run on a command line). Easier to find if separate from `scripts/db`.
 
 ## `unit/`
 
