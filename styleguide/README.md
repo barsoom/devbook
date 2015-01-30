@@ -30,7 +30,9 @@ We discuss in the comments and decide by consensus. Feel free to use emoji inspi
 
 :point_right: Let's discuss further. We don't have all the facts yet.
 
-We may go several rounds. If we get all :thumbsup: or :fist: we have consensus.
+We may go several rounds.
+
+If we get all :thumbsup: or :fist: we have consensus.
 
 
 ---
