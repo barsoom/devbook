@@ -34,6 +34,8 @@ We may go several rounds.
 
 If we get all :thumbsup: or :fist: we have consensus.
 
+If someone abstains from voting for more than three weeks, it counts as a :fist: vote.
+
 
 ---
 ### General
