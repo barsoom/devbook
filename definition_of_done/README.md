@@ -25,7 +25,9 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 
 ## Changes to the public site
 
-* Front-end code has been verified in browsers (for the general public: IE8+, latest Firefox, Chrome, Safari)
+* Front-end code
+  * Has been verified in browsers (for the general public: IE8+, latest Firefox, Chrome, Safari)
+  * Has been verified to be responsive, if the project has that goal
 * The support team has been informed about it and tried using it
 * The FAQ or equivalent has been changed (if applicable)
 * Copy has correct spelling, grammar and pluralization
