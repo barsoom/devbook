@@ -24,6 +24,8 @@ If there's a print stylesheet, it's named `print.scss`.
 
 For simplicity, our filenames don't start with an underscore (we use `foo.scss`,  not `_foo.scss`). So far we've never compiled Sass in a way that underscores would make a difference. We do use underscores as word separators: `cookie_notice.scss` defines `.cookie-notice`.
 
+Note that all `@import`ed files must end in `.scss`, otherwise Sass will generate a plain-CSS `@import url(foo.css)` which may work in dev but fail in production.
+
 `application.scss` links to this file at the top for reference and mentions any additional project-specific constraints or tools, e.g.:
 
 ``` scss
