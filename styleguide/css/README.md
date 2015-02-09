@@ -108,12 +108,17 @@ With Sass 3.4 or later, you can use `&` like this:
 }
 ```
 
-We also accept naming like `.is-inactive` for modifiers (a.k.a. "states") when that is more convenient, e.g. for "polymorphic" modifiers applied by JavaScript to multiple components.
-
 Further reading:
 
 * [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
 * [Scaling down the BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
+
+
+#### `.is-modified` is allowed.
+
+In addition to [BEM-like modifier naming](#bem-like-naming), we also accept naming like `.is-inactive` for modifiers (a.k.a. "states") when that is more convenient, e.g. for "polymorphic" modifiers applied by JavaScript to multiple components.
+
+In this case, *never* style the modifier class standalone (don't do `.is-inactive { … }`), *always* style it together with the modified thing (do `.item-listing.is-inactive { … }`). Generic modifier classes should have no styling on their own since we never know what they may be combined with in the future.
 
 
 #### Keep specificity low.
