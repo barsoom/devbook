@@ -108,6 +108,8 @@ With Sass 3.4 or later, you can use `&` like this:
 }
 ```
 
+We also accept naming like `.is-inactive` for modifiers (a.k.a. "states") when that is more convenient, e.g. for "polymorphic" modifiers applied by JavaScript to multiple components.
+
 Further reading:
 
 * [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
