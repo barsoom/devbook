@@ -120,6 +120,8 @@ Only use `__` when something is a subcomponent, not when it can be seen as a sep
 
 If you have a "hamburger" menu in the site header and you know you are highly unlikely to have other types of hamburgers elsewhere, do `.hamburger` – no need for `.site-header__hamburger`.
 
+Aim for no more than one level of subcomponents (`.a__b` is OK; avoid `.a__b__c`).
+
 See the <http://csswizardry.com/> source (and, hopefully, the source of our own newer projects) for some examples of this.
 
 
