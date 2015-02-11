@@ -114,6 +114,15 @@ Further reading:
 * [Scaling down the BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
 
+#### Keep BEM component nesting shallow.
+
+Only use `__` when something is a subcomponent, not when it can be seen as a separate component that happens to be nested.
+
+If you have a "hamburger" menu in the site header and you know you are highly unlikely to have other types of hamburgers elsewhere, do `.hamburger` – no need for `.site-header__hamburger`.
+
+See the <http://csswizardry.com/> source (and, hopefully, the source of our own newer projects) for some examples of this.
+
+
 #### `.is-modified` is allowed.
 
 In addition to [BEM-like modifier naming](#bem-like-naming), we also accept naming like `.is-inactive` for modifiers (a.k.a. "states") when that is more convenient, e.g. for "polymorphic" modifiers applied by JavaScript to multiple components.
