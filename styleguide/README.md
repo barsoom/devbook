@@ -157,6 +157,49 @@ Use your own judgment to choose between the options.
 ---
 ### Ruby
 
+### Use a consistent class layout
+
+See [Ruby Style Guide on class layout](https://github.com/bbatsov/ruby-style-guide#consistent-classes)
+
+```ruby
+class Person
+  # extend and include go first
+  extend SomeModule
+  include AnotherModule
+
+  # inner classes
+  CustomErrorKlass = Class.new(StandardError)
+
+  # constants are next
+  SOME_CONSTANT = 20
+
+  # afterwards we have attribute macros
+  attr_reader :name
+
+  # followed by other macros (if any)
+  validates :name
+
+  # public class methods are next in line
+  def self.some_method
+  end
+
+  # followed by public instance methods
+  def some_method
+  end
+
+  # protected and private methods are grouped near the end
+  protected
+
+  def some_protected_method
+  end
+
+  private
+
+  def some_private_method
+  end
+end
+```
+
 #### Prefer 1.9-style hashes.
 
 Do `{ json: :style }` and not `{ :hash => :rockets }` when possible.
