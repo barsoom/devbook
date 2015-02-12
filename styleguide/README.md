@@ -36,9 +36,9 @@ If we get all :thumbsup: or :fist: we have consensus.
 
 If you haven't voted after two weeks, it counts as a :fist: vote. If no one else is opposed, the pull request may be merged without your vote, though you should be notified in a comment.
 
-After that, you get one week to change your vote, if you want the merge to be reverted. If you've been on vacation or sick, the week starts when you get back.
+If you missed the vote and want to veto it after the fact, we will revert it. But if months have passed we encourage you to instead make a new pull request.
 
-If you haven't changed your vote after six weeks, the change sticks, even if you've been away – the devbook must go on. If you want to change it then, make a new pull request.
+After that, you get one week to change your vote, if you want the merge to be reverted. If you've been on vacation or sick, the week starts when you get back.
 
 
 ---
