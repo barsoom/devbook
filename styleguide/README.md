@@ -472,6 +472,10 @@ scope :later_alligator, later.alligator                 # now = server launch ti
 
 Write `foo.bar IS NOT NULL`, never `foo.bar is not null`.
 
+#### Explicitly state SQL sort direction.
+
+Write `order("name ASC")`, never `order("name")`.
+
 #### Avoid SQL outside models.
 
 Ideally, each model encapsulates its underlying table. Changes to the table shouldn't need to break the model's API. Specifically:
