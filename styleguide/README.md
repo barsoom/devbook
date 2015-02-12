@@ -34,6 +34,10 @@ We may go several rounds.
 
 If we get all :thumbsup: or :fist: we have consensus.
 
+If you haven't voted after two weeks, it counts as a :fist: vote. If no one else is opposed, the pull request may be merged without your vote, though you should be notified in a comment.
+
+If you missed the vote and want to veto it after the fact, we will revert it. But if months have passed we encourage you to instead make a new pull request.
+
 
 ---
 ### General
