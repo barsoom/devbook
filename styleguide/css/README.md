@@ -166,6 +166,14 @@ Since the element name comes first and is the most generic, it reads well to als
 
 Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
 
+#### Prefer `px` as the unit for `font-size`.
+
+Our preference is `px` (as opposed to `pt`, `em`, `rem` or `%`) since it's easy to reason about.
+
+The use of `px` was previously discouraged since older browsers didn't scale the text on zoom, but modern browsers get this right.
+
+We *do* like `em` for margins or paddings that should be relative to the current font size.
+
 #### Use a `test-` prefix for test-only classes.
 
 If a CSS class is only used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
