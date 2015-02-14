@@ -11,7 +11,15 @@ This styleguide intentionally addresses both higher-level structure and lower-le
 ---
 ### Frameworks and libraries
 
-Avoid Twitter Bootstrap for non-trivial sites. It is a UI toolkit, not (just) a framework. It can be hard to override sensibly.
+#### Avoid Twitter Bootstrap for non-trivial sites.
+
+It is a UI toolkit, not (just) a framework. It can be hard to override sensibly.
+
+#### Use Autoprefixer.
+
+Whenever possible, use [Autoprefixer](https://github.com/postcss/autoprefixer), typically via [autoprefixer-rails](https://github.com/ai/autoprefixer-rails).
+
+It saves us from manually adding prefixes, from making mixins just for that, and from occasionally forgetting to do so.
 
 ---
 ### File structure
