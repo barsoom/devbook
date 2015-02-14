@@ -21,6 +21,10 @@ Whenever possible, use [Autoprefixer](https://github.com/postcss/autoprefixer), 
 
 It saves us from manually adding prefixes, from making mixins just for that, and from occasionally forgetting to do so.
 
+#### Use normalize.css.
+
+Use [normalize.css](https://github.com/necolas/normalize.css/) to make browsers render more consistently.
+
 ---
 ### File structure
 
