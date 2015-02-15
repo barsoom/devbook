@@ -32,7 +32,7 @@ The root stylesheet is named `application.scss` (possibly namespaced, e.g. `admi
 
 If there's a print stylesheet, it's named `print.scss`.
 
-`application.scss` has no inline CSS, only import statements. We use `@import "foo"` or `@import "dir/*"` in Sass rather than [Sprockets `require` statements](http://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directives), since this works better with Sass variables etc.
+`application.scss` has no inline CSS, only import statements. We use `@import "foo"` or `@import "dir/*"` ([globbing](https://github.com/rails/sass-rails#glob-imports) provided by sass-rails) rather than [Sprockets `require` statements](http://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directives), since this works better with Sass variables etc.
 
 For simplicity, our filenames don't start with an underscore (we use `foo.scss`,  not `_foo.scss`). So far we've never compiled Sass in a way that underscores would make a difference. We do use underscores as word separators: `cookie_notice.scss` defines `.cookie-notice`.
 
