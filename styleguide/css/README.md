@@ -100,7 +100,9 @@ This makes maintenance easier by avoiding specificity wars and bugs.
 
 [BEM-like naming](#bem-like-naming) helps achieve this.
 
-[Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
+Further reading:
+
+ * ["Specificity" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#specificity)
 
 
 #### Be mindful of selector intent.
@@ -211,7 +213,7 @@ With Sass 3.4 or later, you can use `&` like this:
 
 Further reading:
 
-* ["BEM-like Naming" in CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
+* ["BEM-like Naming" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
 * [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
 * [Scaling down the BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
@@ -309,4 +311,8 @@ Don't do
 }
 ```
 
-This avoids unintended side-effects if `.foo` appears in multiple contexts. For details, read ["Extending silent classes in Sass" by Harry Roberts](http://csswizardry.com/2014/01/extending-silent-classes-in-sass/).
+This avoids unintended side-effects if `.foo` appears in multiple contexts.
+
+Further reading:
+
+* [Extending silent classes in Sass](http://csswizardry.com/2014/01/extending-silent-classes-in-sass/).
