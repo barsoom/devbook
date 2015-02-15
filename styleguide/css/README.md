@@ -81,9 +81,57 @@ Influences:
 ---
 ### Selectors and declarations
 
+
 #### Use hyphens in class names.
 
-So `foo-bar`, not `foo_bar` or `fooBar`.
+Do `.foo-bar`, not `.foo_bar` or `.fooBar`.
+
+
+#### Use `0` without a unit for zero values.
+
+Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
+
+
+#### Prefer `px` as the unit for `font-size`.
+
+Our preference is `px` (as opposed to `pt`, `em`, `rem` or `%`) since it's easy to reason about.
+
+The use of `px` was previously discouraged since older browsers didn't scale the text on zoom, but modern browsers get this right.
+
+We *do* like `em` for margins or paddings that should be relative to the current font size.
+
+
+#### Use a `test-` prefix for test-only classes.
+
+If a CSS class is only used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
+
+This makes its purpose clear to the reader.
+
+
+#### Use a `js-` prefix for JS-hook classes.
+
+If a CSS class is only used to find elements in JavaScript, prefix it. E.g. `js-destroy-link`.
+
+This makes its purpose clear to the reader.
+
+
+#### In the markup, put more generic selectors first.
+
+We usually write markup in something like [Slim](http://slim-lang.com/).
+
+Then we prefer `table.table-bordered.items-table` to `table.items-table.table-bordered`.
+
+Since the element name comes first and is the most generic, it reads well to also have generic CSS classes sooner.
+
+
+#### Don't use ID selectors.
+
+Feel free to use them for anchor links, but don't style by ID.
+
+They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
+
+They also discourage modular CSS, as they're only intended to be used once per page.
+
 
 #### Use BEM-like naming.
 
@@ -155,49 +203,10 @@ This makes maintenance easier by avoiding specificity wars and bugs.
 
 [Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
 
-#### Don't use ID selectors.
-
-Feel free to use them for anchor links, but don't style by ID.
-
-They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
-
-They also discourage modular CSS, as they're only intended to be used once per page.
 
 #### Avoid undefining styles.
 
 If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
-
-#### In the markup, put more generic selectors first.
-
-We usually write markup in something like [Slim](http://slim-lang.com/).
-
-Then we prefer `table.table-bordered.items-table` to `table.items-table.table-bordered`.
-
-Since the element name comes first and is the most generic, it reads well to also have generic CSS classes sooner.
-
-#### Use `0` without a unit for zero values.
-
-Rather than `0px`, `0em` etc. Not a big deal, but it's the common convention, and less to type.
-
-#### Prefer `px` as the unit for `font-size`.
-
-Our preference is `px` (as opposed to `pt`, `em`, `rem` or `%`) since it's easy to reason about.
-
-The use of `px` was previously discouraged since older browsers didn't scale the text on zoom, but modern browsers get this right.
-
-We *do* like `em` for margins or paddings that should be relative to the current font size.
-
-#### Use a `test-` prefix for test-only classes.
-
-If a CSS class is only used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
-
-This makes its purpose clear to the reader.
-
-#### Use a `js-` prefix for JS-hook classes.
-
-If a CSS class is only used to find elements in JavaScript, prefix it. E.g. `js-destroy-link`.
-
-This makes its purpose clear to the reader.
 
 
 ---
