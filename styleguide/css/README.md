@@ -204,11 +204,13 @@ This makes its purpose clear to the reader.
 
 We use [Sass](http://sass-lang.com/). See [their docs](http://sass-lang.com/documentation/file.SASS_REFERENCE.html).
 
+
 #### Use hyphens in multiple-word variable names.
 
 So `$foo-bar: 123px;`
 
 This is the style used in the Sass documentation.
+
 
 #### Use `$` variables for colors etc.
 
@@ -218,6 +220,7 @@ This helps us keep color schemes small and consistent. It also names the color.
 
 Similarly, variables can help us keep things like margins, padding, line height, font family and font weight consistent.
 
+
 #### Use `$_` for "private" variables.
 
 Whenever possible, if you need a non-global variable, define it inside a selector so it's only visible in that scope.
@@ -225,3 +228,20 @@ Whenever possible, if you need a non-global variable, define it inside a selecto
 Sometimes that's not possible. Then we name it with a leading underscore, e.g. `$_item-spacing`, to show intent: we see it as file-private, though it isn't technically.
 
 Thanks to [Henric Trotzig](https://twitter.com/henrictrotzig/status/563362417439023104) for suggesting this.
+
+
+#### Put multiple selectors on separate lines with trailing commas.
+
+Do
+
+```
+.foo,
+.bar,
+{
+  color: #f00;
+}
+```
+
+The separate lines makes it easier to read.
+
+The trailing commas make changes slightly easier.
