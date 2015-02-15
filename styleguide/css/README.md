@@ -245,3 +245,33 @@ Do
 The separate lines makes it easier to read.
 
 The trailing commas make changes slightly easier.
+
+
+#### Only `@extend` silent classes.
+
+Do
+
+```
+//.foo,  // <- if you also need a .foo
+%foo {
+  color: #f00;
+}
+
+.bar {
+  @extend %foo;
+}
+```
+
+Don't do
+
+```
+.foo {
+  color: #f00;
+}
+
+.bar {
+  @extend .foo;
+}
+```
+
+This avoids unintended side-effects if `.foo` appears in multiple contexts. For details, read ["Extending silent classes in Sass" by Harry Roberts](http://csswizardry.com/2014/01/extending-silent-classes-in-sass/).
