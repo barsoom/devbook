@@ -78,6 +78,38 @@ Influences:
 * [SMACSS](https://smacss.com/)
 * [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4)
 
+
+---
+### Principles
+
+
+#### Keep specificity low.
+
+Strive for as low CSS specificity as possible by avoiding nesting selectors (`.foo .bar { … }`), chaining selectors (`.foo.bar { … }`) or qualifying classes (`div.foo { … }`).
+
+This makes maintenance easier by avoiding specificity wars and bugs.
+
+[BEM-like naming](#bem-like-naming) helps achieve this.
+
+[Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
+
+
+#### Be mindful of selector intent.
+
+If you mean "style the menu links in my sidebar", say something like `.site-nav__link` – don't say `.sidebar a` – to avoid unintended side-effects.
+
+We aim to be pragmatic: if `.site-nav` is a shallow tree of elements and you're confident it won't grow to include more types of links, `.site-nav a` can be fine. But `.sidebar a` is probably a bad idea.
+
+Further reading:
+
+* [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
+
+
+#### Avoid undefining styles.
+
+If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
+
+
 ---
 ### Selectors and declarations
 
@@ -191,22 +223,6 @@ Read more about this in [Harry Roberts' "CSS Guidelines"](http://cssguidelin.es/
 In addition to [BEM-like modifier naming](#bem-like-naming), we also accept naming like `.is-inactive` for modifiers *when they are polymorphic*, i.e. when JavaScript applies the same modifier to multiple types of components. Then BEM naming would be very inconvenient.
 
 *Never* style these generic modifier classes standalone (don't do `.is-inactive { … }`); *always* style them together with the modified thing (do `.item-listing.is-inactive { … }`). Generic modifier classes should have no styling on their own since we never know what they may be combined with in the future.
-
-
-#### Keep specificity low.
-
-Strive for as low CSS specificity as possible by avoiding nesting selectors (`.foo .bar { … }`), chaining selectors (`.foo.bar { … }`) or qualifying classes (`div.foo { … }`).
-
-This makes maintenance easier by avoiding specificity wars and bugs.
-
-[BEM-like naming](#bem-like-naming) helps achieve this.
-
-[Read more in cssguidelin.es.](http://cssguidelin.es/#specificity)
-
-
-#### Avoid undefining styles.
-
-If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
 
 
 ---
