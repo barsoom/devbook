@@ -293,8 +293,9 @@ The trailing commas make changes slightly easier.
 Do
 
 ```
-//.foo,  // <- if you also need a .foo
-%foo {
+.foo,
+%foo,
+{
   color: #f00;
 }
 
@@ -319,4 +320,4 @@ This avoids unintended side-effects if `.foo` appears in multiple contexts.
 
 Further reading:
 
-* [Extending silent classes in Sass](http://csswizardry.com/2014/01/extending-silent-classes-in-sass/).
+* [Extending silent classes in Sass](http://csswizardry.com/2014/01/extending-silent-classes-in-sass/)
