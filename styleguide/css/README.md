@@ -211,6 +211,8 @@ With Sass 3.4 or later, you can use `&` like this:
 }
 ```
 
+Use `&` or not as you please, on a case-by-case basis.
+
 Further reading:
 
 * ["BEM-like Naming" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
