@@ -216,7 +216,6 @@ Use `&` or not as you please, on a case-by-case basis.
 Further reading:
 
 * ["BEM-like Naming" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
-* [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
 * [Scaling down the BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
 
 
@@ -228,7 +227,10 @@ If you have a "hamburger" menu in the site header and you know you are highly un
 
 Aim for no more than one level of subcomponents (`.a__b` is OK; avoid `.a__b__c`).
 
-Read more about this in [Harry Roberts' "CSS Guidelines"](http://cssguidelin.es/#starting-context) and see e.g. the <http://csswizardry.com/> source (and, hopefully, the source of our own newer projects) for some examples.
+Further reading:
+
+* ["Starting Context" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#starting-context)
+* See the <http://csswizardry.com/> source
 
 
 #### `.is-modified` is allowed for polymorphic modifiers only.
