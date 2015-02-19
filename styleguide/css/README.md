@@ -169,7 +169,7 @@ Since the element name comes first and is the most generic, it reads well to als
 
 #### Don't style by ID.
 
-Feel free to use them for anchor links, but don't style by ID.
+Feel free to use them for anchor links or JavaScript when necessary, but don't *style* by ID.
 
 They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
 
