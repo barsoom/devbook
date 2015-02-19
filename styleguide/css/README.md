@@ -167,7 +167,7 @@ Then we prefer `table.table-bordered.items-table` to `table.items-table.table-bo
 Since the element name comes first and is the most generic, it reads well to also have generic CSS classes sooner.
 
 
-#### Don't use ID selectors.
+#### Don't style by ID.
 
 Feel free to use them for anchor links, but don't style by ID.
 
