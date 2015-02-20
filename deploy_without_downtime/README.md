@@ -43,6 +43,8 @@ Specifically:
 
     ``` ruby
     class Item < ActiveRecord::base
+      # Assuming we use https://github.com/henrik/fixme – change the date to some future one
+      FIXME "2015-12-01: Don't forget to remove this code when the column is gone"
       def self.columns
         super.reject { |c| c.name == "description" }
       end
@@ -54,6 +56,8 @@ Specifically:
     Put that method **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
 
   * Deploy 2: A migration to remove the column. The old app will no longer have the column name cached.
+
+  * Deploy 3: Remove the code that ignored the column.
 
 * **Renaming columns** is never safe.
 
