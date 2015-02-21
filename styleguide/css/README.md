@@ -271,7 +271,7 @@ Sometimes that's not possible. Then we name it with a leading underscore, e.g. `
 Thanks to [Henric Trotzig](https://twitter.com/henrictrotzig/status/563362417439023104) for suggesting this.
 
 
-#### Put multiple selectors on separate lines with trailing commas.
+#### Put group selectors on separate lines with trailing commas.
 
 Do
 
