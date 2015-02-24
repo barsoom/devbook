@@ -146,16 +146,20 @@ We *do* like `em` for margins or paddings that should be relative to the current
 
 #### Use a `test-` prefix for test-only classes.
 
-If a CSS class is only used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
+If a CSS class is *only* used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
 
 This makes its purpose clear to the reader.
 
+We don't use BEM-like naming for these: that's for styling.
 
-#### Use a `js-` prefix for JS-hook classes.
 
-If a CSS class is only used to find elements in JavaScript, prefix it. E.g. `js-destroy-link`.
+#### Use a `js-` prefix for JS hook classes.
+
+If a CSS class is *only* used to find elements in JavaScript, prefix it. E.g. `js-destroy-link`.
 
 This makes its purpose clear to the reader.
+
+We don't use BEM-like naming for these: that's for styling.
 
 
 #### In the markup, put more generic selectors first.
