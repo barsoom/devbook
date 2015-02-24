@@ -244,6 +244,15 @@ In addition to [BEM-like modifier naming](#bem-like-naming), we also accept nami
 *Never* style these generic modifier classes standalone (don't do `.is-inactive { … }`); *always* style them together with the modified thing (do `.item-listing.is-inactive { … }`). Generic modifier classes should have no styling on their own since we never know what they may be combined with in the future.
 
 
+#### Avoid pre-defined breakpoints.
+
+Our philosophy on breakpoints (with @media queries) is to just resize the window (or view the page on a device) and set the breakpoint where it makes sense on a case-by-case basis.
+
+We don't want to use predefined breakpoints like "phone", "tablet", "screen" because they're unnecessarily limiting, and less future-proof.
+
+We only use predefined breakpoints when multiple things truly have the same reason to change. If the menu becomes a hamburger at a certain breakpoint, and that change should coincide with other layout changes, then a predefined breakpoint is fine. But name it something like "small-enough-for-hamburger", not "phablet".
+
+
 ---
 ### Sass
 
