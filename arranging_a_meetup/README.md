@@ -17,6 +17,7 @@
 * Non-alcoholic drinks in the fridge
 * Order food (mind allergies and preferences like vegetarianism).
   We've bought wraps from [Miias](http://www.cafemiias.se/). Vegetarian ones done on request. Quicker if you call (073 320 75 56) or mail (info@cafemiias.se) ahead.
+* Remember to inform all of the attendees if BYOL (buy your own lunch)
 * Post wifi details
 * Possibly: Make coffee, tea
 
@@ -42,7 +43,6 @@
 
 ### Do
 
-* Call the security company about the alarm
 * Prepare an introduction
 * Promote the meetup on Twitter
 
@@ -76,7 +76,12 @@
 * Hide secrets (maps, whiteboards…)
 * Make sure the dashboards are pretty ;)
 
+#### During
+
+* If the meetup goes on after 21.00, the alarm will go off (make sure you remember your code!)
+
 #### For an Open Space
+
 * Prepare sheets, pens and a board for topics
 * Prepare a room map
 
@@ -87,6 +92,7 @@
 * Buy alcoholic beverages (~3 per head).
   Heavy! 25 people = 60 beers + some non-alcoholic = 4 people to carry.
 * Buy non-alcoholic beverages
+* Buy snacks/fruit
 
 ### Order
 
@@ -94,6 +100,8 @@
   16 pizzas for ~24 people seemed like just enough.
   At least 1/3 vegetarian.
   From somewhere close or the delivery time can be unreliable.
+
+  We have used [online pizza/pizza hut](http://onlinepizza.se/Stockholm/Pizza-Hut-Klaraberg) and ordered large      pizzas (8 pices) (2-3 pices per attendee)
 
 ### Responsibilities during the meetup
 
