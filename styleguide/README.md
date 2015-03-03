@@ -352,6 +352,10 @@ Do `t("this.here")` and not `t(:"this.here")`.
 
 Where a simple unquoted symbol will do, they're fine: `t(:this)`
 
+### Use `%r{}` for regular expressions with slashes.
+
+`%r{https?://}` reads better than `/https?:\/\//`.
+
 ### Prefer `class X; class Y` for nested classes/modules.
 
 Prefer
