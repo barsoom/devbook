@@ -206,6 +206,8 @@ Define these classes without nesting to [keep specificity low](#keep-specificity
 
 This type of naming has less risk of collisions than nested selectors, more clearly shows which classes are part of the same whole, and makes it easier to override specificity.
 
+The block (the first part of the name) may be implicit: we can use `.input--small` for `input` variants even if we don't want to add an `.input` class to all of them. Or we may do `.home-page__thingie` when a style needs to be page-specific and we don't need to actually add a `.home-page` class.
+
 With Sass 3.4 or later, you can use `&` like this:
 
 ``` scss
