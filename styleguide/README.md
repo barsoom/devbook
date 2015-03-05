@@ -96,11 +96,18 @@ Please see [the CSS and Sass styleguide](/styleguide/css).
 ---
 ### JavaScript
 
-Prefer CoffeeScript.
 
-If you must use JavaScript, some best practices to keep in mind:
+#### Prefer CoffeeScript.
 
-* Use `===` and `!==`, don't use `==` and `!=`, unless you have good reason
+
+#### Use `===` and `!==`, not `==` and `!=`, unless you have good reason.
+
+
+#### Write `if (foo)`, not `if(foo)`.
+
+A stylistic choice, for consistency.
+
+It seems to be the most common format in the JS world. (It's 5 times more common in Auctionet's JS, including third-party libs, as of 2015-03-05.)
 
 
 ---
