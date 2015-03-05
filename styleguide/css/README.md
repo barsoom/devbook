@@ -77,7 +77,10 @@ Note that all `@import`ed files must end in `.scss`, otherwise Sass will generat
 @import "base";
 
 // Anything else, including major layout components.
-@import "components/*";  // E.g. components/{sidebar,cart,cookie_notice}.scss
+@import "components/**/*";  // E.g. components/{sidebar,cart,cookie_notice}.scss
+
+// Per-page CSS, when unavoidable.
+@import "pages/**/*";  // E.g. pages/{about_page,item_page}.scss
 ```
 
 We try to keep our components small (a screenful or less) and reusable (no more specific than necessary).
