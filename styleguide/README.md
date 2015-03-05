@@ -214,6 +214,15 @@ Mostly a stylistic choice. It's consistent with how we define regular methods. A
 
 A stylistic choice.
 
+#### Use square brackets for `%w[]` and friends.
+
+Do `%w[]`, not `%w()`. It results in an array and the square brackets make that more obvious at a glance.
+
+This rule applies to `%` syntax that results in an array, e.g. `%w`, `%W`, `%i` and `%I`.
+
+This rule does *not* apply to `%r`, `%x` or any other such syntax that doesn't result in an array.
+
+
 #### No empty lines when indentation level changes.
 
 But always put empty lines around multiline blocks when the indent level doesn't change.
