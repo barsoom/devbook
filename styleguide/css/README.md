@@ -185,15 +185,17 @@ They also discourage modular CSS, as they're only intended to be used once per p
 
 #### Use BEM-like naming.
 
-Within a component, we prefer [BEM-like naming](http://cssguidelin.es/#bem-like-naming) and we avoid nested selectors.
+We aim for [BEM-like naming](http://cssguidelin.es/#bem-like-naming).
 
-Note that this section is a very brief summary for reference. You *must* read [the article](http://cssguidelin.es/#bem-like-naming) and feel that you grasp the idea behind it before you contribute to our CSS.
+This type of naming has less risk of collisions than nested selectors, more clearly shows which classes are part of the same whole, and makes it easier to override specificity.
+
+Note that this section is a very brief summary for reference. You *must* [read up on BEM elsewhere](http://cssguidelin.es/#bem-like-naming) and grasp the idea behind it before you contribute to our CSS.
 
 Use `__` (two underscores) for component parts (e.g. `.item-listing__title`).
 
 Use `--` (two hyphens) for modifiers (e.g. `.item-listing--inactive`).
 
-E.g.
+Example:
 
 ``` slim
 .item-listing.item-listing--inactive
@@ -209,12 +211,6 @@ Define these classes without nesting to [keep specificity low](#keep-specificity
 .item-listing__title { … }
 ```
 
-This type of naming has less risk of collisions than nested selectors, more clearly shows which classes are part of the same whole, and makes it easier to override specificity.
-
-The block (the first part of the name) may be implied/implicit: we can use `.input--small` for `input` variants even if we don't want to add an `.input` class to all of them. Or we may do `.home-page__thingie` when a style needs to be page-specific and we don't need to actually add a `.home-page` class.
-
-But you must never use a component part without either an explicit or an implied block: don't use `.item-listing__title` for something that isn't an item listing just because it happens to look good. Either add a new component like `.other-thing__title` (if they incidentally look the same) or extract a more general concept like `.list-title` that can be used in both places.
-
 With Sass 3.4 or later, you can use `&` like this:
 
 ``` scss
@@ -226,10 +222,14 @@ With Sass 3.4 or later, you can use `&` like this:
 
 Use `&` or not as you please, on a case-by-case basis.
 
+The block (the first part of the name) may be implied/implicit: we can use `.input--small` for `input` variants even if we don't want to add an `.input` class to all of them. Or we may do `.home-page__thingie` when a style needs to be page-specific and we don't need to actually add a `.home-page` class.
+
+You must never use a component part without either an explicit or an implied block: don't use `.item-listing__title` for something that isn't an item listing just because it happens to look good. Either add a new component like `.other-thing__title` (if they incidentally look the same) or extract a more general concept like `.list-title` that can be used in both places.
+
 Further reading:
 
 * ["BEM-like Naming" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
-* [Scaling down the BEM methodology for small projects](http://www.smashingmagazine.com/2014/07/17/bem-methodology-for-small-projects/)
+* [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 
 
 #### Keep BEM component nesting shallow.
