@@ -226,6 +226,8 @@ The block (the first part of the name) may be implied/implicit: we can use `.inp
 
 You must never use a component part without either an explicit or an implied block: don't use `.item-listing__title` for something that isn't an item listing just because it happens to look good. Either add a new component like `.other-thing__title` (if they incidentally look the same) or extract a more general concept like `.list-title` that can be used in both places.
 
+BEM is an ideal. Pragmatically, we will sometimes "cheat" and write a selector like `.item-info__list dt` rather than `.item-info__list__title`, if we're confident this doesn't introduce significant risk of collisions or specificity wars. And if those things *do* become a problem later, we can stop cheating then – we have the ideal to fall back on.
+
 Further reading:
 
 * ["BEM-like Naming" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
