@@ -144,6 +144,12 @@ This makes its purpose clear to the reader.
 
 We don't use BEM-like naming for these: that's for styling.
 
+TODO: DO we want this rule? Are we OK with classes just for tests?
+
+Further reading:
+
+* [QA namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#qa-namespaces-qa-)
+
 
 #### Use a `js-` prefix for JS hook classes.
 
@@ -152,6 +158,12 @@ If a CSS class is *only* used to find elements in JavaScript, prefix it. E.g. `j
 This makes its purpose clear to the reader.
 
 We don't use BEM-like naming for these: that's for styling.
+
+TODO: Should we forbid using styling CSS for JS hooks, so JS and CSS classes are entirely independent?
+
+Further reading:
+
+* [JavaScript namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#javascript-namespaces-js-)
 
 
 #### In the markup, put more generic selectors first.
