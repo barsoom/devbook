@@ -187,7 +187,7 @@ They also discourage modular CSS, as they're only intended to be used once per p
 
 Within a component, we prefer [BEM-like naming](http://cssguidelin.es/#bem-like-naming) and we avoid nested selectors.
 
-Note that this section is a very brief summary for reference. You *must* read [the article]([BEM-like naming](http://cssguidelin.es/#bem-like-naming) and feel that you grasp the idea behind it before you contribute to our CSS.
+Note that this section is a very brief summary for reference. You *must* read [the article](http://cssguidelin.es/#bem-like-naming) and feel that you grasp the idea behind it before you contribute to our CSS.
 
 Use `__` (two underscores) for component parts (e.g. `.item-listing__title`).
 
