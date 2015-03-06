@@ -108,17 +108,6 @@ Further reading:
  * ["Specificity" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#specificity)
 
 
-#### Be mindful of selector intent.
-
-If you mean "style the menu links in my sidebar", say something like `.site-nav__link` – don't say `.sidebar a` – to avoid unintended side-effects.
-
-We aim to be pragmatic: if `.site-nav` is a shallow tree of elements and you're confident it won't grow to include more types of links, `.site-nav a` can be fine. But `.sidebar a` is probably a bad idea.
-
-Further reading:
-
-* [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
-
-
 #### Avoid undefining styles.
 
 If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
@@ -232,6 +221,7 @@ Further reading:
 
 * ["BEM-like Naming" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#bem-like-naming)
 * [MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
 
 
 #### Keep BEM component nesting shallow.
