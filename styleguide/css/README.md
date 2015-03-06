@@ -101,7 +101,7 @@ Strive for as low CSS specificity as possible by avoiding nesting selectors (`.f
 
 This makes maintenance easier by avoiding specificity wars and bugs.
 
-[BEM-like naming](#bem-like-naming) helps achieve this.
+[BEM-like naming](#use-bem-like-naming) helps achieve this.
 
 Further reading:
 
@@ -244,7 +244,7 @@ Further reading:
 
 #### `.is-modified` is allowed for polymorphic modifiers only.
 
-In addition to [BEM-like modifier naming](#bem-like-naming), we also accept naming like `.is-inactive` for modifiers *when they are polymorphic*, i.e. when JavaScript applies the same modifier to multiple types of components. Then BEM naming would be very inconvenient.
+In addition to [BEM-like modifier naming](#use-bem-like-naming), we also accept naming like `.is-inactive` for modifiers *when they are polymorphic*, i.e. when JavaScript applies the same modifier to multiple types of components. Then BEM naming would be very inconvenient.
 
 *Never* style these generic modifier classes standalone (don't do `.is-inactive { … }`); *always* style them together with the modified thing (do `.item-listing.is-inactive { … }`). Generic modifier classes should have no styling on their own since we never know what they may be combined with in the future.
 
