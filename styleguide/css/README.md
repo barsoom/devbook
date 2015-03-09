@@ -110,7 +110,7 @@ Further reading:
 
 #### Consider selector intent.
 
-If you mean "within message boxes, style the icon" then write `.message-box .icon { }`, not `.message-box i`.
+If you mean "within message boxes, style the icon" then write `.message-box .icon { }`, not `.message-box i { }`.
 
 Even if both selectors work, the former expresses your actual intent and the latter does not. So it communicates better. As a side-effect of that, it's less fragile: the style rule will only affect future icons, not all `<i>` elements. And it won't break if we change the icon markup.
 
