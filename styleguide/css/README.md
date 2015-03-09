@@ -301,7 +301,7 @@ Thanks to [Henric Trotzig](https://twitter.com/henrictrotzig/status/563362417439
 
 #### Put group selectors on separate lines with trailing commas.
 
-Do
+When the list of selectors may grow, do
 
 ```
 .foo,
@@ -314,6 +314,8 @@ Do
 The separate lines makes it easier to read.
 
 The trailing commas make changes slightly easier.
+
+If the list of selectors is unlikely to grow (e.g. `a:hover, a:active {}`) you don't need multiple lines.
 
 
 #### Only `@extend` silent classes.
