@@ -299,6 +299,35 @@ Sometimes that's not possible. Then we name it with a leading underscore, e.g. `
 Thanks to [Henric Trotzig](https://twitter.com/henrictrotzig/status/563362417439023104) for suggesting this.
 
 
+#### Put nested selectors last.
+
+Do
+
+```
+.my-thing {
+  margin: 0;
+
+  &__subthing {
+    padding: 0;
+  }
+}
+```
+
+Don't do
+
+```
+.my-thing {
+  &__subthing {
+    padding: 0;
+  }
+
+  margin: 0;
+}
+```
+
+No practical reason, just taste.
+
+
 #### Put group selectors on separate lines with trailing commas.
 
 When the list of selectors may grow, do
