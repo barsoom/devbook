@@ -108,6 +108,17 @@ Further reading:
  * ["Specificity" in Harry Roberts' CSS Guidelines](http://cssguidelin.es/#specificity)
 
 
+#### Consider selector intent.
+
+If you mean "within message boxes, style the icon" then write `.message-box .icon { }`, not `.message-box i`.
+
+Even if both selectors work, the former expresses your actual intent and the latter does not. So it communicates better. As a side-effect of that, it's less fragile: the style rule will only affect future icons, not all `<i>` elements. And it won't break if we change the icon markup.
+
+Further reading:
+
+* [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
+
+
 #### Avoid undefining styles.
 
 If you find yourself needing to undefine a previously defined style, stop and consider if this is a sign that the previously defined CSS should be refactored.
