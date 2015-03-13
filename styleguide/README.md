@@ -29,7 +29,9 @@ Add checkboxes to the pull request with all our names like this:
 
 If everyone checks their box, we have consensus.
 
-If you haven't voted after two weeks, it counts as a non vote. If no one else is opposed, the pull request may be merged without your vote, though you should be notified in a comment.
+If you veto or need more discussion, say so in a comment.
+
+If you haven't weighed in after two weeks, it counts as a non vote. If no one else is opposed, the pull request may be merged without your vote, though you should be notified in a comment.
 
 If you missed the vote and want to veto it after the fact, we will revert it. But if months have passed we encourage you to instead make a new pull request.
 
