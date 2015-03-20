@@ -66,6 +66,7 @@ Specifically:
   Deploy it in three steps:
 
   * Deploy 1:
+    * TODO: Next time, try using a DB-level trigger instead of doing it app-level. Then update this document!
     * Make the app write to both the old and the new column. Now all new records will have a value in the new column.
 
   * Deploy 2:
