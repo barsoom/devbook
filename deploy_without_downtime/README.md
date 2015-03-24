@@ -20,7 +20,7 @@ The application before a deploy is the "old app". The application after a deploy
 
 **NOTE:** We assume your deploy process runs and completes its migrations *before* starting the new app.
 
-TODO: This is [not true out of the box on Heroku](https://github.com/barsoom/devbook/issues/34). Update this document when we have important stuff on Heroku!
+TODO: This is [not true out of the box on Heroku](https://github.com/barsoom/devbook/issues/34). Update this document when we have important stuff on Heroku! Probably deploying and running a migration in one commit and deploying post-migration changes in the next commit, instead of combining migration and post-migration changes into one.
 
 * A migration is only safe if the old app works with the new state of the DB.
 
