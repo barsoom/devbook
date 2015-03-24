@@ -22,5 +22,6 @@ For reference and discussion.
 ## Checklists
 
 * [Arranging a meetup](/arranging_a_meetup)
+* [Attending a conference](/attending_a_conference)
 * [Holding a demo](/holding_a_demo)
 * [Starting a project](/starting_a_project)
