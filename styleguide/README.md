@@ -164,9 +164,9 @@ Use your own judgment to choose between the options.
 ---
 ### Ruby
 
-#### Use a consistent class layout
+#### Use a consistent class layout.
 
-See [Ruby Style Guide on class layout](https://github.com/bbatsov/ruby-style-guide#consistent-classes)
+Loosely based on [bbatsov's Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide#consistent-classes).
 
 ```ruby
 class Person
