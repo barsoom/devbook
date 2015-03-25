@@ -20,21 +20,18 @@ If a styleguide violation is pointed out in review, follow it and don't debate i
 
 If anyone in the team wants to add, change or remove something, they make a pull request against this repo and make their case.
 
-We discuss in the comments and decide by consensus. Feel free to use emoji inspired by [the Crisp consensus model](http://blog.crisp.se/2014/03/27/peterantman/crisp-consensus-model-2-1):
+We discuss in the comments and decide by consensus.
 
-:thumbsup: Yes please! I actively support this.
+Add checkboxes to the pull request with all our names like this:
 
-:thumbsdown: Veto! I feel that I have all the facts needed to say no.
+- [ ] Joe
+- [ ] Jane
 
-:fist: I stand aside. I neither support nor oppose this.
+If everyone checks their box, we have consensus.
 
-:point_right: Let's discuss further. We don't have all the facts yet.
+If you veto or need more discussion, say so in a comment.
 
-We may go several rounds.
-
-If we get all :thumbsup: or :fist: we have consensus.
-
-If you haven't voted after two weeks, it counts as a :fist: vote. If no one else is opposed, the pull request may be merged without your vote, though you should be notified in a comment.
+If you haven't weighed in after two weeks, it counts as a non vote. If no one else is opposed, the pull request may be merged without your vote, though you should be notified in a comment.
 
 If you missed the vote and want to veto it after the fact, we will revert it. But if months have passed we encourage you to instead make a new pull request.
 
