@@ -162,15 +162,15 @@ Further reading:
 * [QA namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#qa-namespaces-qa-)
 
 
-#### Use a `js-` prefix for JS hook classes.
+#### Use a `js-` prefix for classes used by JS.
 
-If a CSS class is *only* used to find elements in JavaScript, prefix it. E.g. `js-destroy-link`.
+When you find elements in JavaScript, use dedicated JS-only selectors, e.g. `.js-destroy-link`.
 
-This makes its purpose clear to the reader.
+These classes should not be used for styling.
+
+This means that we can confidently change our JS without breaking styling, or our styling without breaking our JS.
 
 We don't use BEM-like naming for these: that's for styling.
-
-TODO: Should we forbid using styling CSS for JS hooks, so JS and CSS classes are entirely independent?
 
 Further reading:
 
