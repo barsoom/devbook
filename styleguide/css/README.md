@@ -166,7 +166,7 @@ Further reading:
 
 When you find elements in JavaScript, use dedicated JS-only selectors, e.g. `.js-destroy-link`.
 
-These classes should not be used for styling.
+These classes should not be used for styling. And styling rules should not be used for JS.
 
 This means that we can confidently change our JS without breaking styling, or our styling without breaking our JS.
 
