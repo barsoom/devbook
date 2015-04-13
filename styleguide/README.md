@@ -495,6 +495,30 @@ Don't do this within one-liner lists or hashes, though, as it doesn't have any o
 Do `[ 1, 2, 3 ]` and `{ foo: 1, bar: 2 }` instead of `[1, 2, 3]` and `{foo: 1, bar: 2}` for increased readability.
 
 
+### Put a blank line below guard statements.
+
+Do
+
+``` ruby
+def hello
+  return nil unless greetable?
+
+  "Hello!"
+end
+```
+
+and not
+
+``` ruby
+def hello
+  return nil unless greetable?
+  "Hello!"
+end
+```
+
+When a method has a happy path and guard statements, we like to have them visually distinct.
+
+
 ### Explain why you lock down a Gemfile version or fork.
 
 If you lock a gem to a specific version, or specify a non-standard GitHub repository or branch, you should explain why in a comment.
