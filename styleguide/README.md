@@ -198,6 +198,11 @@ class Person
   end
 
   private
+  
+  # private class methods are grouped after the private declaration
+  private_class_method \
+  def self.some_private_class_method
+  end
 
   def some_private_method
   end
