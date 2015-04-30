@@ -72,7 +72,7 @@ If you understand and still disagree, don't change it.
 
 Understanding their point means understanding the *underlying* reasons this would be good or bad ("not DRYing this up could easily lead to bugs here"). An appeal to authority ("DHH says this is the right way") or to rules or smells ("this is not DRY", "this violates SRP") is not enough.
 
-### Don't spend much time on things you've considered.
+### Don't spend much time on things you've already considered.
 
 If you already thought of but rejected something that a reviewer suggests, feel free to skip it with a quick explanation, or even without one.
 
