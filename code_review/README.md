@@ -11,6 +11,22 @@ Committers and reviewers should read these guidelines to do it better.
 * https://github.com/thoughtbot/guides/tree/master/code-review
 
 
+## As a reviewer and committer both
+
+
+### Change medium if you talk past each other.
+
+If you think you might be talking past each other, stop writing low-context, low-bandwidth comments. Talk IRL or over voice or video instead.
+
+### Don't have style debates.
+
+Pointing out a difference in style is fine: it can help us learn from each other.
+
+But don't let it go beyond pointing out the difference and saying "cool, I'll try that" or "thanks, but I prefer it this way".
+
+If you feel strongly enough to want to advocate "your" style beyond this, propose a change in our styleguide and have the discussion on that pull request.
+
+
 ## As a reviewer
 
 
@@ -44,7 +60,6 @@ Do point out if documentation is hard to understand or misleading, though, wheth
 
 If someone points out a [styleguide](/barsoom/devbook/tree/master/styleguide#how-and-when-to-follow-this-styleguide) violation, fix it. If you want to debate it, take that debate to the styleguide – after fixing it.
 
-
 ### Don't obey comments you don't understand or agree with.
 
 Every review comment should be seen as a suggestion. Don't follow them blindly because of things like the reviewer's seniority.
@@ -57,6 +72,11 @@ If you understand and still disagree, don't change it.
 
 Understanding their point means understanding the *underlying* reasons this would be good or bad ("not DRYing this up could easily lead to bugs here"). An appeal to authority ("DHH says this is the right way") or to rules or smells ("this is not DRY", "this violates SRP") is not enough.
 
+### Don't spend much time on things you've considered.
+
+If you already thought of but rejected something that a reviewer suggests, feel free to skip it with a quick explanation, or even without one.
+
+We want to keep review low-cost: you don't need to spend time justifying every decision.
 
 ### If you're asked for clarification, clarify in the *source*.
 
