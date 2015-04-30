@@ -4,7 +4,7 @@
 
 Also see [our top-level styleguide](/styleguide): it explains how and when to follow our styleguides, and how to change them.
 
-This is an aspirational styleguide. Use this style for new projects and move old projects in this direction.
+This is an aspirational styleguide: Use this style for new projects. Move old projects in this direction, even if they have "broken windows", so we don't add to the burden of harder-to-maintain legacy styles.
 
 This styleguide intentionally addresses both higher-level structure and lower-level details, based on the current needs of our team.
 
