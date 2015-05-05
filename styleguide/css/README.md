@@ -76,6 +76,9 @@ Note that all `@import`ed files must end in `.scss`, otherwise Sass will generat
 // Again, you may have a single file or separate files: base/{forms,tables,typography,misc}.scss
 @import "base";
 
+// Tiny, often single-declaration utility classes.
+@import "utilities";
+
 // Anything else, including major layout components.
 @import "components/**/*";  // E.g. components/{sidebar,cart,cookie_notice}.scss
 
@@ -247,6 +250,7 @@ Further reading:
 * [More Transparent UI Code with Namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 * [Side Effects in CSS](http://philipwalton.com/articles/side-effects-in-css/)
 * [Shoot to kill; CSS selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/)
+* [Utility classes](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#utility-namespaces-u-)
 
 
 #### Keep BEM component nesting shallow.
