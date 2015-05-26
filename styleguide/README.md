@@ -83,6 +83,16 @@ Rails `dom_id` uses `_`. Twitter Bootstrap uses `-`. We can't be consistent with
 
 Dashes also mean that it's easier to grep for CSS `first-name` vs Ruby `first_name`.
 
+#### Document when IDs are for anchor links.
+
+``` slim
+/ This ID is an anchor.
+#snake
+  p Hello!
+```
+
+So it's not cleaned up by someone thinking it's used for styling.
+
 
 ---
 ### CSS and Sass
