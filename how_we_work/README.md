@@ -50,7 +50,7 @@ Looking into the error *will* certainly involve `git blame`, and possibly some m
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
 
-We try to spend at least an hour or two every morning fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring, documents like this one etc.
+We try to spend at least two days every two weeks fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring, documents like this one etc.
 
 And when we do planned tasks, we try to have enough slack to do them well the first time.
 
@@ -64,13 +64,9 @@ Bugs should be fixed when they crop up, before starting work on new features. Th
 
 We're not perfect, so we're always a little short of this goal, but not very.
 
-#### Some code review.
+#### Code review.
 
-We don't review all code all the time; we prefer to "move fast and break things".
-
-We do review some changes, when breaking things would be unacceptable. At those times, we use GitHub pull requests.
-
-All commits are shown and linked in our chatroom, so there is also some spontaneous post-merge review from that.
+We review all our code in our review tool [Remit](https://github.com/henrik/remit).
 
 #### Some pair programming.
 
