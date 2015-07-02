@@ -34,6 +34,10 @@ When we value precise control, we use our [PrawnCocktail](https://github.com/bar
 
 We have a custom tool (not yet public) to visually preview them in a browser during development.
 
+## Excel generation
+
+If we don't need anything fancy, we use our own [ESV](https://github.com/barsoom/excel-esv).
+
 ## Misc
 
 * [attr_extras](https://github.com/barsoom/attr_extras) to reduce boilerplate.

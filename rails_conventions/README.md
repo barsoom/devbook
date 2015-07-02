@@ -31,7 +31,13 @@ Looking into: Two-step views (view objects and templates).
 
 PDF document generators. E.g. `ContractDocument`.
 
-Preferred library: [ours on top of pdfkit or Prawn](https://github.com/barsoom/devbook/tree/master/libs#pdf-generation).
+Preferred library: [see libs](https://github.com/barsoom/devbook/tree/master/libs#pdf-generation).
+
+### `app/exporters/`
+
+Excel or CSV generators. E.g. `ContractsExcel`.
+
+Preferred library: [see libs](https://github.com/barsoom/devbook/tree/master/libs#excel-generation).
 
 ### `app/forms/`
 
