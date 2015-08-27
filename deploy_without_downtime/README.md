@@ -38,6 +38,18 @@ Specifically:
   The old app will attempt to use the cached column name and will break things.
 
   Deploy removals in two steps:
+  
+  * (Optional) Deploy 0: Make the column nullable if it isn't already:
+  
+    ```ruby
+    class MyMigration < ActiveRecord::Migration
+      def change
+        change_column_null :items, :description, true
+      end
+    end
+    ```
+  
+    This is so you can safely ignore the column without breakink the creation of new records.
 
   * Deploy 1: Make the app ignore the column:
 
