@@ -56,16 +56,23 @@ MyThing = React.createClass
 ```
 
 
-#### Use a `_render_` prefix for functions that are part of the rendering.
+#### Use a `_render_` prefix for functions that return some piece of rendered output.
 
-We want it to be clear which functions are part of that aspect of the component, and which are lifecycle events/event handlers.
+We want it to be clear which functions are part of actual rendering.
+
+This applies to functions that return HTML or strings that are part of the rendered output.
+
+It does not apply to functions that retrieve data that is not rendered as-is.
 
 Do:
 
 ``` coffee
 render: ->
+  data = @_retrieveSomeData()
+
   <div>
-    #{@_renderContent()}
+    <label>#{@_renderName()}</label>
+    #{@_renderInput()}
   </div>
 ```
 
@@ -74,6 +81,6 @@ Don't do this:
 ``` coffee
 render: ->
   <div>
-    #{@_content()}
+    #{@_input()}
   </div>
 ```
