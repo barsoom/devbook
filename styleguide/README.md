@@ -101,6 +101,12 @@ Please see [the CSS and Sass styleguide](/styleguide/css).
 
 
 ---
+### React
+
+Please see [the React styleguide](/styleguide/react).
+
+
+---
 ### JavaScript
 
 
