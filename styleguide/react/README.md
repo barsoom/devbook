@@ -42,15 +42,15 @@ jQuery's namespaced listeners can make this easier. The namespace should match t
 Example:
 
 ``` coffee
-Foo = React.createClass
+MyThing = React.createClass
   componentDidMount: ->
-    $(document).on "CustomEvent.Foo", fun
-    $(document).on "keydown.Foo", fun
+    $(document).on "CustomEvent.MyThing", fun
+    $(document).on "keydown.MyThing", fun
     @timeout = setTimeout(fun, 1000)
     @interval = setInterval(fun, 1000)
 
   componentWillUnmount: ->
-    $(document).off ".Foo"
+    $(document).off ".MyThing"
     clearTimeout(@timeout)
     clearInterval(@interval)
 ```
