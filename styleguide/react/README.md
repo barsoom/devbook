@@ -37,7 +37,7 @@ Any event listeners that are bound on mount should be unbound when we unmount. T
 
 This is to avoid confusing behavior or memory leaks. Even if we think a component may never be unmounted, things can change.
 
-jQuery's namespaced listeners can make this easier.
+jQuery's namespaced listeners can make this easier. The namespace should match the component name and be globally unique. We don't want to unbind someone else's listeners.
 
 Example:
 
