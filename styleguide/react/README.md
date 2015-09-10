@@ -54,3 +54,26 @@ MyThing = React.createClass
     clearTimeout(@timeout)
     clearInterval(@interval)
 ```
+
+
+#### Use a `_render_` prefix for functions that are part of the rendering.
+
+We want it to be clear which functions are part of that aspect of the component, and which are lifecycle events/event handlers.
+
+Do:
+
+``` coffee
+render: ->
+  <div>
+    #{@_renderContent()}
+  </div>
+```
+
+Don't do this:
+
+``` coffee
+render: ->
+  <div>
+    #{@_content()}
+  </div>
+```
