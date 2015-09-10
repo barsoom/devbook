@@ -10,9 +10,26 @@ This styleguide intentionally addresses both higher-level structure and lower-le
 
 ---
 
+
 #### Use `return null` to not render a component.
 
 We've standardized on this value. `false` is also allowed, but it's not our convention.
+
+
+#### Use curlies around non-string attribute values.
+
+Do:
+
+``` jsx
+<div className="foo" key={bar}></div>
+```
+
+Don't do this:
+
+``` jsx
+<div className={"foo"} key=bar></div>
+```
+
 
 #### Unbind events and timers when unmounting.
 
