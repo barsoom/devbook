@@ -14,7 +14,7 @@ This styleguide intentionally addresses both higher-level structure and lower-le
 
 We've standardized on this value. `false` is also allowed, but it's not our convention.
 
-#### Unbind events when unmounting.
+#### Unbind events and timers when unmounting.
 
 Any event listeners that are bound on mount should be unbound when we unmount. Timers and intervals should be cleared.
 
