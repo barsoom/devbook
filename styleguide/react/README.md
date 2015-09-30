@@ -30,6 +30,12 @@ Don't do this:
 <div className={"foo"} key=bar></div>
 ```
 
+#### Put a space before the slash (`… />`) in self-closing tags.
+
+E.g. `<MyComponent foo={bar} />`, not `<MyComponent foo={bar}/>`.
+
+Just as a convention.
+
 
 #### Unbind events and timers when unmounting.
 
