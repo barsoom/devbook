@@ -18,6 +18,7 @@ For reference and discussion.
 * [Rails conventions](/rails_conventions)
 * [Wiki conventions](/wiki)
 * [Libraries](/libs)
+* [Stand-up conventions](/stand_up)
 
 ## Checklists
 
