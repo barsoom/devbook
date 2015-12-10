@@ -170,7 +170,7 @@ class Person
   # inner classes
   CustomErrorKlass = Class.new(StandardError)
 
-  # constants are next
+  # class-wide constants are next (for constants only relevant to a method, group it with the method)
   SOME_CONSTANT = 20
 
   # afterwards we have attribute macros
@@ -185,6 +185,11 @@ class Person
 
   # followed by public instance methods
   def some_method
+  end
+
+  # example of a local value extracted to a constant
+  LOCAL_MAGIC_DEFAULT_VALUE = "ruby"
+  def some_method(thing = LOCAL_MAGIC_DEFAULT_VALUE)
   end
 
   # protected and private methods are grouped near the end
