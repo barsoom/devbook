@@ -18,7 +18,7 @@ If a styleguide violation is pointed out in review, follow it and don't debate i
 
 ## How to change this styleguide
 
-If anyone in the team wants to add, change or remove something, they make a pull request against this repo and make their case.
+If anyone in the team wants to add, change or remove something, they make a pull request against this repo and make their case. Or, they can [open an issue](https://github.com/barsoom/devbook/issues/new) to get some feedback before writing a proposal.
 
 We discuss in the comments and decide by consensus.
 
