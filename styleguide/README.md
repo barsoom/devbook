@@ -429,6 +429,16 @@ Do `t("this.here")` and not `t(:"this.here")`.
 
 Where a simple unquoted symbol will do, they're fine: `t(:this)`
 
+### Use `_html` and `_markdown` i18n key suffixes.
+
+If a translation string contains HTML, use a `_html` suffix, e.g. `t("foo.bar_html")`
+
+If a translation string contains Markdown, use a `_markdown` suffix, e.g. `t("foo.bar_markdown")`
+
+Rails will automatically consider `_html` i18n values to be HTML safe, and this also communicates to the translator what they're allowed to do.
+
+The `_markdown` suffix gets no automatic special treatment, but it also communicates to the translator what they can do.
+
 ### Use `%r{}` for regular expressions with slashes.
 
 `%r{https?://}` reads better than `/https?:\/\//`.
