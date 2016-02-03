@@ -421,8 +421,6 @@ Single-quoted strings [aren't faster](http://stackoverflow.com/questions/1836467
 
 But don't escape quotes inside a string if you don't need to. Change the quote style instead: `'like "this"'` or `%{'like' "this"}`.
 
-In contexts (specifically, in `Gemfile`) where single quotes are conventional, respect that convention.
-
 ### Use strings for complex i18n keys.
 
 Do `t("this.here")` and not `t(:"this.here")`.
