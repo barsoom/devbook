@@ -97,17 +97,17 @@
 ### Order
 
 * Food (pizza, wraps).
-  16 pizzas for ~24 people seemed like just enough.
-  At least 1/3 vegetarian.
-  From somewhere close or the delivery time can be unreliable.
-
-  We have used [online pizza/pizza hut](http://onlinepizza.se/Stockholm/Pizza-Hut-Klaraberg) and ordered large      pizzas (8 pices) (2-3 pices per attendee)
+  - 16 pizzas for ~24 people seemed like just enough.
+  - At least 1/3 vegetarian.
+  - From somewhere close or the delivery time can be unreliable. (We've been bitten by this twice.)
+    - If the food is cold (e.g. wraps), we might as well get them delivered a few hours ahead of time.
+  - We have used [online pizza/pizza hut](http://onlinepizza.se/Stockholm/Pizza-Hut-Klaraberg) and ordered large pizzas (8 slices) (2-3 slices per attendee).
 
 ### Responsibilities during the meetup
 
 * Overall planner
 * Alarm
-* Watch the door
+* Greeter: watch the door, say hello as people arrive, check Twitter/Meetup/chats (maybe multiple people taking turns on this)
 * Food
 * Venue (setting out chairs, cleaning etc)
 * Master of Ceremonies (introduction, timekeeping)
