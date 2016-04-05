@@ -14,11 +14,11 @@ For reference and discussion.
 ## Conventions
 
 * [How we (want to) work](/how_we_work)
+* [Process conventions](/conventions)
 * [Tracks](/tracks)
 * [Rails conventions](/rails_conventions)
 * [Wiki conventions](/wiki)
 * [Libraries](/libs)
-* [Stand-up conventions](/stand_up)
 
 ## Checklists
 
