@@ -85,3 +85,9 @@ Let others finish.
 Be brief.
 
 Be specific.
+
+#### Meetings
+
+We respect the planned starting time of meetings. We will start the meeting on time, even if there are someone missing.
+
+We prefer to have meetings right away as long as everyone who should be in the meeting is present. 
