@@ -8,6 +8,6 @@ We agreed on following these stand-up conventions
 * what they plan on doing next and
 * what's blocking them.
 
-* The facilitator chooses how starts
+* The facilitator chooses who starts
 * Everyone has approx. one minute
 * Topics which are up for longer/in-depth discussions are noted and discussed in post-stand-up or in a separate meeting
