@@ -85,3 +85,9 @@ Let others finish.
 Be brief.
 
 Be specific.
+
+#### Meetings
+
+We respect the starting time of our meetings. We generally do not wait for latecomers.
+
+We prefer to start our meetings as soon as possible and not wait for the planned time.
