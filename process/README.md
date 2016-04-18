@@ -11,7 +11,7 @@ In a stand-up or other meeting, it means "enough detail, let's get back on track
 
 For a conversation taking place in our work room, it means "would you please end this conversation or take it elsewhere".
 
-By agreeing on a shorthand, the idea is that we can be brief without anyone taking offense as the brevity.
+By agreeing on a shorthand, the idea is that we can be brief without anyone taking offense at the brevity.
 
 
 ## Stand-up
