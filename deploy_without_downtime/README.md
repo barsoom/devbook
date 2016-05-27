@@ -69,7 +69,7 @@ Specifically:
 
   * Deploy 2: A migration to remove the column. The old app will no longer have the column name cached.
 
-  * Deploy 3: Remove the code that ignored the column.
+  * Deploy 3: Remove the code that ignored the column. If migrations run before the app code reloads (e.g. not on a standard Heroku setup), step 2 and 3 can be combined in one.
 
 * **Renaming columns** is never safe.
 
