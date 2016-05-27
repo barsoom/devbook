@@ -49,7 +49,7 @@ Specifically:
     end
     ```
   
-    This is so you can safely ignore the column without breakink the creation of new records.
+    This is so you can safely ignore the column without breaking the creation of new records.
 
   * Deploy 1: Make the app ignore the column:
 
