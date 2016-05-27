@@ -130,7 +130,7 @@ Specifically:
   insert_sql("INSERT INTO new_records (SELECT * FROM old_records WHERE id < #{first_new_id})")
   ```
 
-* **Creating indexes** is TODO.
+* **Creating indexes** [should be done concurrently](https://robots.thoughtbot.com/how-to-create-postgres-indexes-concurrently-in).
 
 * **Removing indexes** is always safe.
 
