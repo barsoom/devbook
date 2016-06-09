@@ -554,13 +554,16 @@ If you lock a gem to a specific version, or specify a non-standard GitHub reposi
 
 This helps the person who wants to upgrade that dependency later. Did the standard version have a regression? Does the fork have some fix we need? Is the new version especially hard to upgrade to?
 
-This is not necessary for core dependencies where the reason is obvious, e.g. locking down the Rails version.
+A comment is not necessary when you lock down the major version to avoid it being changed when updating another gem (e.g. `gem "redis", "~> 2.0"`), since this is so common. But if you've tried upgrading the major version and it was especially difficult or had specific gotchas, please do specify these, of course.
 
 Example:
 
 ``` ruby
-# 1.2.4 is not compatible with 'apricots'.
-gem 'bananas', '1.2.3'
+# 1.2.4 is not compatible with "apricots".
+gem "bananas", "1.2.3"
+
+# (no need for a comment)
+gem "redis", "~> 2.0"
 ```
 
 
