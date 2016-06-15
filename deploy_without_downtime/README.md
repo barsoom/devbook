@@ -32,7 +32,13 @@ TODO: This is [not true out of the box on Heroku](https://github.com/barsoom/dev
 
 Specifically:
 
-* **Adding columns** is always safe.
+* **Adding columns** is safe for columns that may be null, or for small tables.
+
+  NOT NULL columns on big tables [will lock the table for a long time](http://stackoverflow.com/a/19527999/6962), so do them in multiple steps (not necessarily multiple deploys):
+
+  * Step 1: Add the column as a NULL column.
+  * Step 2: Set the default value in batches, some records at a time.
+  * Step 3: Make the column NOT NULL with a default.
 
 * **Removing columns** is never safe.
   The old app will attempt to use the cached column name and will break things.
