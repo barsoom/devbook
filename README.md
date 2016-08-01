@@ -14,7 +14,7 @@ For reference and discussion.
 ## Conventions
 
 * [How we (want to) work](/how_we_work)
-* [Process conventions](/conventions)
+* [Process conventions](/process)
 * [Tracks](/tracks)
 * [Rails conventions](/rails_conventions)
 * [Wiki conventions](/wiki)
