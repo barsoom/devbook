@@ -81,7 +81,7 @@ Models don't have to inherit from `ActiveRecord::Base`. In fact, it's nice if th
 
 Models never send mail (or similar) in callbacks. See *interactors* for that.
 
-Looking into: Separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper). With Minimapper, this is where the entity models go.
+Did look into, but won't use in the future: Separating persistence from domain logic with [Minimapper](https://github.com/joakimk/minimapper). With Minimapper, this is where the entity models go.
 
 ### `app/observers/`
 
