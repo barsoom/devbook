@@ -672,9 +672,13 @@ We should write "time zone safe" code when we can:
   * use `Time.zone.mktime` instead of `Time.mktime`
   * other similar cases (update this section if you encounter them)
 
-Sometimes it doesn't really matter and isn't worth the effort. In those cases, say so in a comment so others know it's not an oversight:
+Sometimes it doesn't really matter and isn't worth the effort. In those cases, say so in a comment so others know:
 
-`# It is not important that this is time zone safe.`
+`# This might not be time zone safe but that's acceptable.`
+
+The above applies equally to any scripts we keep around: if they stay in the repo to be run again, or modified, or copy-pasted from, they should be either safe or explicitly unsafe.
+
+For code we don't keep around, anything goes, of course.
 
 #### Use `require_dependency` to require app code.
 
