@@ -22,6 +22,8 @@ The application before a deploy is the "old app". The application after a deploy
 
 TODO: This is [not true out of the box on Heroku](https://github.com/barsoom/devbook/issues/34). Update this document when we have important stuff on Heroku! Probably deploying and running a migration in one commit and deploying post-migration changes in the next commit, instead of combining migration and post-migration changes into one.
 
+For Rails 4, you will need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976) to avoid "PG::InFailedSqlTransaction" errors.
+
 * A migration is only safe if the old app works with the new state of the DB.
 
   This is because deploys will have a period where the migrations have run (in part or in whole) while the old app is still in play.
@@ -76,6 +78,8 @@ Specifically:
   * Deploy 2: A migration to remove the column. The old app will no longer have the column name cached.
 
   * Deploy 3: Remove the code that ignored the column. If migrations run before the app code reloads (e.g. not on a standard Heroku setup), step 2 and 3 can be combined in one.
+
+  If you get "PG::InFailedSqlTransaction" errors, you may be on Rails 4 and need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976).
 
 * **Renaming columns** is never safe.
 
