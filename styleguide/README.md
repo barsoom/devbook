@@ -239,6 +239,12 @@ Mostly a stylistic choice. It's consistent with how we define regular methods. A
 
 A stylistic choice.
 
+#### Prefer `alias_method` to `alias`.
+
+It's more consistent with normal Ruby syntax (`alias_method :a, :b` instead of `alias :a :b`).
+
+It's also got a mnemonic for the argument order in its name: `alias_method :the_alias, :the_method`
+
 #### Use square brackets for `%w[]` and friends.
 
 Do `%w[]`, not `%w()`. It results in an array and the square brackets make that more obvious at a glance.
