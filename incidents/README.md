@@ -32,7 +32,7 @@ The goal of the meeting is to come up with any learnings and actions that let us
 #### Meeting agenda
 
 - [ ] Timeline: What happened? What did we do? What happened then? Where did we leave things?
-- [ ] How did this affect end users? Auction houses, buyers, sellers, support, finance, ….
+- [ ] How did this affect end users? Auction houses, buyers, sellers, support, finance, …. What can we then improve?
 - [ ] Reflect on the post mortem. Can we do post mortems better? Update this document with any learnings.
 
 
