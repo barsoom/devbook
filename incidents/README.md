@@ -38,4 +38,4 @@ The goal of the meeting is to come up with any learnings and actions that let us
 
 ## Inspiration
 
-* [SVTi incident routines](http://svti.svt.se/2016/04/tre-tekniker-och-en-bebis/) (if link is broken, try [Google's cache](http://webcache.googleusercontent.com/search?q=cache%3Asvti.svt.se%2F2016%2F04%2Ftre-tekniker-och-en-bebis%2F&oq=cache%3Asvti.svt.se%2F2016%2F04%2Ftre-tekniker-och-en-bebis%2F&aqs=chrome..69i57j69i58.790j0j4&sourceid=chrome&ie=UTF-8))
+* [SVTi incident routines](http://svti.svt.se/2016/04/tre-tekniker-och-en-bebis/)
