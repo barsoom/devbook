@@ -55,6 +55,14 @@ So show it, and strip it.
 
 Avoid significant trailing whitespace. Use `<br>` over Markdown's double-space, use quoted strings for the `"--  "` e-mail signature convention and so on.
 
+#### Use "NOTE:" in crucial comments only
+
+Our developers' editors may be set up to visually highlight "NOTE" in comments like `# NOTE: If you update this list, you must also update the list in foo_bar.rb.` This makes these comments stand out.
+
+We want "NOTE" to be reserved for especially important comments, so we don't see it all the time and start ignoring it.
+
+The rule of thumb is: If the comment points out something you must be aware of when you edit the associated code, use "NOTE". If the comment only provides background, context or pointers that may be helpful but can safely be ignored, don't use "NOTE".
+
 
 ---
 ### Shell scripts
