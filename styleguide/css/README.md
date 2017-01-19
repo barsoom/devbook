@@ -191,7 +191,11 @@ Since the element name comes first and is the most generic, it reads well to als
 
 #### Don't style by ID.
 
-Feel free to use them for anchor links or JavaScript when necessary, but don't *style* by ID.
+Feel free to use them for anchor links (and then write a comment like "This ID is used for anchor links" so it's clear).
+
+Use them for JavaScript hooks if you absolutely must (e.g. some third-party library has that API), though we should instead use a CSS class with a `js-` prefix in our own code.
+
+But never *style* by ID.
 
 They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
 
