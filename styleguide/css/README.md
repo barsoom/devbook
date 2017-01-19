@@ -193,7 +193,7 @@ Since the element name comes first and is the most generic, it reads well to als
 
 Feel free to use them for anchor links (and then write a comment like "This ID is used for anchor links" so it's clear).
 
-Use them for JavaScript hooks if you absolutely must (e.g. some third-party library has that API), though we should instead use a CSS class with a `js-` prefix in our own code.
+Use them for JavaScript hooks if you absolutely must (e.g. some third-party library has that API), though in our own code we should instead use a CSS class with a `js-` prefix.
 
 But never *style* by ID.
 
