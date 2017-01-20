@@ -154,7 +154,7 @@ We *do* like `em` for margins or paddings that should be relative to the current
 
 If a CSS class is *only* used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
 
-This makes its purpose clear to the reader.
+This makes its purpose clear to the reader, and lets us confidently change styling or JS without breaking tests, and vice versa.
 
 We don't use BEM-like naming for these: that's for styling.
 
@@ -167,9 +167,9 @@ Further reading:
 
 When you find elements in JavaScript, use dedicated JS-only selectors, e.g. `.js-destroy-link`.
 
-These classes should not be used for styling. And styling rules should not be used for JS.
+These classes should not be used for styling or to find elements in tests. And styling or test classes should not be used for JS.
 
-This means that we can confidently change our JS without breaking styling, or our styling without breaking our JS.
+This means that we can confidently change our JS without breaking styling or tests, and vice versa.
 
 We don't use BEM-like naming for these: that's for styling.
 
