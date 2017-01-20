@@ -158,8 +158,6 @@ This makes its purpose clear to the reader.
 
 We don't use BEM-like naming for these: that's for styling.
 
-TODO: DO we want this rule? Are we OK with classes just for tests?
-
 Further reading:
 
 * [QA namespaces](http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#qa-namespaces-qa-)
