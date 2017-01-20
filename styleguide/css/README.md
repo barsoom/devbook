@@ -154,7 +154,9 @@ We *do* like `em` for margins or paddings that should be relative to the current
 
 If a CSS class is *only* used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
 
-This makes its purpose clear to the reader, and lets us confidently change styling or JS without breaking tests, and vice versa.
+These classes should not be used for styling or to find elements in JavaScript. And styling or JS-hook classes should not be used to find elements in tests.
+
+This means that we can confidently change our tests without breaking styling or JavaScript, and vice versa.
 
 We don't use BEM-like naming for these: that's for styling.
 
