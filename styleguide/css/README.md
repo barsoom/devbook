@@ -189,13 +189,19 @@ Then we prefer `table.table-bordered.items-table` to `table.items-table.table-bo
 Since the element name comes first and is the most generic, it reads well to also have generic CSS classes sooner.
 
 
-#### Don't style by ID.
+#### Don't use IDs for styling or JS.
 
-Feel free to use them for anchor links or JavaScript when necessary, but don't *style* by ID.
+Feel free to use them for anchor links (and then write a comment like "This ID is used for anchor links" so it's clear).
+
+Use them for third-party JS or CSS if we absolutely must (e.g. some third-party JS library has that API, or we style some embedded third-party widget).
+
+But never *style* by ID.
 
 They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it hard to override styles.
 
 They also discourage modular CSS, as they're only intended to be used once per page.
+
+And for JS, we prefer to [use CSS classes with a `js-` prefix](#use-a-js--prefix-for-classes-used-by-js).
 
 
 #### Use BEM-like naming.
