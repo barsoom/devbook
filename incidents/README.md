@@ -10,11 +10,10 @@ A checklist for what to do for incidents such as site downtime.
 
 - [ ] Assign an **incident lead** – a single person that is responsible for this checklist. They should delegate tasks explicitly.
 - [ ] If there are remote workers, **"get everone in the same room"** by setting up a video and audio link, e.g. [Zoom](https://zoom.us/).
-- [ ] The incident lead should assign a **communicator**. The communicator ensures that we inform every affected party:
+- [ ] The incident lead should assign a **communicator**. The communicator ensures that we inform every affected party. May be in person, by chat, by phone, Auctionet system messages etc.
   - [ ] The support team.
   - [ ] Auction houses (see [example bulletin](https://auctionet.com/admin/super/bulletins#bulletin_255).
   - [ ] Buyers, sellers, or other affected parties.
-  May be in person, by chat, by phone, Auctionet system messages etc.
 - Consider communicating:
   - [ ] When we first notice the problems.
   - [ ] When there is some workaround.
