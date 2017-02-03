@@ -12,7 +12,7 @@ A checklist for what to do for incidents such as site downtime.
 - [ ] If there are remote workers, **"get everone in the same room"** by setting up a video and audio link, e.g. [Zoom](https://zoom.us/).
 - [ ] The incident lead should assign a **communicator**. The communicator ensures that we inform every affected party. May be in person, by chat, by phone, Auctionet system messages etc.
   - [ ] The support team.
-  - [ ] Auction houses (see [example bulletin](https://auctionet.com/admin/super/bulletins#bulletin_255).
+  - [ ] Auction houses (see [example bulletin](https://auctionet.com/admin/super/bulletins#bulletin_255)).
   - [ ] Buyers, sellers, or other affected parties.
 - Consider communicating:
   - [ ] When we first notice the problems.
