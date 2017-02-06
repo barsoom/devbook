@@ -105,6 +105,8 @@ Specifically:
 
 * **Changing column types** is probably not safe. One case is safe though - changing a :string to :text (internally VARCHAR(255) to TEXT). This is because they are essentially compatible, and :text can hold more data than :string. But the other way may truncate data.
 
+* **Changing column NULL** is not safe. E.g. `change_column_null :foos, :bar_id, false`. It causes a read-and-write lock on the entire table which may cause downtime for large tables that are in active use. [Read more.](http://stackoverflow.com/q/42070628/6962)
+
 * **Removing tables** is never safe.
 
   Just like with removing columns, deploy them in two steps:
