@@ -772,7 +772,7 @@ end
 Further reading: ["How to make negative assertions in tests"](http://thepugautomatic.com/2013/04/negative-assertions/)
 
 
-#### Prefer `to have_received` to `to receive`.
+#### Prefer `to have_received` over `to receive`.
 
 Do:
 
