@@ -792,7 +792,7 @@ expect(Greeter).to receive(:say).with("hello")
 Foo.say_hello
 ```
 
-It is clearer to exercise and *then* verify.
+The test reads clearer if we first exercise and *then* verify.
 
 Note that you will need to replace the method or entire object with a test double as in the example above, for RSpec to be able to verify against it.
 
