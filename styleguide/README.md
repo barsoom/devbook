@@ -779,7 +779,7 @@ Do:
 ``` ruby
 allow(Greeter).to receive(:say)
 
-Greeter.say_hello_to_bar
+Greeter.say_hello
 
 expect(Greeter).to have_received(:say).with("hello")
 ```
@@ -789,7 +789,7 @@ Rather than:
 ``` ruby
 expect(Greeter).to receive(:say).with("hello")
 
-Foo.say_hello_to_bar
+Foo.say_hello
 ```
 
 It is clearer to exercise and *then* verify.
