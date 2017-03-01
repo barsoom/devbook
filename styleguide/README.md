@@ -774,7 +774,7 @@ Further reading: ["How to make negative assertions in tests"](http://thepugautom
 
 #### Prefer `to have_received` over `to receive`.
 
-Do:
+Assuming a `Greeter.say_hello` that calls `say("hello")`, do:
 
 ``` ruby
 allow(Greeter).to receive(:say)
