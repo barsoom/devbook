@@ -772,6 +772,31 @@ end
 Further reading: ["How to make negative assertions in tests"](http://thepugautomatic.com/2013/04/negative-assertions/)
 
 
+#### Prefer `to have_received` over `to receive`.
+
+Assuming a `Greeter.say_hello` that calls `say("hello")`, do:
+
+``` ruby
+allow(Greeter).to receive(:say)
+
+Greeter.say_hello
+
+expect(Greeter).to have_received(:say).with("hello")
+```
+
+Rather than:
+
+``` ruby
+expect(Greeter).to receive(:say).with("hello")
+
+Foo.say_hello
+```
+
+The test reads clearer if we first exercise and *then* verify.
+
+Note that you will need to replace the method or entire object with a test double as in the example above, for RSpec to be able to verify against it.
+
+
 #### Use `private` for help methods.
 
 Do:
