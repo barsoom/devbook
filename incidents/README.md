@@ -13,7 +13,7 @@ A checklist for what to do for incidents such as site downtime.
 - [ ] The incident lead should assign a **communicator**. The communicator ensures that we inform every affected party. May be in person, by chat, by phone, Auctionet system messages etc.
   - [ ] The support team.
   - [ ] Auction houses (see [example bulletin](https://auctionet.com/admin/super/bulletins#bulletin_255)).
-  - [ ] Buyers, sellers, or other affected parties (see [example campaign](https://auctionet.com/admin/super/campaigns/550/edit)).
+  - [ ] Buyers, sellers, or other affected parties (see [example campaign](https://auctionet.com/admin/super/campaigns/550/edit) – remember to disable all other campaigns).
 - Consider communicating:
   - [ ] When we first notice the problems.
   - [ ] When there is some workaround.
