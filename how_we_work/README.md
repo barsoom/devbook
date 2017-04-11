@@ -40,11 +40,13 @@ We use a lot of open source, contribute patches and release [libs of our own](ht
 
 If a problem is not too particular to the app we're working on, and does not represent an important competitive advantage for that business, we encourage extracting and sharing it.
 
-#### Post mortems in a blame-free environment.
+#### A blame-free environment.
 
 The important thing when something goes wrong is to figure out why it happened and how to all learn from that, not to assign blame.
 
-Looking into the error *will* certainly involve `git blame`, and possibly some mild teasing, but making mistakes is considered part of the process.
+This process probably involves determining the people involved, perhaps via `git blame`, but only to learn more about how it happened.
+
+Assigning personal blame, *even in the form of teasing or joking*, is likely to make that person feel bad, reluctant to do similar tasks in the future, and reluctant to be forthcoming about their involvement in any future issues.
 
 #### Leaving some slack.
 
