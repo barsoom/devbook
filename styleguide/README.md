@@ -581,6 +581,18 @@ gem "redis", "~> 2.0"
 ```
 
 
+### Put a last-run date in scripts.
+
+When you add a script that is run manually, e.g. to export some statistics or perform maintenance, put a comment in the top like
+
+```
+# Last run: 2001-02-03
+```
+
+When you run such a script, update the date.
+
+This helps us know which scripts we should maintain and which we can remove.
+
 ---
 ### Active Record
 
