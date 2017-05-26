@@ -45,9 +45,11 @@ Specifically:
 * **Removing columns** is never safe.
   The old app will attempt to use the cached column name and will break things.
 
-  Deploy removals in two steps:
+  Deploy removals in multiple steps:
 
-  * (Optional) Deploy 0: Make the column nullable if it isn't already:
+  * Make sure the column is not actually in use by any code.
+
+  * (Optional) Deploy 1: Make the column nullable if it isn't already (being aware that [it's dangerous on big tables](http://stackoverflow.com/q/42070628/6962):
 
     ```ruby
     class MyMigration < ActiveRecord::Migration
@@ -59,15 +61,16 @@ Specifically:
 
     This is so you can safely ignore the column without breaking the creation of new records.
 
-  * Deploy 1: Make the app ignore the column:
+  * Deploy 2: Make the app ignore the column:
 
     ``` ruby
     class Item < ActiveRecord::base
-      # Assuming we use https://github.com/henrik/fixme – change the date to some future one
-      FIXME "2015-12-01: Don't forget to remove this code when the column is gone"
       def self.columns
         super.reject { |c| c.name == "description" }
       end
+
+      # Or, if the project includes this convenience method:
+      ignore_column :description
 
       # … the rest of the class
     end
@@ -75,9 +78,11 @@ Specifically:
 
     Put that method **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
 
-  * Deploy 2: A migration to remove the column. The old app will no longer have the column name cached.
+  * Deploy 3: A migration to remove the column. The old app will no longer have the column name cached.
 
-  * Deploy 3: Remove the code that ignored the column. If migrations run before the app code reloads (e.g. not on a standard Heroku setup), step 2 and 3 can be combined in one.
+    In a big table, you should drop each index touching the column with `DROP INDEX CONCURRENTLY` (TODO: provide Ruby code for this) before dropping the column itself, to avoid locking issues.
+
+  * Deploy 4: Remove the code that ignored the column. If migrations run before the app code reloads (e.g. not on a standard Heroku setup), step 2 and 3 can be combined in one.
 
   If you get "PG::InFailedSqlTransaction" errors, you may be on Rails 4 and need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976).
 
