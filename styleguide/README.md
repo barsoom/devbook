@@ -63,6 +63,45 @@ We want "NOTE" to be reserved for especially important comments, so we don't see
 
 The rule of thumb is: If the comment points out something you must be aware of when you edit the associated code, use "NOTE". If the comment only provides background, context or pointers that may be helpful but can safely be ignored, don't use "NOTE".
 
+#### Explicitly show both branches of a conditional used as a return value.
+
+If a method will sometimes return nil, we want that to be explicit, not implicit.
+
+So prefer this:
+
+``` ruby
+def my_method
+  if something
+    1
+  else
+    nil
+  end
+end
+
+foo.map { |x|
+  if x == something
+    1
+  else
+    nil
+  end
+}
+```
+
+And avoid this:
+
+``` ruby
+def my_method
+  if something
+    1
+  end
+end
+
+foo.map { |x|
+  if x == something
+    1
+  end
+}
+```
 
 ---
 ### Shell scripts
