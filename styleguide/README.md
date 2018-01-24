@@ -35,6 +35,7 @@ If you haven't weighed in after two weeks, it counts as a non vote. If no one el
 
 If you missed the vote and want to veto it after the fact, we will revert it. But if months have passed we encourage you to instead make a new pull request.
 
+Whenever possible, try to make it automatically enforced by something like [Rubocop](https://github.com/bbatsov/rubocop).
 
 ---
 ### General
