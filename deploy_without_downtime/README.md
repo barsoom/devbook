@@ -18,19 +18,15 @@ The application before a deploy is the "old app". The application after a deploy
 
 ### Database
 
-**NOTE:** We assume your deploy process runs and completes its migrations *before* starting the new app.
+**NOTE:** This applies to Heroku-style deploys where the app code is deployed first, and migrations run after. We used to do it the other way around – see Git history for those instructions.
 
-TODO: This is [not true out of the box on Heroku](https://github.com/barsoom/devbook/issues/34). Update this document when we have important stuff on Heroku! Probably deploying and running a migration in one commit and deploying post-migration changes in the next commit, instead of combining migration and post-migration changes into one.
+For Rails 4, you may need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976) to avoid "PG::InFailedSqlTransaction" errors.
 
-For Rails 4, you will need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976) to avoid "PG::InFailedSqlTransaction" errors.
+Basically, you always need to make sure any code you deploy works both before and after its migrations run.
 
-* A migration is only safe if the old app works with the new state of the DB.
+If you have code that only works after a migration has run, you need to deploy the migration first, and then deploy the new code.
 
-  This is because deploys will have a period where the migrations have run (in part or in whole) while the old app is still in play.
-
-* A migration is not safe if it locks the DB for long.
-
-* The below is for PostgreSQL, which we use. Much of it is true of any DB engine, but locking in particular will vary between engines.
+A migration is not safe if it locks the DB for long. The below is for PostgreSQL, which we use. Much of it is true of any DB engine, but locking in particular will vary between engines.
 
 Specifically:
 
@@ -61,28 +57,32 @@ Specifically:
 
     This is so you can safely ignore the column without breaking the creation of new records.
 
-  * Deploy 2: Make the app ignore the column:
+  * Deploy 2: Make the app ignore the column, and remove it from DB.
 
-    ``` ruby
-    class Item < ActiveRecord::base
-      def self.columns
-        super.reject { |c| c.name == "description" }
+    * Ignore it like this:
+
+      ``` ruby
+      class Item < ActiveRecord::base
+        def self.columns
+          super.reject { |c| c.name == "description" }
+        end
+
+        # Or, if the project includes this convenience method (our projects should):
+        ignore_column :description
+
+        # … the rest of the class
       end
+      ```
 
-      # Or, if the project includes this convenience method:
-      ignore_column :description
+      Put that method **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
 
-      # … the rest of the class
-    end
-    ```
+      If the model uses STI, make sure to put this ignore in the base class, not one of the subclasses.
 
-    Put that method **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
+    * Include a migration to remove the column.
 
-  * Deploy 3: A migration to remove the column. The old app will no longer have the column name cached.
+      In a big table, you should drop each index touching the column with `DROP INDEX CONCURRENTLY` (TODO: provide Ruby code for this) before dropping the column itself, to avoid locking issues.
 
-    In a big table, you should drop each index touching the column with `DROP INDEX CONCURRENTLY` (TODO: provide Ruby code for this) before dropping the column itself, to avoid locking issues.
-
-  * Deploy 4: Remove the code that ignored the column. If migrations run before the app code reloads (e.g. not on a standard Heroku setup), step 2 and 3 can be combined in one.
+  * Deploy 3: Remove the code that ignored the column.
 
   If you get "PG::InFailedSqlTransaction" errors, you may be on Rails 4 and need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976).
 
@@ -90,21 +90,22 @@ Specifically:
 
   You can think of it as adding a duplicate column, then removing the old one.
 
-  Deploy it in three steps:
+  Deploy it in these steps:
 
   * Deploy 1:
     * TODO: Next time, try using a DB-level trigger instead of doing it app-level. Then update this document!
-    * Make the app write to both the old and the new column. Now all new records will have a value in the new column.
+    * Add the new column.
 
   * Deploy 2:
+    * Make the app write to both the old and the new column. Now all new records will have a value in the new column.
     * Migrate old records to copy the old column to the new column. Now both old and new records will have a value in the new column.
-    * The app should ignore the old column (see above). Reference only the new column in code; not the old one.
-    * NOTE: Rails will let you ignore the old column and still read it with `read_attribute`/`[]` in one and the same commit/deploy.
 
   * Deploy 3:
-    * Remove the old column from the DB.
+    * Ignore the old column (see above) and change all code to reference only the new column.
+    * If you're daring, remove the old column. We usually leave it around for a little while until we've run some queries to verify all data is copied.
+    * NOTE: Rails will let you ignore the old column and still read it with `read_attribute`/`[]` in one and the same commit/deploy.
 
-  Note that if you migrate old records in the same deploy as you start writing to the new column, any records updated between the migration completing and the app server restarting will not be correct.
+  * Deploy 4: Remove the code that ignored the column.
 
 * **Adding tables** is always safe.
 
@@ -128,7 +129,7 @@ Specifically:
 
   TODO: Explore using database-level triggers for this.
 
-  The easiest solution is to first add the new table, then make sure the app doesn't update this table (by disabling features and making it raise on changes in prod), then copy the data once that is in effect, then enable the feature against the new table.
+  The easiest solution is to first add the new table, then make sure the app doesn't update the source table (by disabling features and making it raise on changes in prod), then copy the data once that is in effect, then enable the feature against the new table.
 
   If you can't disable the feature, another more painful solution is to write to both tables, something like:
 
