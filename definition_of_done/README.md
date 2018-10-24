@@ -22,6 +22,7 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * In production (deployed, feature-toggled on, rolled out to everyone)
 * Stakeholders have been informed that the feature is available
 * Old data and old code has been removed (if applicable)
+* Code making network requests, e.g. calling APIs, gracefully handles common network errors (see: [Sidekiq retries](http://disq.us/p/1wr05yx), [NetHttpTimeoutErrors](https://github.com/barsoom/net_http_timeout_errors))
 
 ## Changes to the public site
 
