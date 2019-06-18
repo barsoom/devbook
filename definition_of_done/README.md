@@ -23,6 +23,8 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Stakeholders have been informed that the feature is available
 * Old data and old code has been removed (if applicable)
 * Code making network requests, e.g. calling APIs, gracefully handles common network errors (see: [Sidekiq retries](http://disq.us/p/1wr05yx), [NetHttpTimeoutErrors](https://github.com/barsoom/net_http_timeout_errors))
+* If it's an email: there's a `mail_view` preview
+* If it's a document (e.g. PDF): there's a `document_previews` preview
 
 ## Changes to the public site
 
