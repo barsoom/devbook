@@ -35,6 +35,7 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * The support team has been informed about it and tried using it
 * The FAQ or equivalent has been changed (if applicable)
 * Copy has correct spelling, grammar and pluralization
+* Works in our Turbolinks-based app
 
 ## What's *not* part of the definition of done?
 
