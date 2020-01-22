@@ -40,7 +40,7 @@ Specifically:
   
   * Step 1: Add the column as a NULLable column without a default.
   * Step 2: Set the default value in batches, some records at a time.
-  * Step 3: Make the column NOT NULL with a default. (Or just add a default, keeping it NULLable).
+  * Step 3: Make the column NOT NULL with a default. (Or just add a default, keeping it NULLable.)
 
 * **Removing columns** is never safe.
   The old app will attempt to use the cached column name and will break things.
