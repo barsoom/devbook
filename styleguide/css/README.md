@@ -158,7 +158,7 @@ These classes should not be used for styling or to find elements in JavaScript. 
 
 This means that we can confidently change our tests without breaking styling or JavaScript, and vice versa.
 
-We don't use BEM-like naming for these: that's for styling.
+We typically don't use BEM-like naming for test-only classes: we tend to do just `.test-title` or `.test-item-title` instead of `.test-item__title`, but it's allowed if you feel like it makes the grouping clearer.
 
 Further reading:
 
@@ -173,7 +173,7 @@ These classes should not be used for styling or to find elements in tests. And s
 
 This means that we can confidently change our JS without breaking styling or tests, and vice versa.
 
-We don't use BEM-like naming for these: that's for styling.
+We typically don't use BEM-like naming for JS-only classes: we tend to do e.g. `.js-item-title` instead of `.js-item__title`, but it's allowed if you feel like it makes the grouping clearer. [See an example.](https://github.com/barsoom/auctionet/commit/50eead4ae4295d259fcaa561db91667328b72e16#diff-a6b6479f9e076558de9794ddb079c702)
 
 Further reading:
 
