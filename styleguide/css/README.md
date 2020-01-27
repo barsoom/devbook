@@ -201,6 +201,8 @@ They are ["specificity anomalies"](http://cssguidelin.es/#ids-in-css), making it
 
 They also discourage modular CSS, as they're only intended to be used once per page.
 
+Sometimes, even a "unique" element may be included twice on a page, e.g. if we show different parts at different viewport sizes.
+
 And for JS, we prefer to [use CSS classes with a `js-` prefix](#use-a-js--prefix-for-classes-used-by-js).
 
 
