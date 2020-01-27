@@ -93,3 +93,9 @@ Be specific.
 We respect the starting time of our meetings. We do not wait for latecomers unless explicitly requested.
 
 We prefer to start our meetings as soon as possible and not wait for the planned time.
+
+#### Spreading knowledge
+
+When we add new technology and/or build applications or parts of applications using new concepts, we actively try to spread the knowledge in the whole team by deliberately involving new people in improvements in the new parts.
+
+We accept that during some parts of a project, knowledge silos might be created, but work actively to reduce the impact.
