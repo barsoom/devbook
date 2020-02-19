@@ -27,3 +27,4 @@ For reference and discussion.
 * [Holding a demo](/holding_a_demo)
 * [Starting a project](/starting_a_project)
 * [Incident response](/incidents)
+* [Developer pairing session during hiring](/interview)
