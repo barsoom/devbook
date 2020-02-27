@@ -30,7 +30,7 @@ A migration is not safe if it locks the DB for long. The below is for PostgreSQL
 
 Specifically:
 
-* **Adding columns** is safe for columns that are allowed to be null, or for small tables. On Postgres 10 or earlier, it's not safe on big tables if the column hsa a default value.
+* **Adding columns** is safe for columns that are allowed to be null, or for small tables. On Postgres 10 or earlier, it's not safe on big tables if the column has a default value.
 
   NOT NULL columns on big tables [will lock the table for a long time](http://stackoverflow.com/a/19527999/6962).
   
