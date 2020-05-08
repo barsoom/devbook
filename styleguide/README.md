@@ -412,7 +412,7 @@ We still use braces for one-liners, because we think `people.each do |person| pu
 Don't do:
 
 ``` ruby
-Foo.should_receive(:bar).with(:baz).and_return(waz = double)
+expect(Foo).to receive(:bar).with(:baz).and_return(waz = double)
 do_something_with(waz)
 ```
 
@@ -420,7 +420,7 @@ Prefer:
 
 ``` ruby
 waz = double
-Foo.should_receive(:bar).with(:baz).and_return(waz)
+expect(Foo).to receive(:bar).with(:baz).and_return(waz)
 do_something_with(waz)
 ```
 
