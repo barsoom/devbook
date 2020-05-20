@@ -208,11 +208,10 @@ And for JS, we prefer to [use CSS classes with a `js-` prefix](#use-a-js--prefix
 
 #### Use BEM-like naming.
 
-We aim for [BEM-like naming](http://cssguidelin.es/#bem-like-naming).
+We aim for [BEM-like naming](http://cssguidelin.es/#bem-like-naming). This is a summary of the salient points.
 
 This type of naming has less risk of collisions than nested selectors, more clearly shows which classes are part of the same whole, and makes it easier to override specificity.
 
-Note that this section is a very brief summary for reference. You *must* [read up on BEM elsewhere](http://cssguidelin.es/#bem-like-naming) and grasp the idea behind it before you contribute to our CSS.
 
 Use `__` (two underscores) for component parts (e.g. `.item-listing__title`).
 
