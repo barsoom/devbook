@@ -212,7 +212,6 @@ We aim for [BEM-like naming](http://cssguidelin.es/#bem-like-naming). This is a 
 
 This type of naming has less risk of collisions than nested selectors, more clearly shows which classes are part of the same whole, and makes it easier to override specificity.
 
-
 Use `__` (two underscores) for component parts (e.g. `.item-listing__title`).
 
 Use `--` (two hyphens) for modifiers (e.g. `.item-listing--inactive`).
