@@ -758,6 +758,10 @@ It's easier to read `expect(account).to be_valid` than `expect(subject).to be_va
 You're free to use `subject(:account) { … }`, but don't refer to it by the name `subject` elsewhere.
 
 If you do need it for technical reasons, perhaps with shared examples, go ahead.
+[RSpec documentation](https://relishapp.com/rspec/rspec-core/v/3-9/docs/subject/explicit-subject) says:
+
+> we recommend that you reserve `subject` for support of custom
+> matchers and/or extension libraries that hide its use from examples.
 
 We haven't yet regulated using the subject implicitly like `it { should be_valid }`. Use it or not as you please.
 
