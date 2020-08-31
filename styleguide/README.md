@@ -629,18 +629,18 @@ gem "redis", "~> 2.0"
 Do e.g.
 
 ``` ruby
-attribute_was("title")
+attribute_before_last_save("title")
 saved_change_to_attribute?("title")
 ```
 
 rather than
 
 ``` ruby
-title_was
+title_before_last_save
 saved_change_to_title?
 ```
 
-Because it arguably reads a little clearer, being more clearly distinct from an attribute (especially in the case of `xxx_was`). It's incidentally also slightly more performant and easier to find in documentation.
+Because it arguably reads a little clearer, being more clearly distinct from an attribute. It's incidentally also slightly more performant and easier to find in documentation.
 
 #### Avoid `default_scope`.
 
