@@ -624,6 +624,24 @@ gem "redis", "~> 2.0"
 ---
 ### Active Record
 
+#### Prefer non-dynamic dirty tracking methods.
+
+Do e.g.
+
+``` ruby
+attribute_before_last_save("title")
+saved_change_to_attribute?("title")
+```
+
+rather than
+
+``` ruby
+title_before_last_save
+saved_change_to_title?
+```
+
+Because it arguably reads a little clearer, being more clearly distinct from an attribute. It's incidentally also slightly more performant and easier to find in documentation.
+
 #### Avoid `default_scope`.
 
 It tends to cause confusing behavior.
