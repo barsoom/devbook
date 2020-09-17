@@ -1,5 +1,8 @@
 ![Barsoom](http://barsoom.se/barsoom.png)
 
+**NOTE:** Outdated! Please see [the Auctionet incident response plan](https://github.com/barsoom/auctionet/blob/master/developer_documentation/incident_response_plan_for_downtime.md).
+**TODO:** Copy over any useful info from here to there, and then remove this file and any links to it within this repo.
+
 # Incident response
 
 A checklist for what to do for incidents such as site downtime.
