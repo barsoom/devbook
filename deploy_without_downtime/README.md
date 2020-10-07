@@ -67,7 +67,7 @@ Specifically:
 
       ``` ruby
       class Item < ActiveRecord::base
-        self.ignored_columns [:description]
+        self.ignored_columns = [ :description ]
         # … the rest of the class
       end
       ```
