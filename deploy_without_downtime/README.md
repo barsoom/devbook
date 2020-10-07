@@ -67,20 +67,14 @@ Specifically:
 
       ``` ruby
       class Item < ActiveRecord::base
-        def self.columns
-          super.reject { |c| c.name == "description" }
-        end
-
-        # Or, if the project includes this convenience method (our projects should):
-        ignore_column :description
-
+        self.ignored_columns [:description]
         # … the rest of the class
       end
       ```
 
-      Put that method **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
+      Put that method call **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
 
-      If the model uses STI, make sure to put this ignore in the base class, not one of the subclasses.
+      If the model uses STI, make sure to do this in the base class, not one of the subclasses.
 
     * Include a migration to remove the column.
 
