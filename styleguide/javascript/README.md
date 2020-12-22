@@ -76,7 +76,7 @@ If you're using function-style components in React, you (usually) don't need `th
 
 ## React
 
-The other guide is written for CoffeeScript so here's one is for JavaScript.
+The other guide is written for CoffeeScript so here's one for JavaScript.
 
 #### Wrap your app in `<React.StrictMode>`
 
