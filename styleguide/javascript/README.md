@@ -92,7 +92,7 @@ Our eslint rules will complain if you don't use them.
 
 #### Callback names
 
-Prop names for callbacks and events should be called `onSomething`, like `onClick` or `handleMouseOver` etc.
+Prop names for callbacks and events should be called `onSomething`, like `onClick` or `onMouseOver` etc.
 
 Example:
 
