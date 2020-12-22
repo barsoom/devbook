@@ -82,7 +82,7 @@ The other guide is written for CoffeeScript so here's one for JavaScript.
 
 This will enable some extra warnings in development mode.
 
-[Read more here](https://reactjs.org/docs/strict-mode.html)
+[React.js docs about Strict Mode](https://reactjs.org/docs/strict-mode.html)
 
 #### PropTypes
 
