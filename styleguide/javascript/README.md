@@ -61,13 +61,16 @@ It might be tempting to add a dependency for something, but if it's simple enoug
 ### Regular functions vs. arrow functions
 
 Use `function` for named functions and arrow functions for unnamed closures.
+The reason for this is that `function foo` easier to read (less syntax).
 
 ``` javascript
-// Avoid this
-const foo = () => { /*...*/ }
+const foo = () => {
+  // Avoid this
+}
 
-// When you can do this
-function foo() { /*...*/ }
+function foo() {
+  // When you can do this
+}
 ```
 
 Use arrows for functions that are passed as callbacks, since arrow-functions bind `this` automatically.
