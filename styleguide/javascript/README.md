@@ -2,13 +2,13 @@
 
 ## Tooling
 
-#### Avoid jQuery
+### Avoid jQuery
 
 Just don't use it. It's better to use standard APIs.
 
 [Should you use or learn jQuery in 2020?](https://flaviocopes.com/jquery/)
 
-#### Avoid lodash
+### Avoid lodash
 
 You probably don't need it. And if you do, import the functions you need like this:
 
@@ -26,15 +26,15 @@ import _ from 'lodash'
 The latter will make tree-shaking impossible.
 Read more about [lodash and tree-shaking](https://www.azavea.com/blog/2019/03/07/lessons-on-tree-shaking-lodash/)
 
-#### Use Prettier
+### Use Prettier
 
 Use our [prettier-config](https://github.com/barsoom/prettier-config)
 
-#### Use eslint
+### Use eslint
 
 Use [eslint-config-barsoom](https://github.com/barsoom/eslint-config-barsoom)
 
-#### When using Babel
+### When using Babel
 
 Try to avoid using too many experimental features.
 
@@ -42,7 +42,7 @@ Stage 3 is fine and stage 2 can be ok.
 
 Just don't go crazy with everything shiny and new that is likely to change, or maybe not even get into the standard.
 
-#### Prefer npm over yarn
+### Prefer npm over yarn
 
 When Yarn was initially released, it solved a lot of problems that npm had.
 
@@ -50,7 +50,7 @@ Since then, npm has improved a lot and nowadays there isn't really any reason to
 
 [Why Are You Still Using Yarn in 2018?](https://iamturns.com/yarn-vs-npm-2018/)
 
-#### Dependencies
+### Dependencies
 
 In the npm repository, you can find packages for almost anything.
 
@@ -58,7 +58,7 @@ It might be tempting to add a dependency for something, but if it's simple enoug
 
 ## Code style
 
-#### Regular functions vs. arrow functions
+### Regular functions vs. arrow functions
 
 Use `function` for named functions and arrow functions for unnamed closures.
 
@@ -78,19 +78,19 @@ If you're using function-style components in React, you (usually) don't need `th
 
 The other guide is written for CoffeeScript so here's one for JavaScript.
 
-#### Wrap your app in `<React.StrictMode>`
+### Wrap your app in `<React.StrictMode>`
 
 This will enable some extra warnings in development mode.
 
 [React.js docs about Strict Mode](https://reactjs.org/docs/strict-mode.html)
 
-#### PropTypes
+### PropTypes
 
 Read [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html).
 
 Our eslint rules will complain if you don't use them.
 
-#### Callback names
+### Callback names
 
 Prop names for callbacks and events should be called `onSomething`, like `onClick` or `onMouseOver` etc.
 
@@ -132,7 +132,7 @@ function MyComponent() {
 }
 ```
 
-#### File structure
+### File structure
 
 Name the file after the default export, so that `MyAwesomeComponent.js` exports the component `MyAwesomeComponent`.
 
