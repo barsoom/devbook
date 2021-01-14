@@ -39,7 +39,7 @@ Specifically:
   So do them in multiple steps (not necessarily multiple deploys):
   
   * Step 1: Add the column as a NULLable column without a default.
-  * Step 2: Set the default value in batches, some records at a time.
+  * Step 2: Set the default value in batches, some records at a time. Remember to disable transactions (`disable_ddl_transaction!`) if this is done in a migration.
   * Step 3: Make the column NOT NULL with a default. (Or just add a default, keeping it NULLable.)
 
 * **Removing columns** is never safe.
