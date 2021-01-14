@@ -38,7 +38,7 @@ Use [eslint-config-barsoom](https://github.com/barsoom/eslint-config-barsoom)
 
 Try to avoid using too many experimental features.
 
-Stage 3 is fine and stage 2 can be ok.
+Stage 3 is fine and stage 2 can be OK.
 
 Just don't go crazy with everything shiny and new that is likely to change, or maybe not even get into the standard.
 
@@ -52,9 +52,9 @@ Since then, npm has improved a lot and nowadays there isn't really any reason to
 
 ### Dependencies
 
-In the npm repository, you can find packages for almost anything.
+Avoid adding npm dependencies for simple things.
 
-It might be tempting to add a dependency for something, but if it's simple enough it's probably better to implement it yourself. (Looking at you, [left-pad](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/))
+It might be tempting to add a dependency for something, but if it's simple enough it's probably better to implement it yourself. (Looking at you, [left-pad](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/)).
 
 ## Code style
 
