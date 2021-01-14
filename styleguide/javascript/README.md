@@ -73,7 +73,7 @@ function foo() {
 }
 ```
 
-Use arrows for functions that are passed as callbacks, since arrow-functions bind `this` automatically.
+Use arrows for functions that are passed as callbacks, since arrow functions bind `this` automatically.
 
 If you're using function-style components in React, you (usually) don't need `this`, so it's better to use named functions because they are easier to read. But always prefer arrows instead of `.bind(this)`, and for unnamed closures.
 
