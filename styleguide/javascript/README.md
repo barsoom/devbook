@@ -140,4 +140,4 @@ function MyComponent() {
 Name the file after the default export, so that `MyAwesomeComponent.js` exports the component `MyAwesomeComponent`.
 
 Try to use 1 component for each file, especially if they have a lot of logic that can be separated.
-It's ok to have multiple components in one file if they are closely related.
+It's OK to have multiple components in one file if they are closely related.
