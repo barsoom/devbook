@@ -13,13 +13,15 @@ This is a public list, so a developer that reads the devbook beforehand may get 
 
 ## Setting expectations
 
+Mention this in communication before the fact, and repeat it during the interview.
+
 - We don't need to complete any task. We just want to get a feel for how they are to work with, and for them to get an idea as well.
 - Questions are very welcome, especially about our conventions, our domain model and so on. It's also fine to Google, phone a friend and so on, just like you would in day-to-day work.
 - Please think aloud.
 
 ## Remember
 
-- Have video turned on during pairing so we can see each other's faces.
+- Consider having video turned on during pairing so we can see each other's faces.
 - Don't jump straight to code; the social part is important too, and may make the interviewee more comfortable. (But be sensitive to the fact that for some people, it may make them less comfortable.)
 - Take breaks.
 
