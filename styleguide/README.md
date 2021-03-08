@@ -463,7 +463,9 @@ Avoid using `unless` with complex conditions (e.g. `unless x.blank? || x.old?`) 
 
 When in doubt between `#foo` and `#foo!`, go with `#foo`.
 
-Only use the bang when there is a pair of methods, with and without bang, where one is more destructive (e.g. raises, modifies in place). Cf. `String#gsub!`, `ActiveRecord::Base#save!`.
+If the method is used in a context where Active Record semantics would make sense, it's fine to use a bang to follow those semantics – e.g. `Item.create_with_some_custom_behavior!(attributes)` if the method raises on validation errors.
+
+Otherwise, only use the bang when there is a pair of methods, with and without bang, where one is more destructive (e.g. raises, modifies in place). Cf. `String#gsub!`, `ActiveRecord::Base#save!`.
 
 Further reading: ["Bang methods; or, Danger, Will Rubyist!" by David Black](http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist)
 
