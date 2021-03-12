@@ -42,7 +42,11 @@ Stage 3 is fine and stage 2 can be OK.
 
 Just don't go crazy with everything shiny and new that is likely to change, or maybe not even get into the standard.
 
-### Prefer npm over yarn
+### Prefer npm over yarn, unless you need transitive dependency pinning
+
+We are using Yarn Classic, to get the "transitive dependency pinning" feature. This allows us to mitigate security advisories.
+
+If npm gains this feature, we will be interested in switching to it.
 
 When Yarn was initially released, it solved a lot of problems that npm had.
 
