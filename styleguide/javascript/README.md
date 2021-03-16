@@ -4,7 +4,11 @@
 
 ### Avoid jQuery
 
-Just don't use it. It's better to use standard APIs.
+Don't add jQuery to new projects. You probably don't need it.
+
+Prefer using the [standard DOM API](https://dom.spec.whatwg.org/) or let something like React handle the DOM for you.
+
+In projects where we already use jQuery, it's fine to keep using it.
 
 [Should you use or learn jQuery in 2020?](https://flaviocopes.com/jquery/)
 
