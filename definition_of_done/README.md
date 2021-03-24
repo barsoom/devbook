@@ -25,6 +25,9 @@ When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its 
 * Code making network requests, e.g. calling APIs, gracefully handles common network errors (see: [Sidekiq retries](http://disq.us/p/1wr05yx), [NetHttpTimeoutErrors](https://github.com/barsoom/net_http_timeout_errors))
 * If it's an email: there's a `mail_view` preview
 * If it's a document (e.g. PDF): there's a `document_previews` preview
+* If the feature has a known element of manual work that it might generate
+  - Get sign-off from the team that this new task it introduces is manageable, and that it does not create an undue amount of work. Ideally no feature should "cost" future work, but it might be ok for edge cases that happen very rarely.
+  - Document the task, and make it require as little context as possible. Add the context in a potential error message or in the task instructions.
 
 ## Changes to the public site
 
