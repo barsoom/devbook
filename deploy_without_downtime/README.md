@@ -20,8 +20,6 @@ The application before a deploy is the "old app". The application after a deploy
 
 **NOTE:** This applies to Heroku-style deploys where the app code is deployed first, and migrations run after. We used to do it the other way around – see Git history for those instructions.
 
-For Rails 4, you may need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976) to avoid "PG::InFailedSqlTransaction" errors.
-
 Basically, you always need to make sure any code you deploy works both before and after its migrations run.
 
 If you have code that only works after a migration has run, you need to deploy the migration first, and then deploy the new code.
@@ -96,14 +94,19 @@ Specifically:
 
   * Deploy 2:
     * Make the app write to both the old and the new column. Now all new records will have a value in the new column.
+  
+  * Deploy 3:
     * Migrate old records to copy the old column to the new column. Now both old and new records will have a value in the new column.
 
-  * Deploy 3:
+  * Deploy 4:
     * Ignore the old column (see above) and change all code to reference only the new column.
-    * If you're daring, remove the old column. We usually leave it around for a little while until we've run some queries to verify all data is copied.
     * NOTE: Rails will let you ignore the old column and still read it with `read_attribute`/`[]` in one and the same commit/deploy.
 
-  * Deploy 4: Remove the code that ignored the column.
+  * Deploy 5:
+    * Remove the old column. We usually leave it around for a little while until we've run some queries to verify all data is copied.
+    * If you're daring, you could do deploy 6 now.
+
+  * Deploy 6: Remove the code that ignored the column.
 
 * **Adding tables** is always safe.
 
