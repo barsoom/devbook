@@ -18,7 +18,13 @@ The application before a deploy is the "old app". The application after a deploy
 
 ### Database
 
-**NOTE:** This applies to Heroku-style deploys where the app code is deployed first, and migrations run after. We used to do it the other way around – see Git history for those instructions.
+**NOTE: IMPORTANT!**
+
+The instructions below apply to Heroku-style deploys where the app code is deployed first, and migrations run after. We used to do it the other way around – see Git history for those instructions.
+
+But as of 2021-03 (well, long before then) we typically run migrations first and restart the app code later. So TODO, update the instructions below!
+
+**END OF NOTE**
 
 For Rails 4, you may need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976) to avoid "PG::InFailedSqlTransaction" errors.
 
