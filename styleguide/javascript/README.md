@@ -46,20 +46,6 @@ Stage 3 is fine and stage 2 can be OK.
 
 Just don't go crazy with everything shiny and new that is likely to change, or maybe not even get into the standard.
 
-### Prefer npm over yarn, unless you need transitive dependency pinning
-
-In project which have already started, no change is necessary. This section is informative.
-
-We are using Yarn Classic, to get the "transitive dependency pinning" feature. This allows us to mitigate security advisories.
-
-If npm gains this feature, we will be interested in switching to it. Example of community-created support for that feature: https://github.com/rogeriochaves/npm-force-resolutions
-
-When Yarn was initially released, it solved a lot of problems that npm had.
-
-Since then, npm has improved a lot and nowadays there isn't really any reason to use yarn over npm.
-
-[Why Are You Still Using Yarn in 2018?](https://iamturns.com/yarn-vs-npm-2018/)
-
 ### Dependencies
 
 Avoid adding npm dependencies for simple things.
