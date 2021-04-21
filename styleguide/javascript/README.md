@@ -1,10 +1,18 @@
 # JavaScript Styleguide
 
+## CoffeeScript
+
+Avoid it.
+
+Try not to add more to projects that already use it. (Though it's fine if that's easier.)
+
 ## Tooling
 
 ### Avoid jQuery
 
 Don't add jQuery to new projects. You probably don't need it.
+
+Try not to add more to projects that already use it. (Though it's fine if that's easier.)
 
 Prefer vanilla JS or let something like React handle the DOM for you.
 
@@ -76,7 +84,7 @@ If you're using function-style components in React, you (usually) don't need `th
 
 ## React
 
-The other guide is written for CoffeeScript so here's one for JavaScript.
+TODO: Merge this with [our React styleguide](/styleguide/react). That guide may be outdated and uses CoffeeScript.
 
 ### Wrap your app in `<React.StrictMode>`
 

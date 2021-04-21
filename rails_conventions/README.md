@@ -6,10 +6,6 @@ This is where we document how our Rails conventions deviate (or not) from the [o
 
 ## `app/`
 
-### `app/assets/`
-
-Preferred libraries: SCSS (Sass) and CoffeeScript.
-
 ### `app/breadcrumbs/`
 
 For [breadcrumb builders](https://github.com/barsoom/devbook/tree/master/libs#breadcrumbs).

@@ -163,6 +163,8 @@ Please see [the JavaScript styleguide](/styleguide/javascript).
 ---
 ### CoffeeScript
 
+Avoid CoffeeScript. But if you must:
+
 Do [follow idioms](#follow-idioms). The style of [their documentation examples](http://coffeescript.org/) is canon.
 
 #### Use `lowerCamelCase` for names of variables and functions.
