@@ -2,27 +2,34 @@
 
 ## Tooling
 
-### Prefer jQuery over standard APIs
+### Avoid jQuery
 
-Use jQuery whenever you can.
+Don't add jQuery to new projects. You probably don't need it.
+
+Prefer vanilla JS or let something like React handle the DOM for you.
+
+In projects where we already use jQuery, it's fine to keep using it, but consider it legacy and something we want to get away from.
+
+Read more:
+
+- [Should you use or learn jQuery in 2020?](https://flaviocopes.com/jquery/)
 
 ### Avoid lodash
 
-You probably don't need it. And if you do, import the functions you need like this:
+You probably don't need it – see ["Avoid jQuery"](#avoid-jquery).
+
+If you do use it, import only the functions you need, like this:
 
 ``` javascript
 import foo from 'lodash/foo'
 ```
 
-Don't do this:
+Don't do this, because [it will make tree-shaking impossible](https://www.azavea.com/blog/2019/03/07/lessons-on-tree-shaking-lodash/):
 
 ``` javascript
 import { foo } from 'lodash'
 import _ from 'lodash'
 ```
-
-The latter will make tree-shaking impossible.
-Read more about [lodash and tree-shaking](https://www.azavea.com/blog/2019/03/07/lessons-on-tree-shaking-lodash/)
 
 ### Use Prettier
 
