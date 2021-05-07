@@ -898,7 +898,7 @@ This communicates *why* it's pending so that others (or a later you) can tell, e
 ### Don't use string interpolations with `Kernel#system`.
 
 This can be very dangerous because of shell escapes.
-Use [ShellWords](https://ruby-doc.org/stdlib-2.7.0/libdoc/shellwords/rdoc/Shellwords.html) if you need to construct more complex command lines.
+Use [Shellwords](https://ruby-doc.org/stdlib-2.7.0/libdoc/shellwords/rdoc/Shellwords.html) if you need to construct more complex command lines.
 
 Here are some examples:
 
@@ -910,10 +910,10 @@ system("rm", "-rf", path) # ✅
 cmd = "rm -rf #{path}"
 system(cmd) # 🚫💀
 
-cmd = ShellWords.shelljoin(["rm", "-rf", path])
+cmd = Shellwords.shelljoin(["rm", "-rf", path])
 system(cmd) # ✅
 
-figlet = ShellWords.shelljoin(["figlet", "-f", "banner", *ARGV])
+figlet = Shellwords.shelljoin(["figlet", "-f", "banner", *ARGV])
 system("#{figlet} | lolcat") # ✅
 
 text = `#{figlet}` # ✅
