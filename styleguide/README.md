@@ -894,3 +894,29 @@ end
 ```
 
 This communicates *why* it's pending so that others (or a later you) can tell, e.g. if it's abandoned.
+
+### Don't use string interpolations with `Kernel#system`.
+
+This can be very dangerous because of shell escapes.
+Use [Shellwords](https://ruby-doc.org/stdlib-2.7.0/libdoc/shellwords/rdoc/Shellwords.html) if you need to construct more complex command lines.
+
+Here are some examples:
+
+``` ruby
+system("rm -rf #{path}") # 🚫💀
+
+system("rm", "-rf", path) # ✅
+
+cmd = "rm -rf #{path}"
+system(cmd) # 🚫💀
+
+cmd = Shellwords.shelljoin(["rm", "-rf", path])
+system(cmd) # ✅
+
+figlet = Shellwords.shelljoin(["figlet", "-f", "banner", *ARGV])
+system("#{figlet} | lolcat") # ✅
+
+text = `#{figlet}` # ✅
+
+text = `figlet -f banner #{ARGV.join(" ")}` # 🚫💀
+```
