@@ -904,7 +904,7 @@ Use `system` with multiple arguments or [Shellwords](https://ruby-doc.org/stdlib
 Here are some examples:
 
 ``` ruby
-system("rm -rf #{path}") # 🚫💀 If path contains spaces, this can remove the wrong thing!
+system("rm -rf #{path}") # 🚫💀 If path contains e.g. spaces or asterisks, this can remove the wrong thing!
 
 `rm -rf #{path}` # 🚫💀
 
