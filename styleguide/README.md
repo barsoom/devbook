@@ -903,7 +903,7 @@ Use [Shellwords](https://ruby-doc.org/stdlib-2.7.0/libdoc/shellwords/rdoc/Shellw
 Here are some examples:
 
 ``` ruby
-system("rm -rf #{path}") # 🚫💀
+system("rm -rf #{path}") # 🚫💀 If path contains spaces, this can remove the wrong thing!
 
 system("rm", "-rf", path) # ✅
 
