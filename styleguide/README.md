@@ -895,28 +895,33 @@ end
 
 This communicates *why* it's pending so that others (or a later you) can tell, e.g. if it's abandoned.
 
-### Don't use string interpolations with `Kernel#system`.
+### Don't use string interpolations with `Kernel#system` or `Kernel#\``.
 
 This can be very dangerous because of shell escapes.
-Use [Shellwords](https://ruby-doc.org/stdlib-2.7.0/libdoc/shellwords/rdoc/Shellwords.html) if you need to construct more complex command lines.
+
+Use `system` with multiple arguments or [Shellwords](https://ruby-doc.org/stdlib-2.7.0/libdoc/shellwords/rdoc/Shellwords.html) if you need to construct more complex command lines.
 
 Here are some examples:
 
 ``` ruby
 system("rm -rf #{path}") # 🚫💀 If path contains spaces, this can remove the wrong thing!
 
-system("rm", "-rf", path) # ✅
+`rm -rf #{path}` # 🚫💀
 
 cmd = "rm -rf #{path}"
 system(cmd) # 🚫💀
 
+system("rm", "-rf", path) # ✅
+
+system("rm -rf #{Shellwords.escape path}") # ✅
+
+`rm -rf #{Shellwords.escape path}` # ✅
+
 cmd = Shellwords.shelljoin(["rm", "-rf", path])
 system(cmd) # ✅
 
+text = `figlet -f banner #{ARGV.join(" ")} | lolcat` # 🚫💀
+
 figlet = Shellwords.shelljoin(["figlet", "-f", "banner", *ARGV])
 system("#{figlet} | lolcat") # ✅
-
-text = `#{figlet}` # ✅
-
-text = `figlet -f banner #{ARGV.join(" ")}` # 🚫💀
 ```
