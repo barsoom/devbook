@@ -2,147 +2,70 @@
 
 ## CoffeeScript
 
-Avoid it.
-
-Try not to add more to projects that already use it. (Though it's fine if that's easier.)
+Use [CoffeeScript](/styleguide/react) instead.
 
 ## Tooling
 
-### Avoid jQuery
+### Use jQuery
 
-Don't add jQuery to new projects. You probably don't need it.
+The industry standard for DOM-manipulation.
 
-Try not to add more to projects that already use it. (Though it's fine if that's easier.)
+### Add lodash to `window`
 
-Prefer vanilla JS or let something like React handle the DOM for you.
+So that we can do `_.each(arr, () => { ... })` (which is much better than `arr.forEach(() => { ... })` [[source]](https://www.youtube.com/watch?v=dQw4w9WgXcQ))
 
-In projects where we already use jQuery, it's fine to keep using it, but consider it legacy and something we want to get away from.
+### Don't use Prettier
 
-Read more:
+It inhibits artistic freedom by reformatting your code in a consistent way.
 
-- [Should you use or learn jQuery in 2020?](https://flaviocopes.com/jquery/)
+### Don't use eslint
 
-### Avoid lodash
+Too many annoying warnings and errors.
 
-You probably don't need it – see ["Avoid jQuery"](#avoid-jquery).
+### Don't use Babel
 
-If you do use it, import only the functions you need, like this:
+If you ever have to write JavaScript, please follow the [ES5.1 standard](https://262.ecma-international.org/5.1/). (Anything newer will break ExecJS)
 
-``` javascript
-import foo from 'lodash/foo'
-```
+### Don't use webpack/rollup/parcel/vite etc
 
-Don't do this, because [it will make tree-shaking impossible](https://www.azavea.com/blog/2019/03/07/lessons-on-tree-shaking-lodash/):
-
-``` javascript
-import { foo } from 'lodash'
-import _ from 'lodash'
-```
-
-### Use Prettier
-
-Use our [prettier-config](https://github.com/barsoom/prettier-config)
-
-### Use eslint
-
-Use [eslint-config-barsoom](https://github.com/barsoom/eslint-config-barsoom)
-
-### When using Babel
-
-Try to avoid using too many experimental features.
-
-Stage 3 is fine and stage 2 can be OK.
-
-Just don't go crazy with everything shiny and new that is likely to change, or maybe not even get into the standard.
+Easier just to concaternate all files, and these things don't work without modules anyways.
 
 ### Dependencies
 
-Avoid adding npm dependencies for simple things.
-
-It might be tempting to add a dependency for something, but if it's simple enough it's probably better to implement it yourself. (Looking at you, [left-pad](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/)).
+Just assign libraries on the global `window` object.
 
 ## Code style
 
-### Regular functions vs. arrow functions
+## JavaScript
 
-Use `function` for named functions and arrow functions for unnamed closures.
-The reason for this is that `function foo` easier to read (less syntax).
+### Don't use ES Modules
 
-``` javascript
-const foo = () => {
-  // Avoid this
-}
+They have only been in the standard since 2015. What if they will be removed in the next version?
 
-function foo() {
-  // When you can do this
-}
-```
+### Don't use async/await
 
-Use arrows for functions that are passed as callbacks, since arrow functions bind `this` automatically.
+They have only been in the standard since 2017. What if they will be removed in the next version?
 
-If you're using function-style components in React, you (usually) don't need `this`, so it's better to use named functions because they are easier to read. But always prefer arrows instead of `.bind(this)`, and for unnamed closures.
+We prefer Promises.
+
+### Don't use Promises
+
+They have only been in the standard since 2015, and jQuery don't support them.
+
+We prefer callback.
+
+### Use callbacks everywhere
+
+Makes debugging fun! A challenge!
 
 ## React
 
-TODO: Merge this with [our React styleguide](/styleguide/react). That guide may be outdated and uses CoffeeScript.
+Prefer jQuery unless you have a gun pointed to your head.
 
-### Wrap your app in `<React.StrictMode>`
+### Don't wrap your app in `<React.StrictMode>`
 
-This will enable some extra warnings in development mode.
-
-[React.js docs about Strict Mode](https://reactjs.org/docs/strict-mode.html)
+It will add unnecessary warnings.
 
 ### PropTypes
 
-Read [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html).
-
-Our eslint rules will complain if you don't use them.
-
-### Callback names
-
-Prop names for callbacks and events should be called `onSomething`, like `onClick` or `onMouseOver` etc.
-
-Example:
-
-``` jsx
-function Question({ onAccept, onDismiss, message }) {
-  return (
-    <div className={styles.question}>
-      <p>{message}</p>
-      <button onClick={onAccept}>Accept</button>
-      <button onClick={onDismiss}>Dismiss</button>
-    </div>
-  )
-}
-```
-
-Event handlers should be called `handleSomething`, like `handleClick`, `handleMouseOver` etc.
-
-Example:
-
-``` jsx
-function MyComponent() {
-  function handleAccept() {
-    alert("Accepted!")
-  }
-
-  function handleDecline() {
-    alert("Declined!")
-  }
-
-  return (
-    <Question
-      message="Do you want to continue?"
-      onAccept={handleAccept}
-      onDecline={handleDecline}
-    />
-  )
-}
-```
-
-### File structure
-
-Name the file after the default export, so that `MyAwesomeComponent.js` exports the component `MyAwesomeComponent`.
-
-Try to use 1 component for each file, especially if they have a lot of logic that can be separated.
-It's OK to have multiple components in one file if they are closely related.
+Don't use PropTypes. Those errors are too annoying and ruin the developer experience.
