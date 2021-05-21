@@ -39,6 +39,12 @@ import { foo } from 'lodash'
 import _ from 'lodash'
 ```
 
+### Do not use moment.js
+
+[You don't need Moment.js](https://github.com/you-dont-need/You-Dont-Need-Momentjs).
+
+Use [date-fns](https://www.npmjs.com/package/date-fns) instead. It's small, modular and supports tree-shaking.
+
 ### Use Prettier
 
 Use our [prettier-config](https://github.com/barsoom/prettier-config)
@@ -82,9 +88,35 @@ Use arrows for functions that are passed as callbacks, since arrow functions bin
 
 If you're using function-style components in React, you (usually) don't need `this`, so it's better to use named functions because they are easier to read. But always prefer arrows instead of `.bind(this)`, and for unnamed closures.
 
+### camelCase in object properties
+
+Do:
+
+``` javascript
+const obj = {
+  fooBar: {
+    barBaz: 123
+  },
+}
+```
+
+Don't:
+
+``` javascript
+const obj = {
+  foo_bar: {
+    bar_baz: 123
+  },
+}
+```
+
+If you're working with an API that uses snake\_case, there are libraries that can transform keys between camelCase/snake\_case in nested objects. Just plug them into your API client.
+
 ## React
 
-TODO: Merge this with [our React styleguide](/styleguide/react). That guide may be outdated and uses CoffeeScript.
+*TODO: Merge this with [our React styleguide](/styleguide/react). That guide may be outdated and uses CoffeeScript.*
+
+Read and understand [the React documentation](https://reactjs.org/docs/hello-world.html). It's pretty short.
 
 ### Wrap your app in `<React.StrictMode>`
 
@@ -92,11 +124,86 @@ This will enable some extra warnings in development mode.
 
 [React.js docs about Strict Mode](https://reactjs.org/docs/strict-mode.html)
 
+### Prefer function components over class components
+
+Do this:
+
+``` jsx
+function Counter() {
+  const [count, setCount] = React.useState(0)
+
+  function handleDecrement() {
+    setCount(count - 1)
+  }
+
+  function handleIncrement() {
+    setCount(count + 1)
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <div>
+        <button onClick={handleDecrement}>-</button>
+        <button onClick={handleIncrement}>+</button>
+      </div>
+    </div>
+  )
+}
+```
+
+Instead of this:
+
+``` jsx
+class Counter extends React.Component {
+  state = {
+    count: 0,
+  }
+
+  handleDecrement = () => {
+    this.setState({ count: this.state.count - 1 })
+  }
+
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
+
+  render() {
+    <div>
+      <p>Count: {this.state.count}</p>
+      <div>
+        <button onClick={this.handleDecrement}>-</button>
+        <button onClick={this.handleIncrement}>+</button>
+      </div>
+    </div>
+  }
+}
+```
+
+Most of the time function components are easier to write and maintain, but sometimes class components are better suited.
+
+Some of the benefits with function components:
+
+* Less syntax.
+* You don't need to think about binding `this`.
+* You will use identifiers that exist in the current scope, so the linter will complain if you try to use something that doesn't exist, which it can't do if you do `this.somethingThatDoesNotExist`.
+* Function components use hooks for state and lifecycle methods, which can easily be reusable.
+
+Try to keep your components small and compose them instead of having large components that have too much state and logic.
+
 ### PropTypes
 
 Read [Typechecking With PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html).
 
 Our eslint rules will complain if you don't use them.
+
+### Use CSS Modules
+
+CSS Modules solve the same problem as BEM, but automatically.
+
+Basically what it does is that it turns CSS-files into JavaScript modules, so that `.title { color: #f0f; }` will turn into `export default { title: '_components__MyComponent__title_abc123' }` or any other unique name, so that when we do `<h1 className={styles.title}>hello</h1>` we get `<h1 className="_components__MyComponent__title_abc123">hello<h1>`, which guarantees there will be no collisions in class names.
+
+[What are CSS Modules and why do we need them?](https://css-tricks.com/css-modules-part-1-need/)
 
 ### Callback names
 
@@ -146,3 +253,14 @@ Name the file after the default export, so that `MyAwesomeComponent.js` exports 
 
 Try to use 1 component for each file, especially if they have a lot of logic that can be separated.
 It's OK to have multiple components in one file if they are closely related.
+
+Example file structure:
+
+```
+Counter/index.js
+  export { default } from './Counter'
+Counter/Counter.js
+  export default Counter
+Counter/Counter.css
+  .counter { background: #f0f; }
+```
