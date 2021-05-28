@@ -38,6 +38,16 @@ Specifically:
 
 * **Adding columns** is safe for columns that are allowed to be null, or for small tables. On Postgres 10 or earlier, it's not safe on big tables if the column has a default value.
 
+  Below, example of such a (safe) migration for one of our largest table, images with around 6M rows.
+  ```
+  == 20210527200847 AddOwnerIdAndOwnerTypeToImages: migrating ===================
+  -- add_column(:images, :owner_type, :string)
+     -> 0.0128s
+  -- add_column(:images, :owner_id, :integer)
+     -> 0.0440s
+  == 20210527200847 AddOwnerIdAndOwnerTypeToImages: migrated (0.0571s) ==========
+  ```
+
   NOT NULL columns on big tables [will lock the table for a long time](http://stackoverflow.com/a/19527999/6962).
   
   Columns with default values on big tables [will rewrite the whole table and its indexes](https://stackoverflow.com/q/19525083/6962).
