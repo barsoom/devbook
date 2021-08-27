@@ -13,7 +13,6 @@ We want to move in the direction of many small, focused libraries that do things
 This is what we have so far:
 
 * [ActiveModel::SecurePassword](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html) for encrypting passwords, validating confirmation etc.
-* [Autho](http://github.com/henrik/autho) for auth and session management.
 * [go_to_param](https://github.com/henrik/go_to_param/) to redirect where you wanted to go after logging in.
 
 ## Breadcrumbs
