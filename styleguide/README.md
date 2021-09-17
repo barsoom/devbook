@@ -776,16 +776,6 @@ If you do need it for technical reasons, perhaps with shared examples, go ahead.
 
 We haven't yet regulated using the subject implicitly like `it { should be_valid }`. Use it or not as you please.
 
-#### Avoid `described_class`.
-
-It's easier to read `expect(MyFooThingie.foo).to eq("foo")` than `expect(described_class.foo).to eq("foo")`.
-
-That clarity is worth more than not having to type the name, or not having to search-and-replace if it changes.
-
-If the class name is inconveniently long, maybe a `let` works: `let(:my_class) { Foo::Bar::Baz::MyClass }`
-
-If you do need it for technical reasons, perhaps with shared examples, go ahead.
-
 #### Don't use `be_foo` in the spec for `foo?`
 
 In `describe Item, "#foo?"`, do `expect(item.foo?).to be_true` but not `expect(item).to be_foo`.
