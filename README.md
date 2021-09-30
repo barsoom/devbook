@@ -15,7 +15,7 @@ For reference and discussion.
 
 * [How we (want to) work](/how_we_work)
 * [Process conventions](/process)
-* [Tracks](/tracks)
+* [Hatter](/hatter)
 * [Rails conventions](/rails_conventions)
 * [Wiki conventions](/wiki)
 * [Libraries](/libs)
