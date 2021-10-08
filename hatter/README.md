@@ -12,11 +12,13 @@ They are the designated person(s) keeping an eye on incoming exceptions and requ
 
 The hatter triages incoming requests (from Slack to the "Hatten" Trello) and the dev dashboard (mainly logged exceptions), routing them where they belong.
 
-They should look at requests pretty soon after they arrive, to ensure we don't miss anything important, and so we can ask for clarifying questions while the requester has context.
+Look at requests pretty soon after they arrive, to ensure we don't miss anything important, and so we can ask for clarifying questions while the requester has context.
 
-They should look at exceptions pretty soon after they arrive as well. When possible, they should make a ticket, link to it, and resolve the exception, keeping the dashboard green. This makes it easier to spot new exceptions and to determine priority of ticketed ones.
+Look at exceptions pretty soon after they arrive as well. If you can't fix it immediately: make a ticket, link to it, and resolve the exception (unless it keeps recurring), keeping the dashboard green. This makes it easier to spot new exceptions and to determine priority of ticketed ones.
 
-The hatter ensures the prio of requests is correct. A "today" may actually be a "this week" or "anytime", or the other way around. Ask the requester if the prio is unclear.
+Ensure the prio of requests is correct. A "today" may actually be a "this week" or "anytime", or the other way around. Ask the requester if the prio is unclear.
+
+Keep the requester in the loop – let them know when the issue is fixed, or paused, or rejected.
 
 ### Only keep smaller, urgent tasks
 
@@ -33,6 +35,7 @@ Sometimes the hatter can find a small fix in a bigger task – e.g. change a rec
 #### Typical tasks suitable for the hatter
 
 - Answer a technical question from support
+- Change data in batch or that isn't exposed via UI, perhaps by running or writing a script (no more than a few hours of work)
 - Simple data exports or Rubyclips (no more than a few hours of work)
 - Fixing simple bugs (no more than a few hours of work)
 
