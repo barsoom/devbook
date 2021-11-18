@@ -118,6 +118,26 @@ If a flag is still unclear, consider documenting it:
 `curl --insecure https://example.com`
 ```
 
+#### Use `lower_snake_case` for functions and non-environment variables
+
+``` bash
+foo_bar="baz"
+my_func() { … }
+```
+
+A fairly arbitrary choice, inspired by [Google's style guide](https://google.github.io/styleguide/shellguide.html#function-names).
+
+#### Use `UPPER_SNAKE_CASE` for environment variables
+
+``` bash
+echo "Getting ${MY_VALUE} from e.g. the hosting or CI provider"
+
+# Exporting it ourselves for use in subprocesses.
+export FOO_BAR="baz"
+```
+
+This is conventional and lets us distinguish them from other variables with lesser scope.
+
 ---
 ### HTML
 
