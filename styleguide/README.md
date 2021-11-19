@@ -122,7 +122,7 @@ If a flag is still unclear, consider documenting it:
 
 ``` bash
 foo_bar="baz"
-my_func() { … }
+my_func () { … }
 ```
 
 A fairly arbitrary choice, inspired by [Google's style guide](https://google.github.io/styleguide/shellguide.html#function-names).
