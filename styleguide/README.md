@@ -125,7 +125,7 @@ foo_bar="baz"
 my_func () { … }
 ```
 
-A fairly arbitrary choice, inspired by [Google's style guide](https://google.github.io/styleguide/shellguide.html#function-names).
+An arbitrary choice, inspired by [Google's style guide](https://google.github.io/styleguide/shellguide.html#function-names).
 
 #### Use `UPPER_SNAKE_CASE` for environment variables
 
