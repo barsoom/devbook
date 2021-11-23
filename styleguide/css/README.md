@@ -152,7 +152,7 @@ We *do* like `em` for margins or paddings that should be relative to the current
 
 #### Use a `test-` prefix for test-only classes.
 
-If a CSS class is *only* used to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
+When you use a CSS class to find elements in automated tests, prefix it. E.g. `test-destroy-link`.
 
 These classes should not be used for styling or to find elements in JavaScript. And styling or JS-hook classes should not be used to find elements in tests.
 
