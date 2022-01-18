@@ -45,7 +45,6 @@ Note that all `@import`ed files must end in `.scss`, otherwise Sass will generat
 
 ``` scss
 // Styleguide: https://github.com/barsoom/devbook/tree/master/styleguide/css
-// We support IE8 or better.
 ```
 
 `application.scss` conventionally imports the following things:
