@@ -15,12 +15,6 @@ This styleguide intentionally addresses both higher-level structure and lower-le
 
 It is a UI toolkit, not (just) a framework. It can be hard to override sensibly.
 
-#### Use Autoprefixer.
-
-Whenever possible, use [Autoprefixer](https://github.com/postcss/autoprefixer), typically via [autoprefixer-rails](https://github.com/ai/autoprefixer-rails).
-
-It saves us from manually adding prefixes, from making mixins just for that, and from occasionally forgetting to do so.
-
 #### Use normalize.css.
 
 Use [normalize.css](https://github.com/necolas/normalize.css/) to make browsers render more consistently.
@@ -52,7 +46,6 @@ Note that all `@import`ed files must end in `.scss`, otherwise Sass will generat
 ``` scss
 // Styleguide: https://github.com/barsoom/devbook/tree/master/styleguide/css
 // We support IE8 or better.
-// We use autoprefixer-rails, so there's no need to specify vendor prefixes.
 ```
 
 `application.scss` conventionally imports the following things:
