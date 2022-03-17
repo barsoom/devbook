@@ -679,7 +679,7 @@ Write `foo.bar IS NOT NULL`, never `foo.bar is not null`.
 
 #### Explicitly state SQL sort direction.
 
-Write `order("name ASC")`, never `order("name")`.
+Write `order(name: :asc)`, never just `order(:name)`.
 
 #### Avoid SQL outside models.
 
