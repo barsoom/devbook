@@ -6,6 +6,19 @@ Avoid it.
 
 Try not to add more to projects that already use it. (Though it's fine if that's easier.)
 
+### Prefer TypeScript
+
+If you are starting a new project, or the project you are
+working in supports it, use TypeScript.
+
+Here are some benefits:
+
+* Setup is easier than babel.
+* Editor integration is amazing.
+* The type system helps catching bugs while developing.
+* The type system gives a lot of confidence when refactoring.
+* Syntax is just a thin layer on top of JavaScript.
+
 ## Tooling
 
 ### Avoid jQuery
@@ -41,11 +54,15 @@ import _ from 'lodash'
 
 ### Use Prettier
 
-Use our [prettier-config](https://github.com/barsoom/prettier-config)
+Use the default settings. No prettierrc.
 
 ### Use eslint
 
-Use [eslint-config-barsoom](https://github.com/barsoom/eslint-config-barsoom)
+These are some recommended plugins:
+
+* [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
+* [eslint-plugin-css-modules](https://www.npmjs.com/package/eslint-plugin-css-modules)
+* [eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier)
 
 ### When using Babel
 
