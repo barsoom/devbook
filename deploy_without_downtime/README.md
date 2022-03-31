@@ -26,8 +26,6 @@ But as of 2021-03 (well, long before then) we typically run migrations first and
 
 **END OF NOTE**
 
-For Rails 4, you may need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976) to avoid "PG::InFailedSqlTransaction" errors.
-
 Basically, you always need to make sure any code you deploy works both before and after its migrations run.
 
 If you have code that only works after a migration has run, you need to deploy the migration first, and then deploy the new code.
