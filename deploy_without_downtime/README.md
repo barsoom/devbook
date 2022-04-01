@@ -34,6 +34,8 @@ A migration is not safe if it locks the DB for long. The below is for PostgreSQL
 
 Specifically:
 
+### Adding columns
+
 * **Adding columns** is safe for columns that are allowed to be null, or for small tables. On Postgres 10 or earlier, it's not safe on big tables if the column has a default value.
 
   Below, example of such a (safe) migration for one of our largest tables, `images` with around 6M rows.
@@ -55,6 +57,8 @@ Specifically:
   * Step 1: Add the column as a NULLable column without a default.
   * Step 2: Set the default value in batches, some records at a time. Remember to disable transactions (`disable_ddl_transaction!`) if this is done in a migration.
   * Step 3: Make the column NOT NULL with a default. (Or just add a default, keeping it NULLable.)
+
+### Removing columns
 
 * **Removing columns** is never safe.
   The old app will attempt to use the cached column name and will break things.
@@ -98,6 +102,8 @@ Specifically:
 
   If you get "PG::InFailedSqlTransaction" errors, you may be on Rails 4 and need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976).
 
+### Renaming columns
+
 * **Renaming columns** is never safe.
 
   You can think of it as adding a duplicate column, then removing the old one.
@@ -119,11 +125,19 @@ Specifically:
 
   * Deploy 4: Remove the code that ignored the column.
 
+### Adding tables
+
 * **Adding tables** is always safe.
+
+### Changing column types
 
 * **Changing column types** is probably not safe. One case is safe though - changing a :string to :text (internally VARCHAR(255) to TEXT). This is because they are essentially compatible, and :text can hold more data than :string. But the other way may truncate data.
 
+### Changing column NULL
+
 * **Changing column NULL** is not safe. E.g. `change_column_null :foos, :bar_id, false`. It causes a read-and-write lock on the entire table which may cause downtime for large tables that are in active use. [Read more.](http://stackoverflow.com/q/42070628/6962)
+
+### Removing tables
 
 * **Removing tables** is never safe.
 
@@ -132,6 +146,8 @@ Specifically:
   * Deploy an app that doesn't use those tables at all.
 
   * Deploy the migration that removes those tables.
+
+### Renaming tables
 
 * **Renaming tables** is never safe.
 
@@ -160,7 +176,11 @@ Specifically:
   insert_sql("INSERT INTO new_records (SELECT * FROM old_records WHERE id < #{first_new_id})")
   ```
 
+### Creating indexes
+
 * **Creating indexes** [should be done concurrently](https://robots.thoughtbot.com/how-to-create-postgres-indexes-concurrently-in).
+
+### Removing indexes
 
 * **Removing indexes** is always safe.
 
