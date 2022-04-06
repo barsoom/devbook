@@ -16,6 +16,7 @@ These are some of the tools we've adopted, changed or bolted on:
   - Have a retro.
   - Schedule things like interviews, if we can avoid planning them mid-cycle.
   - Have lab time, scratching itches and trying out new things.
+  - Do routine maintenance on our projects. (We have split out our projects between us for routine updates of Gems, NPM packages, language versions and such.)
   - Do track work, where our area-of-interest groups (maintenance, tooling, security, frontend, architecture etc) discuss priorities, pitch to the product team, or just fix it then and there.
 
 ## Timeout
