@@ -18,7 +18,7 @@ These are some of the tools we've adopted, changed or bolted on:
   - Have lab time, scratching itches and trying out new things.
   - Do routine maintenance on our projects. (We have split out our projects between us for routine updates of Gems, NPM packages, language versions and such.)
   - Do track work, where our area-of-interest groups (maintenance, tooling, security, frontend, architecture etc) discuss priorities, pitch to the product team, or just fix it then and there.
-- We rotate [hatter](/hatter) mid-cooldown. Meaning each hatter stint is 6 weeks, and that the outgoing and incoming hatters both get one week of cooldown.
+- We rotate [hatters](/hatter) mid-cooldown. Meaning each hatter stint is 6 weeks, and that the outgoing and incoming hatters both get one week of cooldown.
 
 ## Timeout
 
