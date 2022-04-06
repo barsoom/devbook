@@ -8,7 +8,10 @@ Since circa March 2022, we're trying out a take on the [Shape Up](https://baseca
 
 These are some of the tools we've adopted, changed or bolted on:
 
-- A 4 week cycle focusing on planned work, avoiding distractions such as non-urgent maintenance.
+- Shaping/betting/pitching is the part we're the least sure about, but so far:
+  - We only do a rough pitch before betting.
+  - We don't shape tasks as fully, leaving some details for the developers to shape.
+- We have a 4 week cycle focusing on planned work, avoiding distractions such as non-urgent maintenance.
 - Followed by a 2 week cooldown, where we:
   - Finish up if we didn't get done during the cycle. (But we should aggressively scope down to avoid this.)
   - Do bug fixes and smaller improvements to the cycle work based on feedback. (But major stuff should be planned for a future cycle. And ideally we should ship iteratively to get feedback during the cycle.)
