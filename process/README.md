@@ -2,6 +2,21 @@
 
 # Process conventions
 
+## Shape Up
+
+Since circa March 2022, we're trying out a take on the [Shape Up](https://basecamp.com/shapeup) process.
+
+These are some of the tools we've adopted, changed or bolted on:
+
+- A 4 week cycle focusing on planned work, avoiding distractions such as non-urgent maintenance.
+- Followed by a 2 week cooldown, where we:
+  - Finish up if we didn't get done during cycle. (But we should aggressively scope down to avoid this.)
+  - Do bug fixes and smaller improvements to the cycle work based on feedback. (But major stuff should be planned for a future cycle. And ideally we should ship iteratively to get feedback during the cycle.)
+    - After the first cooldown, the implementing group no longer "owns" it, and any further bugs would be handled by [the hatter](/hatter), though they can of course delegate to or consult those with more context.
+  - Have a retro.
+  - Schedule things like interviews, if we can avoid planning them mid-cycle.
+  - Have lab time, scratching itches and trying out new things.
+  - Do track work, where our area-of-interest groups (maintenance, tooling, security, frontend, architecture etc) discuss priorities, pitch to the product team, or just fix it then and there.
 
 ## Timeout
 
