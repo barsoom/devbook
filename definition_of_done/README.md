@@ -2,7 +2,7 @@
 
 # Definition of done
 
-When is a feature ["done done"](http://chrislema.com/what-is-done-done/) so its ticket can be closed?
+When is a feature ["done done"](https://web.archive.org/web/20170725135300/https://chrislema.com/what-is-done-done/) so its ticket can be closed?
 
 ## Checklist
 
