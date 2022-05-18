@@ -32,7 +32,7 @@ When is a feature ["done done"](https://web.archive.org/web/20170725135300/https
 ## Changes to the public site
 
 * Front-end code
-  * Has been verified in browsers (for the general public: IE11+, latest Firefox, Chrome, Safari, Mobile Safari)
+  * Has been verified in browsers (for the general public: latest Edge, Firefox, Chrome, Safari, Mobile Safari)
   * Has been verified to be responsive, if the project has that goal
   * Has been verified in the print preview, if printing this page makes sense
 * The support team has been informed about it and tried using it
