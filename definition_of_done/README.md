@@ -9,31 +9,28 @@ When is a feature ["done done"](https://web.archive.org/web/20170725135300/https
 * Working code
 * Automatic tests
   * Tests updated or added
-  * All old tests pass
-  * Have considered if it can be a unit test (and the test pyramid in general)
-* Refactored (readable to others, maintainable)
-  * Spend at least a few minutes, to the best of your ability
-  * When in doubt, consider naming and [Sandi's rules](https://gist.github.com/henrik/4509394)
-* Optimized enough (not slow when run with realistic amounts of data and traffic)
-* Secure enough (consider the security aspects)
+    * Covered by an integration test
+    * Details tested at as low a level as reasonable
+* Clean (idiomatic, readable to others, maintainable)
+* Automated (consider whether manual tasks are the right trade-off – ask the team for expensive tasks)
+* Optimized (not slow when run with realistic amounts of data and traffic)
+* Secure (consider the security aspects)
 * Localized
-* Documented if necessary (others can use it)
-* Stakeholders have approved it
-* In production (deployed, feature-toggled on, rolled out to everyone)
+* Documented (updating or adding relevant docs, especially for new tasks/routines)
+* Approved by the product owner
+* Used in production (deployed, feature-toggled on, rolled out to everyone)
+  * Feature toggle removed if not needed, or scheduled for removal if we're not keeping it forever
 * Stakeholders have been informed that the feature is available
-* Old data and old code has been removed (if applicable)
-* Code making network requests, e.g. calling APIs, gracefully handles common network errors (see: [Sidekiq retries](http://disq.us/p/1wr05yx), [NetHttpTimeoutErrors](https://github.com/barsoom/net_http_timeout_errors))
+* Old data and old code has been removed
+* Likely errors handled so the hatter isn't notified if devs don't need to act on it (e.g. showing an error only to the user, retries – especially for network requests)
 * If it's an email: there's a `mail_view` preview
 * If it's a document (e.g. PDF): there's a `document_previews` preview
-* If the feature has a known element of manual work that it might generate
-  - Get sign-off from the team that this new task it introduces is manageable, and that it does not create an undue amount of work. Ideally no feature should "cost" future work, but it might be ok for edge cases that happen very rarely.
-  - Document the task, and make it require as little context as possible. Add the context in a potential error message or in the task instructions.
 
 ## Changes to the public site
 
 * Front-end code
-  * Has been verified in browsers (for the general public: latest Edge, Firefox, Chrome, Safari, Mobile Safari)
-  * Has been verified to be responsive, if the project has that goal
+  * Works in all modern browsers, desktop and mobile
+  * Is responsive
   * Has been verified in the print preview, if printing this page makes sense
 * The support team has been informed about it and tried using it
 * The FAQ or equivalent has been changed (if applicable)
