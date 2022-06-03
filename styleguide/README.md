@@ -359,14 +359,14 @@ my_method(foo, one: 1, two: 2)
 my_method(
   foo,
   one: 1,
-  two: 2
+  two: 2,
 )
 
 my_method(
   foo,
   {
     one: 1,
-    two: 2
+    two: 2,
   }
 )
 
