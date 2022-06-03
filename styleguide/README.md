@@ -68,6 +68,8 @@ The rule of thumb is: If the comment points out something you must be aware of w
 
 If a method will sometimes return nil, we want that to be explicit, not implicit.
 
+This makes it clear to the reader that the code author has considered the "else" case.
+
 So prefer this:
 
 ``` ruby
