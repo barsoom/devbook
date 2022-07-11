@@ -100,8 +100,6 @@ Specifically:
 
   * Deploy 3: Remove the code that ignored the column.
 
-  If you get "PG::InFailedSqlTransaction" errors, you may be on Rails 4 and need [this monkeypatch](https://github.com/rails/rails/issues/12330#issuecomment-244930976).
-
 ### Renaming columns
 
 * **Renaming columns** is never safe.
