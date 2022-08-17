@@ -32,13 +32,34 @@ If you have code that only works after a migration has run, you need to deploy t
 
 A migration is not safe if it locks the DB for long. The below is for PostgreSQL, which we use. Much of it is true of any DB engine, but locking in particular will vary between engines.
 
-Specifically:
+**However**, all DDL statements that take an exclusive lock come with a risk even if the operation under the lock is very fast, since:
+* the exclusive lock must wait for all ongoing work to finish before it can be acquired
+* once someone is attempting to acquire an exclusive lock, all new incoming work must wait for it to be released
+
+Therefore, under heavy load even a normally fast operation may cascade into a traffic jam around the affected table, if the initial wait to begin the DDL takes longer than expected. For extra safety, you can consider setting the timeout to a low value; it's better to abort a migration than to grind the database to a halt: `SET LOCAL lock_timeout = '1s';`.
 
 ### Adding columns
 
-* **Adding columns** is safe for columns that are allowed to be null, or for small tables. On Postgres 10 or earlier, it's not safe on big tables if the column has a default value.
+In certain circumstances adding a column can cause a physical rewrite of the entire table and its indexes. An exclusive lock is taken on the table for this operation. Consider the following to determine whether your change is safe:
 
-  Below, example of such a (safe) migration for one of our largest tables, `images` with around 6M rows.
+* `NULL`, no default
+  * Safe.
+* Small table
+  * Safe if the rewrite finishes quickly enough. You can use `SELECT pg_size_pretty(pg_total_relation_size('tablename'))` to make your decision.
+* Non-volatile default
+  * Safe since Postgres 11. The default value is stored in the table metadata instead of physically updating the rows.
+    * `CURRENT_TIMESTAMP` is a stable function, so it is also safe.
+* ❗ `NULL`, volatile default
+  * Safe **is the default is set separately**, i.e. first `ALTER TABLE ADD COLUMN`, then `ALTER TABLE ALTER COLUMN SET DEFAULT`.
+    * Setting the default in the same statement as adding a column **will** trigger a table rewrite; yes, even on adding a `NULL` column.
+    * Setting the default separately will not touch existing rows, leaving them as `NULL`.
+* ❗ Anything else
+  * Unsafe. Try to find a way to do a staged change, for example:
+    1. Create the column as `NULL` without a default.
+    2. Fill in the data in batches to avoid updating the entire table in one transaction. Remember to disable transactions (`disable_ddl_transaction!`) if this is done in a migration, or do it outside of a migration.
+    3. Set the desired nullability and default on the column.
+
+  Below, example of a safe migration for one of our largest tables, `images` with around 6M rows.
   ```
   == 20210527200847 AddOwnerIdAndOwnerTypeToImages: migrating ===================
   -- add_column(:images, :owner_type, :string)
@@ -47,16 +68,6 @@ Specifically:
      -> 0.0440s
   == 20210527200847 AddOwnerIdAndOwnerTypeToImages: migrated (0.0571s) ==========
   ```
-
-  NOT NULL columns on big tables [will lock the table for a long time](http://stackoverflow.com/a/19527999/6962).
-  
-  Columns with default values on big tables [will rewrite the whole table and its indexes](https://stackoverflow.com/q/19525083/6962).
-    
-  So do them in multiple steps (not necessarily multiple deploys):
-  
-  * Step 1: Add the column as a NULLable column without a default.
-  * Step 2: Set the default value in batches, some records at a time. Remember to disable transactions (`disable_ddl_transaction!`) if this is done in a migration.
-  * Step 3: Make the column NOT NULL with a default. (Or just add a default, keeping it NULLable.)
 
 ### Removing columns
 
