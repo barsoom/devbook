@@ -49,6 +49,7 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
 * Non-volatile default
   * Safe since Postgres 11. The default value is stored in the table metadata instead of physically updating the rows.
     * `CURRENT_TIMESTAMP` is a stable function, so it is also safe.
+    * See [Function Volatility Categories](https://www.postgresql.org/docs/current/xfunc-volatility.html) for more (it's not hugely helpful in this context though).
 * ❗ `NULL`, volatile default
   * Safe **if the default is set separately**, i.e. first `ALTER TABLE ADD COLUMN`, then `ALTER TABLE ALTER COLUMN SET DEFAULT`.
     * Setting the default in the same statement as adding a column **will** trigger a table rewrite; yes, even on adding a `NULL` column.
