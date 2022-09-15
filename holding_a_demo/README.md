@@ -31,7 +31,7 @@ This is a checklist for those.
 
 * Do a dry run with only developers in order to catch those bugs and things that aren’t interesting for stakeholders
 
-* The developer who worked on the software starts by demostrating some new feature they've completed during the cycle
+* The developer who worked on the software starts by demonstrating some new feature they've completed during the cycle
 
 * Then, once a developer has provided a quick walk-through of all the user-facing parts of their work, stakeholders ask
   questions. These questions are an opportunity for stakeholders to identify the next development steps for the project 
