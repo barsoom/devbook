@@ -35,7 +35,7 @@ This is a checklist for those.
   questions. These questions are an opportunity for stakeholders to identify the next development steps for the project 
   
 * Emphasize getting stakeholders involved in realistic scenarios to discover real issues insted of revisiting long-winded 
-  technical details.
+  technical details
 
 # Step 4
 
