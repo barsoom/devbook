@@ -25,8 +25,6 @@ This is a checklist for those.
 
 * Prepare all the data you need for the demo
 
-* Try not to run the demo on a local environment, instead of the higher environments.
-
 # Step 3
 
 * Do a dry run with only developers in order to catch those bugs and things that aren’t interesting for stakeholders
