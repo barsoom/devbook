@@ -88,13 +88,15 @@ Be brief.
 
 Be specific.
 
-#### Meetings
+#### Meetings.
 
 We respect the starting time of our meetings. We do not wait for latecomers unless explicitly requested.
 
-We prefer to start our meetings as soon as possible and not wait for the planned time.
+Recurring meetings should have an explicit purpose.
 
-#### Spreading knowledge
+One-off meetings should have an agenda, including at least the desired outcome.
+
+#### Spreading knowledge.
 
 When we add new technology and/or build applications or parts of applications using new concepts, we actively try to spread the knowledge in the whole team by deliberately involving new people in improvements in the new parts.
 
