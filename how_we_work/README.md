@@ -54,19 +54,17 @@ Assigning personal blame, *even in the form of teasing or joking*, is likely to 
 
 We don't plan all of our time, leaving some slack. It counters stress and leads to a higher level of polish.
 
-We try to spend at least two days every two weeks fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring, documents like this one etc.
+We spend two weeks out of every six [on cooldown](https://github.com/barsoom/devbook/tree/master/process#shape-up) fixing things we want to fix: tools, visual polish, fun features, improve workflows, refactoring, documents like this one etc.
 
 And when we do planned tasks, we try to have enough slack to do them well the first time.
 
-#### Zero tolerance for bugs and exceptions.
+#### Zero tolerance for exceptions.
 
 We want to be notified about every exception, but ideally only once or twice; then they should be fixed. If you glance at an exception and discard it because it's a known issue, you're doing it wrong.
 
 If it's known, make your app handle or swallow it. Exceptions should be exceptional. Whatever you're doing in your head to handle or ignore that exception, put it in code.
 
-Bugs should be fixed when they crop up, before starting work on new features. The only way to win against entropy is to fix the broken stuff before adding new <strike>broken stuff</strike> features.
-
-We're not perfect, so we're always a little short of this goal, but not very.
+This is aspirational – we're always a little short of this goal, but it's what we strive for.
 
 #### Code review.
 
