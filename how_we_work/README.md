@@ -42,9 +42,11 @@ If a problem is not too particular to the app we're working on, and does not rep
 
 #### A blame-free environment.
 
-The important thing when something goes wrong is to figure out why it happened and how to all learn from that, not to assign blame.
+The important thing when something goes wrong is to figure out why it happened and how to all learn from that; not to assign blame.
 
-This process probably involves determining the people involved, perhaps via `git blame`, but only to learn more about how it happened.
+This process may involve determining the people involved, perhaps via `git blame`, but only to learn more about how it happened.
+
+If the site goes down, it's better if people are comfortable saying "I recently changed X, could that explain it?" than if they try to hide any possible involvement out of fear or embarrassment.
 
 Assigning personal blame, *even in the form of teasing or joking*, is likely to make that person feel bad, reluctant to do similar tasks in the future, and reluctant to be forthcoming about their involvement in any future issues.
 
