@@ -17,7 +17,6 @@ For reference and discussion.
 * [Process conventions](/process)
 * [Hatter](/hatter)
 * [Rails conventions](/rails_conventions)
-* [Wiki conventions](/wiki)
 * [Libraries](/libs)
 
 ## Checklists
