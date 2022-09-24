@@ -68,7 +68,7 @@ We're not perfect, so we're always a little short of this goal, but not very.
 
 #### Code review.
 
-We review all our code in our review tool [Remit](https://github.com/henrik/remit).
+We review all our code in our review tool [Remit](https://github.com/barsoom/ex-remit).
 
 #### Some pair programming.
 
