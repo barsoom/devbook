@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # React Styleguide
 
 TODO: Merge this with the React stuff in [our JavaScript styleguide](/styleguide/javascript).

@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # CSS and Sass styleguide
 
 Also see [our top-level styleguide](/styleguide): it explains how and when to follow our styleguides, and how to change them.

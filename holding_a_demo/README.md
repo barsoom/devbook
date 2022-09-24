@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Holding a demo
 
 We like to do demos to evaluate our products as we work on them. The goal of the demo is for developers, 

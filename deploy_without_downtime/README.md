@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Deploy without downtime
 
 We deploy without downtime when we can to avoid user frustration. It's pretty rare that we can't.

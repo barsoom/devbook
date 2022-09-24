@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Libraries
 
 Checklist/reference when setting up new projects.

@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Wiki conventions
 
 We use GitHub wikis to document project-specific things as well as all company information that can't be public (i.e. in this devbook).

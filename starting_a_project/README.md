@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Starting a project
 
 A basic checklist for starting a new project.

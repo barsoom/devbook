@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Rails conventions
 
 This is where we document how our Rails conventions deviate (or not) from the [omakase stack](http://david.heinemeierhansson.com/2012/rails-is-omakase.html).

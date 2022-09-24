@@ -1,6 +1,6 @@
-![Barsoom](http://barsoom.se/barsoom.png)
+<img src="https://assets.auctionet.com/assets/public/logo_on_light_background.png" width="500">
 
-# Barsoom developer's handbook
+# Auctionet developer's handbook
 
 For reference and discussion.
 

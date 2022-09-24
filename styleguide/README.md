@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Styleguide
 
 We aim toward a consistent style so we don't waste time arguing over unimportant things with one another, or with ourselves.

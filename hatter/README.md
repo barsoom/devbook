@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Hatter
 
 The developers take turns being the "hatter" (or "hat").

@@ -1,5 +1,3 @@
-![Barsoom](https://dev.auctionet.com/barsoom.png)
-
 # Developer pairing session during hiring
 
 A non-exhaustive checklist for things we might want to think about and ask about in a developer pairing session during hiring. (The CTO may ask about other things in a separate meeting.)

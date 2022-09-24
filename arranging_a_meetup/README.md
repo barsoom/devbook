@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Arranging a meetup
 
 
@@ -138,7 +136,7 @@
 
 #### Example introduction
 
-Welcome. Barsoom is a Rails development shop, …. We're hiring.
+Welcome. Auctionet is …. We're hiring.
 
 Practical: bathroom is there, pizza arrives at X.
 

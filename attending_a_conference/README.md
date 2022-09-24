@@ -1,5 +1,3 @@
-![Barsoom](http://barsoom.se/barsoom.png)
-
 # Attending a conference
 
 Things we might want to remember when the company sends us to a conference.
