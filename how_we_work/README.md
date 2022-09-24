@@ -70,15 +70,15 @@ This is aspirational – we're always a little short of this goal, but it's what
 
 We review all our code in our review tool [Remit](https://github.com/barsoom/ex-remit).
 
-#### Some pair programming.
+#### Pair programming by default.
 
-We pair program to spread knowledge or for problems that don't easily fit inside one head.
+We default to assigning tasks to a pair.
 
-We try to be receptive to someone wanting to pair.
+We pair program to spread knowledge, for problems that don't easily fit inside one head, and because collaboration is joyful.
 
-But we don't always pair program, as the flow and speed of the lone developer is hard to beat.
+The pair will choose when to work together and when to work separately. We recognise that pairing is sometimes less valuable, and that the flow and speed you can get working solo is hard to beat. Pair programming is a tool; not dogma.
 
-Sometimes we do "distributed pair programming" where two or more developers work on different parts of the same task, so they can consult each other without any major context switching.
+Often it's good to work together when there's more thinking than typing; often it's good to work apart when there's more typing than thinking. We think of this as "distributed pair programming" – you can work apart but consult each other without any major context switching.
 
 #### Respectful discussions.
 
