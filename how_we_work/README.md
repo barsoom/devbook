@@ -44,7 +44,7 @@ The important thing when something goes wrong is to figure out why it happened a
 
 This process may involve determining the people involved, perhaps via `git blame`, but only to learn more about how it happened.
 
-If the site goes down, it's better if people are comfortable saying "I recently changed X, could that explain it?" than if they try to hide any possible involvement out of fear or embarrassment.
+If the site has issues, it's better if people are comfortable saying "I recently changed X, could that explain it?" than if they try to hide any possible involvement out of fear or embarrassment.
 
 Assigning personal blame, *even in the form of teasing or joking*, is likely to make that person feel bad, reluctant to do similar tasks in the future, and reluctant to be forthcoming about their involvement in any future issues.
 
