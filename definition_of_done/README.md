@@ -23,6 +23,7 @@ When is a feature ["done done"](https://web.archive.org/web/20170725135300/https
 * Likely errors handled so the hatter isn't notified if devs don't need to act on it (e.g. showing an error only to the user, retries – especially for network requests)
 * If it's an email: there's a `mail_view` preview
 * If it's a document (e.g. PDF): there's a `document_previews` preview
+* We've documented or automated GDPR removal of personal data (in our system or external ones)
 
 ## Changes to the public site
 
