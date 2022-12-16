@@ -15,7 +15,7 @@ When is a feature ["done done"](https://web.archive.org/web/20170725135300/https
 * Secure (consider the security aspects)
 * Localized
 * Documented (updating or adding relevant docs, especially for new tasks/routines)
-* Approved by the product owner
+* Approved by the product owner and the designer
 * Used in production (deployed, feature-toggled on, rolled out to everyone)
   * Feature toggle removed if not needed, or scheduled for removal if we're not keeping it forever
 * Stakeholders have been informed that the feature is available
