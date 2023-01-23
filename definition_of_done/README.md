@@ -34,7 +34,7 @@ When is a feature ["done done"](https://web.archive.org/web/20170725135300/https
 * The support team has been informed about it and tried using it
 * The FAQ or equivalent has been changed (if applicable)
 * Copy has correct spelling, grammar and pluralization
-* Works in our Turbolinks-based app
+* Works in our Turbo/Turbolinks-based apps
 
 ## What's *not* part of the definition of done?
 
