@@ -10,9 +10,9 @@ Some of this reflects our conventions prior to splitting into teams in 2022. Tea
 
 ## Both as reviewer and committer
 
-### Change medium if you talk past each other.
+### Change medium if you talk past one another.
 
-If you think you might be talking past each other, stop writing low-context, low-bandwidth comments. Talk IRL or over voice or video instead.
+If you think you might be talking past one another, stop writing low-context, low-bandwidth comments. Talk IRL or over voice or video instead.
 
 ### Don't have style debates.
 
