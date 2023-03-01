@@ -89,7 +89,7 @@ If you don't understand their point, don't change it until you do.
 
 If you understand and still disagree, don't change it.
 
-Understanding their point means understanding the *underlying* reasons this would be good or bad ("not DRYing this up could easily lead to bugs here"). An appeal to authority ("DHH says this is the right way") or to rules or smells ("this is not DRY", "this violates SRP") is not enough.
+Understanding their point means understanding the *underlying* reasons this would be good or bad ("not DRYing this up could easily lead to bugs here"). An appeal to authority ("DHH says this is the right way") or to rules or smells ("this is not DRY", "this violates SRP") is not enough. An appeal to the styleguide [is](#obey-the-styleguide).
 
 ### Don't spend much time on things you've already considered.
 
