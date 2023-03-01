@@ -20,7 +20,9 @@ These are some of the tools we've adopted, changed or bolted on:
   - Do routine maintenance on our projects. (We have split out our projects between us for routine updates of gems, NPM packages, language versions and such.)
   - Do track work, where our area-of-interest groups (maintenance, tooling, security, frontend, architecture etc) discuss priorities, pitch to the product team, or just fix it then and there.
 
-## Timeout
+## Meetings
+
+### Timeout
 
 We've agreed to a "timeout" convention, where you can make a "T" with your hands (or say "timeout", in an audio conference).
 
