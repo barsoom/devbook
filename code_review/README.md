@@ -2,9 +2,7 @@
 
 We review all code commit-by-commit after the fact using [Remit](https://github.com/barsoom/ex-remit/), for [reasons](https://thepugautomatic.com/2014/02/code-review/).
 
-Some of this reflects our conventions prior to splitting into teams in 2022. Teams may experiment with their own conventions and with how/whether to do review at all.
-
-See this less as a list of rules to follow, and more as a descriptive guide to understanding how we've approached it so far.
+Some of this reflects our conventions prior to splitting into teams in 2022. Teams may experiment with their own conventions and with how/whether to do review at all. See this less as a list of rules to follow, and more as a descriptive guide to understanding how we've approached it so far.
 
 ## Inspiration
 
