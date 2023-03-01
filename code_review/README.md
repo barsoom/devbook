@@ -88,7 +88,7 @@ We want to keep review low-cost: you don't need to spend time justifying every d
 
 ### If you're asked for clarification, clarify in the *source*.
 
-If a reviewer asks what a piece of documentation or a snippet of code means, don't just reply in the review tool; try to clarify the documentation or code itself.
+If a reviewer asks what a piece of documentation or code means, don't just reply in the review tool; try to clarify the documentation or code itself.
 
 A reply in the review tool is hard to dig up later, if you even know to try.
 
