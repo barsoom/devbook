@@ -1,16 +1,16 @@
 # Code review guidelines
 
-We review all code commit-by-commit after the fact using [Remit](https://github.com/henrik/remit/).
+We review all code commit-by-commit after the fact using [Remit](https://github.com/barsoom/ex-remit/).
 
-Committers and reviewers should read these guidelines to do it better.
+Some of this reflects our conventions prior to splitting into teams in 2022. Teams may experiment with their own conventions and with how/whether to do review at all.
 
-### Inspiration:
+See this less as a list of rules to follow, and more as a descriptive guide to understanding how we've approached it so far.
+
+## Inspiration
 
 * https://github.com/thoughtbot/guides/tree/master/code-review
 
-
-## As a reviewer and committer both
-
+## Both as reviewer and committer
 
 ### Change medium if you talk past each other.
 
@@ -22,47 +22,57 @@ Pointing out a difference in style is fine: it can help us learn from each other
 
 But don't let it go beyond pointing out the difference and saying "cool, I'll try that" or "thanks, but I prefer it this way".
 
-If you feel strongly enough to want to advocate "your" style beyond this, propose a change in our styleguide and have the discussion on that pull request.
+If you feel strongly enough to want to advocate "your" style beyond this, propose a change in our styleguide and have the discussion on that pull request, or in a meeting.
 
 
 ## As a reviewer
 
+### Use "Minor: …" to distinguish less important feedback.
 
-### Don't mention small style changes.
+A review comment like "Minor: We could do this instead" can be read as "If you don't agree or don't think it's worth the effort, never mind, and no need to tell me".
 
-For small, mostly unimportant stylistic matters like quote style and whitespace, don't point them out unless that person has said they want that feedback.
+Sometimes we miss this and a comment without this prefix is obviously intended as minor.
 
-It takes more time for the committer to open that project, find the file file and fix the quote style from `'` to `"` than it's worth.
+### Don't mention small style changes and typos/grammar.
 
-Fix it yourself or let it go.
+It's usually not worth the overhead. Fix it yourself, or let it go.
 
-We still have a "right" way of doing things: do complain if someone intentionally changes from the "right" to the "wrong" style, and please clean it up if you see it. It's just not efficient to enforce this in commit-by-commit review.
+For code style, try to automatically enforce it with a linter.
 
-
-### Don't mention harmless typos/grammar in internal docs or code comments.
-
-Runnable code and customer-facing copy should not have typos or grammar errors.
-
-But if someone makes a harmless typo or grammar error in internal docs or code comments, it probably takes more time for them to open that project, find the file and fix it than it's worth.
-
-Fix it yourself or let it go.
+If you see the same error a lot (e.g. the same person is always confused about a style convention, or the spelling of a word) that *could* be worth pointing out.
 
 Do point out if documentation is hard to understand or misleading, though, whether or not it has typos.
 
 
-
 ## As a committer
 
+### It's OK to silently act on feedback.
+
+If you act on the feedback, there's no need to respond with an "OK" or a link to the commit fixing it, though sometimes we do this to be extra clear.
+
+The reviewer can see that the comment is resolved and can see that the change has been made.
+
+### Respond to non-minor feedback you don't act on.
+
+If you don't act on the feedback (and it's not minor), it's usually courteous to briefly comment.
+
+Otherwise the reviewer will see that the comment is resolved but no change has been made.
+
+These comments could be e.g. "I disagree for this reason" or "Not a priority for me, but feel free if it is for you".
 
 ### Obey the styleguide.
 
-If someone points out a [styleguide](/barsoom/devbook/tree/master/styleguide#how-and-when-to-follow-this-styleguide) violation, fix it. If you want to debate it, take that debate to the styleguide – after fixing it.
+If someone points out a [styleguide](/barsoom/devbook/tree/master/styleguide#how-and-when-to-follow-this-styleguide) violation, fix it.
 
-### Don't obey comments you don't understand or agree with.
+If you want to debate it, take that debate to the styleguide – after fixing it.
+
+### Don't blindly implement comments you don't understand or agree with.
 
 Every review comment should be seen as a suggestion. Don't follow them blindly because of things like the reviewer's seniority.
 
-Ask questions (in person, if that helps) until you understand and agree that the change would be an improvement.
+We've had situations where a change is made that neither the reviewer nor the reviewee wanted, because of misunderstandings combined with making the change you think someone else wants.
+
+Ask questions (ideally in person or a meeting to increase bandwidth) until you understand and agree that the change would be an improvement.
 
 If you don't understand their point, don't change it until you do.
 
