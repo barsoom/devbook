@@ -90,7 +90,7 @@ We want to keep review low-cost: you don't need to spend time justifying every d
 
 If a reviewer asks what a piece of documentation or code means, don't just reply in the review tool; try to clarify the documentation or code itself.
 
-A reply in the review tool is hard to dig up later, if you even know to try.
+A reply in the review tool is hard to dig up later, if you even know to look for it.
 
 Clarified code, on the other hand, helps everyone who deals with that code in the future.
 
