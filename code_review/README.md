@@ -82,7 +82,7 @@ Understanding their point means understanding the *underlying* reasons this woul
 
 ### Don't spend much time on things you've already considered.
 
-If you already thought of but rejected something that a reviewer suggests, feel free to skip it with a quick explanation, or even without one.
+If you already thought of but rejected something that a reviewer suggests, feel free to skip it with a quick explanation.
 
 We want to keep review low-cost: you don't need to spend time justifying every decision.
 
