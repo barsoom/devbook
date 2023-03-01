@@ -41,6 +41,19 @@ If you see the same error a lot (e.g. the same person is always confused about a
 
 Do point out if documentation is hard to understand or misleading, though, whether or not it has typos.
 
+### Feel free to make uncontroversial fixes yourself.
+
+CI broken due to a syntax error? Feel free to just fix it.
+
+### Be careful about making controversial changes yourself.
+
+If someone else is actively working on some code, refactoring it without involving them could step on toes and lead to double work.
+
+You don't have their context, and perhaps your change makes future changes harder.
+
+You can suggest the refactoring, or offer to pair on it.
+
+Sometimes we do make and push the change – it can be quicker than explaining it or trying to find a time to pair up. But then we explicitly tell the person e.g. "I gave this a shot. WDYT? Revert if you disagree."
 
 ## As a committer
 
@@ -93,3 +106,9 @@ A reply in the review tool is hard to dig up later, if you even know to look for
 Clarified code, on the other hand, helps everyone who deals with that code in the future.
 
 One of the big wins of code review is to catch hard-to-understand things when *someone* still understands it (having just written it).
+
+### If you commit translation updates, take some responsibility for them.
+
+When you pull translations from the translation tool, commit them and push, they will go live on the site – most likely before a reviewer has had a chance to look at them – most likely before a reviewer has had a chance to look at them.
+
+You should scan through them and look for obvious issues – broken interpolation syntax, misunderstood context etc. We can spot some of these even in languages we don't know.
