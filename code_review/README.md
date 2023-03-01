@@ -109,6 +109,6 @@ One of the big wins of code review is to catch hard-to-understand things when *s
 
 ### If you commit translation updates, take some responsibility for them.
 
-When you pull translations from the translation tool, commit them and push, they will go live on the site – most likely before a reviewer has had a chance to look at them – most likely before a reviewer has had a chance to look at them.
+When you pull translations from the translation tool, commit them and push, they will go live on the site – most likely before a reviewer has had a chance to look at them.
 
 You should scan through them and look for obvious issues – broken interpolation syntax, misunderstood context etc. We can spot some of these even in languages we don't know.
