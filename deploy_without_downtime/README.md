@@ -89,7 +89,7 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
 
     This is so you can safely ignore the column without breaking the creation of new records.
 
-  * Deploy 2: Make the app ignore the column, and remove it from DB.
+  * Deploy 2: Make the app ignore the column.
 
     * Ignore it like this:
 
@@ -103,12 +103,13 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
       Put that method call **at the very top of the class** or you risk errors like "undefined method `type' for nil:NilClass".
 
       If the model uses STI, make sure to do this in the base class, not one of the subclasses.
-
+  * Deploy 3: Remove it from DB.
+    
     * Include a migration to remove the column.
 
       In a big table, you should drop each index touching the column with `DROP INDEX CONCURRENTLY` (Example: `remove_index :companies, :bookie_api_key, name: "index_companies_on_bookie_api_key", unique: true, algorithm: :concurrently`) before dropping the column itself, to avoid locking issues. This requires the migration class to run the class method `disable_ddl_transaction!` first.
 
-  * Deploy 3: Remove the code that ignored the column.
+  * Deploy 4: Remove the code that ignored the column.
 
 ### Renaming columns
 
