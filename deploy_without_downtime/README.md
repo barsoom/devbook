@@ -106,7 +106,7 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
 
     * Include a migration to remove the column.
 
-      In a big table, you should drop each index touching the column with `DROP INDEX CONCURRENTLY` (TODO: provide Ruby code for this) before dropping the column itself, to avoid locking issues.
+      In a big table, you should drop each index touching the column with `DROP INDEX CONCURRENTLY` (Example: `remove_index :companies, :bookie_api_key, name: "index_companies_on_bookie_api_key", unique: true, algorithm: :concurrently`) before dropping the column itself, to avoid locking issues. This requires the migration class to run the class method `disable_ddl_transaction!` first.
 
   * Deploy 3: Remove the code that ignored the column.
 
