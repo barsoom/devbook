@@ -417,6 +417,20 @@ Rationale: It adds more information than the "always `do/end` for multiple lines
 
 We still use braces for one-liners, because we think `people.each do |person| puts person.name end` looks bad, and you also want to keep one-liners short.
 
+### Prefer named over anonymous doubles:
+
+``` ruby
+item = double(name_sv: "Furubord")
+```
+
+Prefer:
+
+``` ruby
+item = double(:item, name_sv: "Furubord")
+```
+
+That would make it easier to read and detect failures.
+
 
 ### Don't assign in a method argument if you use that variable later.
 
