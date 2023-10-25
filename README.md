@@ -1,4 +1,5 @@
-<img src="https://assets.auctionet.com/assets/public/logo_on_light_background.png" width="500">
+
+![auctionet_logotype](https://github.com/barsoom/devbook/assets/54472509/4e532404-4c95-47d6-b873-5e8df0be8def)
 
 # Auctionet developer's handbook
 
