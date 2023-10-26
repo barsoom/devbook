@@ -1,5 +1,5 @@
-
-![auctionet_logotype](https://github.com/barsoom/devbook/assets/54472509/4e532404-4c95-47d6-b873-5e8df0be8def)
+<!-- Export from Figma: https://www.figma.com/file/jEp6AjNGBdfPrHR6RzGnCX/Untitled?node-id=0:1&mode=dev -->
+![Auctionet logo](https://github.com/barsoom/devbook/assets/54472509/4e532404-4c95-47d6-b873-5e8df0be8def)
 
 # Auctionet developer's handbook
 
