@@ -70,8 +70,11 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
 
 ### Removing columns
 
-* **Removing columns** is never safe.
+* **Removing columns** is not safe for *tables* that are in use, unless the old (currently running) app ignores the column.
+
   The old app will attempt to use the cached column name and will break things.
+
+  (If the *table* is not in use, with no queries running against it, you can remove the *column* in a single step.)
 
   Deploy removals in multiple steps:
 
@@ -113,9 +116,11 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
 
 ### Renaming columns
 
-* **Renaming columns** is never safe.
+* **Renaming columns** is not safe for *tables* that are in use, unless the old (currently running) app ignores the column.
 
-  You can think of it as adding a duplicate column, then removing the old one.
+  Add a duplicate column with the new name, then remove the old one safely.
+
+  (If the *table* is not in use, with no queries running against it, you can rename the *column* in a single step.)
 
   Deploy it in these steps:
 
