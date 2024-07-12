@@ -417,7 +417,9 @@ Rationale: It adds more information than the "always `do/end` for multiple lines
 
 We still use braces for one-liners, because we think `people.each do |person| puts person.name end` looks bad, and you also want to keep one-liners short.
 
-### Prefer named over anonymous doubles:
+### Name test doubles.
+
+Don't do:
 
 ``` ruby
 item = double(name_sv: "Furubord")
@@ -429,7 +431,7 @@ Prefer:
 item = double(:item, name_sv: "Furubord")
 ```
 
-That would make it easier to read and detect failures.
+Test failures will point more clearly to the right double.
 
 
 ### Don't assign in a method argument if you use that variable later.
