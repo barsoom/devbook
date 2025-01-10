@@ -439,14 +439,14 @@ Test failures will point more clearly to the right double.
 Don't do:
 
 ``` ruby
-expect(Foo).to receive(:bar).with(:baz).and_return(waz = double)
+expect(Foo).to receive(:bar).with(:baz).and_return(waz = double(:item))
 do_something_with(waz)
 ```
 
 Prefer:
 
 ``` ruby
-waz = double
+waz = double(:item)
 expect(Foo).to receive(:bar).with(:baz).and_return(waz)
 do_something_with(waz)
 ```
@@ -456,7 +456,7 @@ Otherwise it's hard to see where the variable is defined.
 It *is* acceptable to define *unused* local variables as a refactoring step towards replacing positional arguments with keyword arguments:
 
 ``` ruby
-method_with_too_many_arguments(name = "Foo", company = "Bar", age = 42, do_the_thing = false)
+method_with_too_many_arguments(name = "Foo", company = "Bar", _age = 42, _do_the_thing = false)
 ```
 
 ### Prefer `unless x` to `if !x` for simple expressions.
