@@ -172,7 +172,7 @@ This [is safe](https://www.enterprisedb.com/blog/adding-new-table-columns-defaul
 Tables can be renamed in two phases:
 
 1. Make a simple view like `CREATE VIEW new_table AS SELECT * FROM old_table`, point the model to `new_table`, and deploy. [Simple views are automatically updateable](https://www.postgresql.org/docs/16/sql-createview.html#id-1.9.3.97.7.11.2), so the view will act as a perfect proxy to the underlying table.
-2. `DELETE VIEW new table; ALTER TABLE old_table RENAME TO new_table` – when executed in a transaction, as most migrations would be, it atomically swaps out the objects.
+2. `DELETE VIEW new_table; ALTER TABLE old_table RENAME TO new_table` – when executed in a transaction, as most migrations would be, it atomically swaps out the objects.
 
 Usual considerations about taking exclusive locks in the middle of a busy day still apply.
 
