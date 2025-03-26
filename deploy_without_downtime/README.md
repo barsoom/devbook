@@ -169,30 +169,12 @@ This [is safe](https://www.enterprisedb.com/blog/adding-new-table-columns-defaul
 
 * **Renaming tables** is never safe.
 
-  You can do it much like renaming columns. Write to both tables, then migrate old records, then remove the old table.
+Tables can be renamed in two phases:
 
-  This may be tricky if the table is edited from a lot of places through a big API (i.e. if your model does not encapsulate Active Record).
+1. Make a simple view like `CREATE VIEW new_table AS SELECT * FROM old_table`, point the model to `new_table`, and deploy. [Simple views are automatically updateable](https://www.postgresql.org/docs/16/sql-createview.html#id-1.9.3.97.7.11.2), so the view will act as a perfect proxy to the underlying table.
+2. `DELETE VIEW new table; ALTER TABLE old_table RENAME TO new_table` – when executed in a transaction, as most migrations would be, it atomically swaps out the objects.
 
-  TODO: Explore using database-level triggers for this.
-
-  The easiest solution is to first add the new table, then make sure the app doesn't update the source table (by disabling features and making it raise on changes in prod), then copy the data once that is in effect, then enable the feature against the new table.
-
-  If you can't disable the feature, another more painful solution is to write to both tables, something like:
-
-  ``` ruby
-  x = OldRecord.create(params)
-  # NOTE: id is a protected attribute.
-  NewRecord.create(params.merge(id: x.id), without_protection: true)
-  # NOTE: Postgres doesn't change the id autoincrement automatically.
-  NewRecord.connection.select_value("SELECT setval('new_records_id_seq', (SELECT MAX(id) FROM new_records));")
-  ```
-
-  And you may migrate old values something like:
-
-  ``` ruby
-  first_new_id = NewRecord.minimum(:id) || 999_999_999
-  insert_sql("INSERT INTO new_records (SELECT * FROM old_records WHERE id < #{first_new_id})")
-  ```
+Usual considerations about taking exclusive locks in the middle of a busy day still apply.
 
 ### Creating indexes
 
