@@ -151,9 +151,9 @@ In certain circumstances adding a column can cause a physical rewrite of the ent
 
 * **Changing column NULL** is not safe. E.g. `change_column_null :foos, :bar_id, false`. It causes a read-and-write lock on the entire table which may cause downtime for large tables that are in active use. [Read more.](http://stackoverflow.com/q/42070628/6962)
 
-### Changing a column default
+### Adding a default value to a column (or adding a new column with a default value)
 
-* **Changing column default** [is safe](https://www.enterprisedb.com/blog/adding-new-table-columns-default-values-postgresql-11) since Postgres 11, even with nullable columns.
+* This [is safe](https://www.enterprisedb.com/blog/adding-new-table-columns-default-values-postgresql-11) since Postgres 11, even with nullable columns.
 
 ### Removing tables
 
