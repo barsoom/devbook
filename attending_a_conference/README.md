@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Attending a conference
 
 Things we might want to remember when the company sends us to a conference.

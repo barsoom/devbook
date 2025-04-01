@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Developer pairing session during hiring
 
 A non-exhaustive checklist for things we might want to think about and ask about in a developer pairing session during hiring. (The CTO may ask about other things in a separate meeting.)

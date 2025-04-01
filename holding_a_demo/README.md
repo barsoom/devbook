@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Holding a demo
 
 We like to do demos to evaluate our products as we work on them. The goal of the demo is for developers, 

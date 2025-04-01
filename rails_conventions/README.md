@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Rails conventions
 
 This is where we document how our Rails conventions deviate (or not) from the [omakase stack](http://david.heinemeierhansson.com/2012/rails-is-omakase.html).

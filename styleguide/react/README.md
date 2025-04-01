@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # React Styleguide
 
 TODO: Merge this with the React stuff in [our JavaScript styleguide](/styleguide/javascript).

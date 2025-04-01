@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Styleguide
 
 We aim toward a consistent style so we don't waste time arguing over unimportant things with one another, or with ourselves.

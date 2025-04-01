@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 **NOTE:** Outdated! Please see [the Auctionet incident response plan](https://github.com/barsoom/auctionet/blob/master/developer_documentation/incident_response_plan_for_downtime.md).
 
 **TODO:** Copy over any useful info from here to there, and then remove this file and any links to it within this repo.

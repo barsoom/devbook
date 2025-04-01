@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Deploy without downtime
 
 We deploy without downtime when we can to avoid user frustration. It's pretty rare that we can't.

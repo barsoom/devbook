@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Code review guidelines
 
 We review all code commit-by-commit after the fact using [Remit](https://github.com/barsoom/ex-remit/), for [reasons](https://thepugautomatic.com/2014/02/code-review/).

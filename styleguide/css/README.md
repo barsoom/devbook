@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # CSS and Sass styleguide
 
 Also see [our top-level styleguide](/styleguide): it explains how and when to follow our styleguides, and how to change them.

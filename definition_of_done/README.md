@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 # Definition of done
 
 When is a feature ["done done"](https://web.archive.org/web/20170725135300/https://chrislema.com/what-is-done-done/) so its ticket can be closed?
