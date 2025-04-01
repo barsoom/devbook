@@ -1,3 +1,7 @@
+🫡 **Retired 2025-04-01.** Moved to Notion. We're leaving the repo around for now, but note that it might not reflect current practice.
+
+---
+
 <!-- Export from Figma: https://www.figma.com/file/jEp6AjNGBdfPrHR6RzGnCX/Untitled?node-id=0:1&mode=dev -->
 ![Auctionet logo](https://github.com/barsoom/devbook/assets/54472509/4e532404-4c95-47d6-b873-5e8df0be8def)
 
